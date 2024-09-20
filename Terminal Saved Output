@@ -1,0 +1,52 @@
+Last login: Tue Jul 23 15:12:07 on ttys000
+mac@Macs-MacBook-Air ~ % sudo npm i -g nodemon
+Password:
+
+changed 29 packages in 4s
+
+4 packages are looking for funding
+  run `npm fund` for details
+mac@Macs-MacBook-Air ~ % npm fund
+axia-backend-express@0.0.1
+├── https://github.com/sponsors/ljharb
+│   └── call-bind@1.0.7, define-data-property@1.1.4, function-bind@1.1.2, get-intrinsic@1.2.4, gopd@1.0.1, has-property-descriptors@1.0.2, has-proto@1.0.3, has-symbols@1.0.3, object-inspect@1.13.2, qs@6.11.0, side-channel@1.0.6
+├─┬ https://opencollective.com/nodemon
+│ │ └── nodemon@3.1.4
+│ └─┬ https://paulmillr.com/funding/
+│   │ └── chokidar@3.6.0
+│   ├── https://github.com/sponsors/jonschlinkert
+│   │   └── picomatch@2.3.1
+│   └── https://github.com/sponsors/sindresorhus
+│       └── binary-extensions@2.3.0
+└── https://github.com/sponsors/feross
+    └── safe-buffer@5.2.1
+
+mac@Macs-MacBook-Air ~ % nodemon -v
+3.1.4
+mac@Macs-MacBook-Air ~ % sudo nano /etc/sysctl.conf
+Password:
+
+  GNU nano 2.0.6                DIR: /private/etc/                              
+
+..                                 (parent dir)
+apache2                                   (dir)
+asl                                       (dir)
+cups                                      (dir)
+defaults                                  (dir)
+emond.d                                   (dir)
+manpaths.d                                (dir)
+newsyslog.d                               (dir)
+openldap                                  (dir)
+pam.d                                     (dir)
+paths.d                                   (dir)
+periodic                                  (dir)
+pf.anchors                                (dir)
+php-fpm.d                                 (dir)
+postfix                                   (dir)
+ppp                                       (dir)
+racoon                                    (dir)
+security                                  (dir)
+snmp                                      (dir)
+Go To Directory: Mac                                                            
+^G Get Help     
+^C Cancel

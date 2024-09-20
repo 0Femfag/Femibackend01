@@ -1,4 +1,13 @@
 .env
 .env.vault
 /node_modules
-.Trash
+.Trash 
+/Applications
+/Desktop
+/Documents
+/Downloads
+/Library
+/Movies
+/Music
+/Pictures
+/Public
