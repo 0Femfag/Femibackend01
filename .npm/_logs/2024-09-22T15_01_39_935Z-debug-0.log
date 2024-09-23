@@ -1,0 +1,116 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.3
+2 info using node@v20.15.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/Library/Caches/typescript/5.4/.npmrc
+5 silly config load:file:/Users/mac/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install @types/accepts@ts5.4 @types/bcrypt@ts5.4 @types/bcryptjs@ts5.4 @types/body-parser@ts5.4 @types/bytes@ts5.4 @types/call-bind@ts5.4 @types/content-disposition@ts5.4 @types/content-type@ts5.4 @types/cookie@ts5.4 @types/cookie-parser@ts5.4 @types/cookie-signature@ts5.4 @types/debug@ts5.4 @types/depd@ts5.4 @types/destroy@ts5.4 @types/ee-first@ts5.4 @types/encodeurl@ts5.4 @types/escape-html@ts5.4 @types/etag@ts5.4 @types/express@ts5.4 @types/finalhandler@ts5.4 @types/forwarded@ts5.4 @types/fresh@ts5.4 @types/function-bind@ts5.4 @types/get-intrinsic@ts5.4 @types/gopd@ts5.4 @types/has-property-descriptors@ts5.4 @types/has-symbols@ts5.4 @types/http-errors@ts5.4 @types/inherits@ts5.4 @types/jsonwebtoken@ts5.4 @types/media-typer@ts5.4 @types/merge-descriptors@ts5.4 @types/methods@ts5.4 @types/mime-db@ts5.4 @types/mime-types@ts5.4 @types/ms@ts5.4 @types/negotiator@ts5.4 @types/object-inspect@ts5.4 @types/on-finished@ts5.4 @types/parseurl@ts5.4 @types/proxy-addr@ts5.4 @types/qs@ts5.4 @types/range-parser@ts5.4 @types/safer-buffer@ts5.4 @types/send@ts5.4 @types/serve-static@ts5.4 @types/statuses@ts5.4 @types/toidentifier@ts5.4 @types/type-is@ts5.4 @types/utils-merge@ts5.4 @types/vary@ts5.4 @types/jws@ts5.4 @types/lodash.includes@ts5.4 @types/lodash.isboolean@ts5.4 @types/lodash.isinteger@ts5.4 @types/lodash.isnumber@ts5.4 @types/lodash.isplainobject@ts5.4 @types/lodash.isstring@ts5.4 @types/lodash.once@ts5.4
+8 verbose argv "install" "--ignore-scripts" "@types/accepts@ts5.4" "@types/bcrypt@ts5.4" "@types/bcryptjs@ts5.4" "@types/body-parser@ts5.4" "@types/bytes@ts5.4" "@types/call-bind@ts5.4" "@types/content-disposition@ts5.4" "@types/content-type@ts5.4" "@types/cookie@ts5.4" "@types/cookie-parser@ts5.4" "@types/cookie-signature@ts5.4" "@types/debug@ts5.4" "@types/depd@ts5.4" "@types/destroy@ts5.4" "@types/ee-first@ts5.4" "@types/encodeurl@ts5.4" "@types/escape-html@ts5.4" "@types/etag@ts5.4" "@types/express@ts5.4" "@types/finalhandler@ts5.4" "@types/forwarded@ts5.4" "@types/fresh@ts5.4" "@types/function-bind@ts5.4" "@types/get-intrinsic@ts5.4" "@types/gopd@ts5.4" "@types/has-property-descriptors@ts5.4" "@types/has-symbols@ts5.4" "@types/http-errors@ts5.4" "@types/inherits@ts5.4" "@types/jsonwebtoken@ts5.4" "@types/media-typer@ts5.4" "@types/merge-descriptors@ts5.4" "@types/methods@ts5.4" "@types/mime-db@ts5.4" "@types/mime-types@ts5.4" "@types/ms@ts5.4" "@types/negotiator@ts5.4" "@types/object-inspect@ts5.4" "@types/on-finished@ts5.4" "@types/parseurl@ts5.4" "@types/proxy-addr@ts5.4" "@types/qs@ts5.4" "@types/range-parser@ts5.4" "@types/safer-buffer@ts5.4" "@types/send@ts5.4" "@types/serve-static@ts5.4" "@types/statuses@ts5.4" "@types/toidentifier@ts5.4" "@types/type-is@ts5.4" "@types/utils-merge@ts5.4" "@types/vary@ts5.4" "@types/jws@ts5.4" "@types/lodash.includes@ts5.4" "@types/lodash.isboolean@ts5.4" "@types/lodash.isinteger@ts5.4" "@types/lodash.isnumber@ts5.4" "@types/lodash.isplainobject@ts5.4" "@types/lodash.isstring@ts5.4" "@types/lodash.once@ts5.4" "--save-dev" "--user-agent" "typesInstaller/5.4.5"
+9 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-22T15_01_39_935Z-
+10 verbose logfile /Users/mac/.npm/_logs/2024-09-22T15_01_39_935Z-debug-0.log
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmjs.org/@types%2faccepts cache-miss
+15 silly packumentCache corgi:https://registry.npmjs.org/@types%2fbcrypt cache-miss
+16 silly packumentCache corgi:https://registry.npmjs.org/@types%2fbcryptjs cache-miss
+17 silly packumentCache corgi:https://registry.npmjs.org/@types%2fbody-parser cache-miss
+18 silly packumentCache corgi:https://registry.npmjs.org/@types%2fbytes cache-miss
+19 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcall-bind cache-miss
+20 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcontent-disposition cache-miss
+21 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcontent-type cache-miss
+22 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcookie cache-miss
+23 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcookie-parser cache-miss
+24 silly packumentCache corgi:https://registry.npmjs.org/@types%2fcookie-signature cache-miss
+25 silly packumentCache corgi:https://registry.npmjs.org/@types%2fdebug cache-miss
+26 silly packumentCache corgi:https://registry.npmjs.org/@types%2fdepd cache-miss
+27 silly packumentCache corgi:https://registry.npmjs.org/@types%2fdestroy cache-miss
+28 silly packumentCache corgi:https://registry.npmjs.org/@types%2fee-first cache-miss
+29 silly packumentCache corgi:https://registry.npmjs.org/@types%2fencodeurl cache-miss
+30 silly packumentCache corgi:https://registry.npmjs.org/@types%2fescape-html cache-miss
+31 silly packumentCache corgi:https://registry.npmjs.org/@types%2fetag cache-miss
+32 silly packumentCache corgi:https://registry.npmjs.org/@types%2fexpress cache-miss
+33 silly packumentCache corgi:https://registry.npmjs.org/@types%2ffinalhandler cache-miss
+34 silly packumentCache corgi:https://registry.npmjs.org/@types%2fforwarded cache-miss
+35 silly packumentCache corgi:https://registry.npmjs.org/@types%2ffresh cache-miss
+36 silly packumentCache corgi:https://registry.npmjs.org/@types%2ffunction-bind cache-miss
+37 silly packumentCache corgi:https://registry.npmjs.org/@types%2fget-intrinsic cache-miss
+38 silly packumentCache corgi:https://registry.npmjs.org/@types%2fgopd cache-miss
+39 silly packumentCache corgi:https://registry.npmjs.org/@types%2fhas-property-descriptors cache-miss
+40 silly packumentCache corgi:https://registry.npmjs.org/@types%2fhas-symbols cache-miss
+41 silly packumentCache corgi:https://registry.npmjs.org/@types%2fhttp-errors cache-miss
+42 silly packumentCache corgi:https://registry.npmjs.org/@types%2finherits cache-miss
+43 silly packumentCache corgi:https://registry.npmjs.org/@types%2fjsonwebtoken cache-miss
+44 silly packumentCache corgi:https://registry.npmjs.org/@types%2fmedia-typer cache-miss
+45 silly packumentCache corgi:https://registry.npmjs.org/@types%2fmerge-descriptors cache-miss
+46 silly packumentCache corgi:https://registry.npmjs.org/@types%2fmethods cache-miss
+47 silly packumentCache corgi:https://registry.npmjs.org/@types%2fmime-db cache-miss
+48 silly packumentCache corgi:https://registry.npmjs.org/@types%2fmime-types cache-miss
+49 silly packumentCache corgi:https://registry.npmjs.org/@types%2fms cache-miss
+50 silly packumentCache corgi:https://registry.npmjs.org/@types%2fnegotiator cache-miss
+51 silly packumentCache corgi:https://registry.npmjs.org/@types%2fobject-inspect cache-miss
+52 silly packumentCache corgi:https://registry.npmjs.org/@types%2fon-finished cache-miss
+53 silly packumentCache corgi:https://registry.npmjs.org/@types%2fparseurl cache-miss
+54 silly packumentCache corgi:https://registry.npmjs.org/@types%2fproxy-addr cache-miss
+55 silly packumentCache corgi:https://registry.npmjs.org/@types%2fqs cache-miss
+56 silly packumentCache corgi:https://registry.npmjs.org/@types%2frange-parser cache-miss
+57 silly packumentCache corgi:https://registry.npmjs.org/@types%2fsafer-buffer cache-miss
+58 silly packumentCache corgi:https://registry.npmjs.org/@types%2fsend cache-miss
+59 silly packumentCache corgi:https://registry.npmjs.org/@types%2fserve-static cache-miss
+60 silly packumentCache corgi:https://registry.npmjs.org/@types%2fstatuses cache-miss
+61 silly packumentCache corgi:https://registry.npmjs.org/@types%2ftoidentifier cache-miss
+62 silly packumentCache corgi:https://registry.npmjs.org/@types%2ftype-is cache-miss
+63 silly packumentCache corgi:https://registry.npmjs.org/@types%2futils-merge cache-miss
+64 silly packumentCache corgi:https://registry.npmjs.org/@types%2fvary cache-miss
+65 silly packumentCache corgi:https://registry.npmjs.org/@types%2fjws cache-miss
+66 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.includes cache-miss
+67 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isboolean cache-miss
+68 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isinteger cache-miss
+69 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isnumber cache-miss
+70 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isplainobject cache-miss
+71 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isstring cache-miss
+72 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.once cache-miss
+73 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@types%2flodash.includes: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/3f19fc09'
+    at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
+    at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
+    at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
+    at async RegistryFetcher.manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:128:23)
+    at async /usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:512:22
+    at async Promise.all (index 52)
+    at async #add (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:501:5)
+    at async #applyUserRequestsToNode (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:470:7)
+    at async #applyUserRequests (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:405:7)
+    at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:180:7)
+74 verbose type system
+75 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@types%2flodash.includes: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/3f19fc09'
+75 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
+75 verbose stack     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
+75 verbose stack     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
+75 verbose stack     at async RegistryFetcher.manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:128:23)
+75 verbose stack     at async /usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:512:22
+75 verbose stack     at async Promise.all (index 52)
+75 verbose stack     at async #add (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:501:5)
+75 verbose stack     at async #applyUserRequestsToNode (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:470:7)
+75 verbose stack     at async #applyUserRequests (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:405:7)
+75 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:180:7)
+76 error code EACCES
+77 error syscall open
+78 error path /Users/mac/.npm/_cacache/tmp/3f19fc09
+79 error errno EACCES
+80 error
+80 error Your cache folder contains root-owned files, due to a bug in
+80 error previous versions of npm which has since been addressed.
+80 error
+80 error To permanently fix this problem, please run:
+80 error   sudo chown -R 501:20 "/Users/mac/.npm"
+81 silly unfinished npm timer reify 1727017302122
+82 silly unfinished npm timer reify:loadTrees 1727017302134
+83 silly unfinished npm timer idealTree:userRequests 1727017302210
+84 verbose cwd /Users/mac/Library/Caches/typescript/5.4
+85 verbose os Darwin 19.4.0
+86 verbose node v20.15.1
+87 verbose npm  v10.8.3
+88 verbose exit 1
+89 verbose code 1
+90 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-22T15_01_39_935Z-debug-0.log
