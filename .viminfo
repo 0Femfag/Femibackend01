@@ -11,6 +11,10 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:x
+|2,0,1727092363,,"x"
+:'<,'>:
+|2,0,1727092332,,"'<,'>:"
 
 # Search String History (newest to oldest):
 
@@ -22,20 +26,36 @@
 
 # Registers:
 ""-	CHAR	0
-	l
-|3,1,36,0,1,0,1726833845,"l"
+	#
+|3,1,36,0,1,0,1727092132,"#"
 
 # File marks:
-'0  2  0  ~/.gitconfig
-|4,48,2,0,1726833874,"~/.gitconfig"
+'0  36  0  ~/.git/rebase-merge/git-rebase-todo
+|4,48,36,0,1727092363,"~/.git/rebase-merge/git-rebase-todo"
+'1  2  0  ~/.gitconfig
+|4,49,2,0,1726833874,"~/.gitconfig"
 
 # Jumplist (newest first):
+-'  36  0  ~/.git/rebase-merge/git-rebase-todo
+|4,39,36,0,1727092363,"~/.git/rebase-merge/git-rebase-todo"
+-'  1  0  ~/.git/rebase-merge/git-rebase-todo
+|4,39,1,0,1727092063,"~/.git/rebase-merge/git-rebase-todo"
+-'  2  0  ~/.gitconfig
+|4,39,2,0,1726833874,"~/.gitconfig"
 -'  2  0  ~/.gitconfig
 |4,39,2,0,1726833874,"~/.gitconfig"
 -'  1  0  ~/.gitconfig
 |4,39,1,0,1726833508,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1726833508,"~/.gitconfig"
 
 # History of marks within files (newest to oldest):
+
+> ~/.git/rebase-merge/git-rebase-todo
+	*	1727092332	0
+	"	36	0
+	.	36	0
+	+	36	0
 
 > ~/.gitconfig
 	*	1726833871	0
