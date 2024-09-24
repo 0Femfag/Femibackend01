@@ -43,4 +43,48 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { register, loginUser };
+const logoutUser = async (req, res) => {
+  try {
+    res
+      .clearCookie("user_token")
+      .status(200)
+      .json({ message: "user logged out succesfully" });
+  } catch (error) {
+    res.status(500).json({ message: "something went wrong" });
+  }
+};
+
+const OuathRegister = async (req, res) => {
+  const { username, email, gender } = req.body;
+  try {
+    const findOne = await newuserModel.findOne({ email });
+    if (findOne && findOne.credentialAccount) {
+      return res.status(404).json({ message: "illegal parameters" });
+    }
+    if (findOne) {
+      const aboutUser = { id: findOne.id, role: findOne.role };
+      const token = jwt.sign(aboutUser, process.env.JWT_SECRET);
+      return res
+        .cookie("user_token", token)
+        .status(200)
+        .json({ message: "Login successful" });
+    }
+    const newUser = new newuserModel({
+      username,
+      email,
+      gender,
+      credentialAccount: false,
+    });
+    const savedUser = await newUser.save();
+    const aboutUser = { id: findOne.id, role: findOne.role };
+    const token = jwt.sign(aboutUser, process.env.JWT_SECRET);
+    return res
+      .cookie("user_token", token)
+      .status(200)
+      .json({ message: "Registration successful" });
+  } catch (error) {
+    res.status(500).json({ message: "something went wrong" });
+  }
+};
+
+module.exports = { register, loginUser, logoutUser, OuathRegister };

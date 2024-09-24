@@ -76,4 +76,4 @@ console.log(char2);
 
 const name = "23Schools";
 let letter = name.at(2);
-console.log();
+console.log(letter);

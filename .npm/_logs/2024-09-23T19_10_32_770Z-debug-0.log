@@ -6,9 +6,9 @@
 5 silly config load:file:/usr/local/etc/npmrc
 6 verbose title npm start
 7 verbose argv "start"
-8 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-20T10_54_42_058Z-
-9 verbose logfile /Users/mac/.npm/_logs/2024-09-20T10_54_42_058Z-debug-0.log
-10 silly logfile start cleaning logs, removing 2 files
+8 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-23T19_10_32_770Z-
+9 verbose logfile /Users/mac/.npm/_logs/2024-09-23T19_10_32_770Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
 11 silly logfile done cleaning log files
 12 verbose cwd /Users/mac
 13 verbose os Darwin 19.4.0
