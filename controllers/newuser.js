@@ -70,6 +70,7 @@ const deleteUser = async (req, res) => {
   console.log(id);
   try {
     await newuserModel.findByIdAndDelete(id);
+    res.clearCookie("user_token");
     res.json({ message: "User deleted successfully" });
   } catch (error) {
     console.log(error.message);

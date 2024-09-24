@@ -14,7 +14,10 @@ const newuserSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: true,
+    },
+    credentialAccount: {
+      type: Boolean,
+      default: true,
     },
     gender: {
       type: String,
@@ -27,6 +30,7 @@ const newuserSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: ["Basic", "Admin", "SuperAdmin"],
+      default: "Basic",
     },
   },
   { timestamps: true }

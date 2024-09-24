@@ -10,7 +10,6 @@ const register = async (req, res) => {
   const newUser = await newuserModel({
     password: hashedPassword,
     ...others,
-    role: "Basic",
   });
   try {
     const savedUser = await newUser.save();
@@ -47,7 +46,7 @@ const logoutUser = async (req, res) => {
   try {
     res
       .clearCookie("user_token")
-      .status(200)
+      .status(201)
       .json({ message: "user logged out succesfully" });
   } catch (error) {
     res.status(500).json({ message: "something went wrong" });
@@ -76,7 +75,7 @@ const OuathRegister = async (req, res) => {
       credentialAccount: false,
     });
     const savedUser = await newUser.save();
-    const aboutUser = { id: findOne.id, role: findOne.role };
+    const aboutUser = { id: savedUser.id, role: savedUser.role };
     const token = jwt.sign(aboutUser, process.env.JWT_SECRET);
     return res
       .cookie("user_token", token)
