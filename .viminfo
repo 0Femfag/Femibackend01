@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :x
-|2,0,1727195183,,"x"
+|2,0,1727254114,,"x"
 :'<,'>:
 |2,0,1727092332,,"'<,'>:"
 
@@ -30,14 +30,24 @@
 |3,1,36,0,1,0,1727092132,"#"
 
 # File marks:
-'0  76  0  ~/.git/COMMIT_EDITMSG
-|4,48,76,0,1727195183,"~/.git/COMMIT_EDITMSG"
-'1  36  0  ~/.git/rebase-merge/git-rebase-todo
-|4,49,36,0,1727092363,"~/.git/rebase-merge/git-rebase-todo"
-'2  2  0  ~/.gitconfig
-|4,50,2,0,1726833874,"~/.gitconfig"
+'0  64  0  ~/.git/COMMIT_EDITMSG
+|4,48,64,0,1727254114,"~/.git/COMMIT_EDITMSG"
+'1  76  0  ~/.git/COMMIT_EDITMSG
+|4,49,76,0,1727195183,"~/.git/COMMIT_EDITMSG"
+'2  76  0  ~/.git/COMMIT_EDITMSG
+|4,50,76,0,1727195183,"~/.git/COMMIT_EDITMSG"
+'3  36  0  ~/.git/rebase-merge/git-rebase-todo
+|4,51,36,0,1727092363,"~/.git/rebase-merge/git-rebase-todo"
+'4  2  0  ~/.gitconfig
+|4,52,2,0,1726833874,"~/.gitconfig"
 
 # Jumplist (newest first):
+-'  64  0  ~/.git/COMMIT_EDITMSG
+|4,39,64,0,1727254114,"~/.git/COMMIT_EDITMSG"
+-'  1  0  ~/.git/COMMIT_EDITMSG
+|4,39,1,0,1727254050,"~/.git/COMMIT_EDITMSG"
+-'  76  0  ~/.git/COMMIT_EDITMSG
+|4,39,76,0,1727195183,"~/.git/COMMIT_EDITMSG"
 -'  76  0  ~/.git/COMMIT_EDITMSG
 |4,39,76,0,1727195183,"~/.git/COMMIT_EDITMSG"
 -'  1  0  ~/.git/COMMIT_EDITMSG
@@ -46,6 +56,14 @@
 |4,39,36,0,1727092363,"~/.git/rebase-merge/git-rebase-todo"
 -'  36  0  ~/.git/rebase-merge/git-rebase-todo
 |4,39,36,0,1727092363,"~/.git/rebase-merge/git-rebase-todo"
+-'  36  0  ~/.git/rebase-merge/git-rebase-todo
+|4,39,36,0,1727092363,"~/.git/rebase-merge/git-rebase-todo"
+-'  36  0  ~/.git/rebase-merge/git-rebase-todo
+|4,39,36,0,1727092363,"~/.git/rebase-merge/git-rebase-todo"
+-'  1  0  ~/.git/rebase-merge/git-rebase-todo
+|4,39,1,0,1727092063,"~/.git/rebase-merge/git-rebase-todo"
+-'  1  0  ~/.git/rebase-merge/git-rebase-todo
+|4,39,1,0,1727092063,"~/.git/rebase-merge/git-rebase-todo"
 -'  1  0  ~/.git/rebase-merge/git-rebase-todo
 |4,39,1,0,1727092063,"~/.git/rebase-merge/git-rebase-todo"
 -'  1  0  ~/.git/rebase-merge/git-rebase-todo
@@ -58,6 +76,22 @@
 |4,39,2,0,1726833874,"~/.gitconfig"
 -'  2  0  ~/.gitconfig
 |4,39,2,0,1726833874,"~/.gitconfig"
+-'  2  0  ~/.gitconfig
+|4,39,2,0,1726833874,"~/.gitconfig"
+-'  2  0  ~/.gitconfig
+|4,39,2,0,1726833874,"~/.gitconfig"
+-'  2  0  ~/.gitconfig
+|4,39,2,0,1726833874,"~/.gitconfig"
+-'  2  0  ~/.gitconfig
+|4,39,2,0,1726833874,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1726833508,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1726833508,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1726833508,"~/.gitconfig"
+-'  1  0  ~/.gitconfig
+|4,39,1,0,1726833508,"~/.gitconfig"
 -'  1  0  ~/.gitconfig
 |4,39,1,0,1726833508,"~/.gitconfig"
 -'  1  0  ~/.gitconfig
@@ -70,8 +104,8 @@
 # History of marks within files (newest to oldest):
 
 > ~/.git/COMMIT_EDITMSG
-	*	1727195171	0
-	"	76	0
+	*	1727254108	0
+	"	64	0
 
 > ~/.git/rebase-merge/git-rebase-todo
 	*	1727092332	0
