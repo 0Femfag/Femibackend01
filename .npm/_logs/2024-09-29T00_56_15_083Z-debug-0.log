@@ -4,13 +4,13 @@
 3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
 4 silly config load:file:/Users/mac/.npmrc
 5 silly config load:file:/usr/local/etc/npmrc
-6 verbose title npm view type-is description dist-tags.latest homepage version time
-7 verbose argv "view" "--json" "--" "type-is" "description" "dist-tags.latest" "homepage" "version" "time"
-8 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-24T18_27_13_812Z-
-9 verbose logfile /Users/mac/.npm/_logs/2024-09-24T18_27_13_812Z-debug-0.log
+6 verbose title npm view setprototypeof description dist-tags.latest homepage version time
+7 verbose argv "view" "--json" "--" "setprototypeof" "description" "dist-tags.latest" "homepage" "version" "time"
+8 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-29T00_56_15_083Z-
+9 verbose logfile /Users/mac/.npm/_logs/2024-09-29T00_56_15_083Z-debug-0.log
 10 silly logfile start cleaning logs, removing 1 files
 11 silly logfile done cleaning log files
-12 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/type-is: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/a5a362e6'
+12 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/setprototypeof: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/2acd9c48'
     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
@@ -20,7 +20,7 @@
     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
 13 verbose type system
-14 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/type-is: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/a5a362e6'
+14 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/setprototypeof: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/2acd9c48'
 14 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
 14 verbose stack     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
 14 verbose stack     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
@@ -31,7 +31,7 @@
 14 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
 15 error code EACCES
 16 error syscall open
-17 error path /Users/mac/.npm/_cacache/tmp/a5a362e6
+17 error path /Users/mac/.npm/_cacache/tmp/2acd9c48
 18 error errno EACCES
 19 error
 19 error Your cache folder contains root-owned files, due to a bug in
@@ -45,4 +45,4 @@
 23 verbose npm  v10.8.3
 24 verbose exit 1
 25 verbose code 1
-26 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-24T18_27_13_812Z-debug-0.log
+26 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-29T00_56_15_083Z-debug-0.log

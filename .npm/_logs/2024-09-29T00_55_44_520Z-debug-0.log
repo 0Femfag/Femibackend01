@@ -4,14 +4,14 @@
 3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
 4 silly config load:file:/Users/mac/.npmrc
 5 silly config load:file:/usr/local/etc/npmrc
-6 verbose title npm view unpipe description dist-tags.latest homepage version time
-7 verbose argv "view" "--json" "--" "unpipe" "description" "dist-tags.latest" "homepage" "version" "time"
-8 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-24T18_27_14_799Z-
-9 verbose logfile /Users/mac/.npm/_logs/2024-09-24T18_27_14_799Z-debug-0.log
-10 silly logfile start cleaning logs, removing 1 files
+6 verbose title npm view utils-merge description dist-tags.latest homepage version time
+7 verbose argv "view" "--json" "--" "utils-merge" "description" "dist-tags.latest" "homepage" "version" "time"
+8 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-29T00_55_44_520Z-
+9 verbose logfile /Users/mac/.npm/_logs/2024-09-29T00_55_44_520Z-debug-0.log
+10 silly logfile start cleaning logs, removing 8 files
 11 silly logfile done cleaning log files
-12 http fetch GET 200 https://registry.npmjs.org/unpipe 2222ms (cache miss)
-13 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/unpipe: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/6a1b5438'
+12 http fetch GET 200 https://registry.npmjs.org/utils-merge 1246ms (cache miss)
+13 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/utils-merge: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/2d751ef4'
     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
@@ -21,7 +21,7 @@
     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
 14 verbose type system
-15 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/unpipe: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/6a1b5438'
+15 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/utils-merge: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/2d751ef4'
 15 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
 15 verbose stack     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
 15 verbose stack     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
@@ -32,7 +32,7 @@
 15 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
 16 error code EACCES
 17 error syscall open
-18 error path /Users/mac/.npm/_cacache/tmp/6a1b5438
+18 error path /Users/mac/.npm/_cacache/tmp/2d751ef4
 19 error errno EACCES
 20 error
 20 error Your cache folder contains root-owned files, due to a bug in
@@ -46,4 +46,4 @@
 24 verbose npm  v10.8.3
 25 verbose exit 1
 26 verbose code 1
-27 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-24T18_27_14_799Z-debug-0.log
+27 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-29T00_55_44_520Z-debug-0.log

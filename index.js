@@ -24,9 +24,9 @@ mongoose
   .then(() => console.log("connected"))
   .catch((error) => console.log(error));
 
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
-  console.log(`app is running at ${7000}`);
+  console.log(`app is running at ${PORT}`);
 });
 
 // const newUser = {
