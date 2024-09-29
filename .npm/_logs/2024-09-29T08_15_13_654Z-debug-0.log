@@ -7,8 +7,8 @@
 6 silly config load:file:/usr/local/etc/npmrc
 7 verbose title npm install @types/accepts@ts5.4 @types/bcrypt@ts5.4 @types/bcryptjs@ts5.4 @types/body-parser@ts5.4 @types/bytes@ts5.4 @types/call-bind@ts5.4 @types/content-disposition@ts5.4 @types/content-type@ts5.4 @types/cookie@ts5.4 @types/cookie-parser@ts5.4 @types/cookie-signature@ts5.4 @types/debug@ts5.4 @types/depd@ts5.4 @types/destroy@ts5.4 @types/ee-first@ts5.4 @types/encodeurl@ts5.4 @types/escape-html@ts5.4 @types/etag@ts5.4 @types/express@ts5.4 @types/finalhandler@ts5.4 @types/forwarded@ts5.4 @types/fresh@ts5.4 @types/function-bind@ts5.4 @types/get-intrinsic@ts5.4 @types/gopd@ts5.4 @types/has-property-descriptors@ts5.4 @types/has-symbols@ts5.4 @types/http-errors@ts5.4 @types/inherits@ts5.4 @types/jsonwebtoken@ts5.4 @types/media-typer@ts5.4 @types/merge-descriptors@ts5.4 @types/methods@ts5.4 @types/mime-db@ts5.4 @types/mime-types@ts5.4 @types/ms@ts5.4 @types/negotiator@ts5.4 @types/object-inspect@ts5.4 @types/on-finished@ts5.4 @types/parseurl@ts5.4 @types/proxy-addr@ts5.4 @types/qs@ts5.4 @types/range-parser@ts5.4 @types/safer-buffer@ts5.4 @types/send@ts5.4 @types/serve-static@ts5.4 @types/statuses@ts5.4 @types/toidentifier@ts5.4 @types/type-is@ts5.4 @types/utils-merge@ts5.4 @types/vary@ts5.4
 8 verbose argv "install" "--ignore-scripts" "@types/accepts@ts5.4" "@types/bcrypt@ts5.4" "@types/bcryptjs@ts5.4" "@types/body-parser@ts5.4" "@types/bytes@ts5.4" "@types/call-bind@ts5.4" "@types/content-disposition@ts5.4" "@types/content-type@ts5.4" "@types/cookie@ts5.4" "@types/cookie-parser@ts5.4" "@types/cookie-signature@ts5.4" "@types/debug@ts5.4" "@types/depd@ts5.4" "@types/destroy@ts5.4" "@types/ee-first@ts5.4" "@types/encodeurl@ts5.4" "@types/escape-html@ts5.4" "@types/etag@ts5.4" "@types/express@ts5.4" "@types/finalhandler@ts5.4" "@types/forwarded@ts5.4" "@types/fresh@ts5.4" "@types/function-bind@ts5.4" "@types/get-intrinsic@ts5.4" "@types/gopd@ts5.4" "@types/has-property-descriptors@ts5.4" "@types/has-symbols@ts5.4" "@types/http-errors@ts5.4" "@types/inherits@ts5.4" "@types/jsonwebtoken@ts5.4" "@types/media-typer@ts5.4" "@types/merge-descriptors@ts5.4" "@types/methods@ts5.4" "@types/mime-db@ts5.4" "@types/mime-types@ts5.4" "@types/ms@ts5.4" "@types/negotiator@ts5.4" "@types/object-inspect@ts5.4" "@types/on-finished@ts5.4" "@types/parseurl@ts5.4" "@types/proxy-addr@ts5.4" "@types/qs@ts5.4" "@types/range-parser@ts5.4" "@types/safer-buffer@ts5.4" "@types/send@ts5.4" "@types/serve-static@ts5.4" "@types/statuses@ts5.4" "@types/toidentifier@ts5.4" "@types/type-is@ts5.4" "@types/utils-merge@ts5.4" "@types/vary@ts5.4" "--save-dev" "--user-agent" "typesInstaller/5.4.5"
-9 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-27T17_49_50_064Z-
-10 verbose logfile /Users/mac/.npm/_logs/2024-09-27T17_49_50_064Z-debug-0.log
+9 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-29T08_15_13_654Z-
+10 verbose logfile /Users/mac/.npm/_logs/2024-09-29T08_15_13_654Z-debug-0.log
 11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
 12 silly logfile start cleaning logs, removing 1 files
 13 silly logfile done cleaning log files
@@ -63,7 +63,7 @@
 62 silly packumentCache corgi:https://registry.npmjs.org/@types%2ftype-is cache-miss
 63 silly packumentCache corgi:https://registry.npmjs.org/@types%2futils-merge cache-miss
 64 silly packumentCache corgi:https://registry.npmjs.org/@types%2fvary cache-miss
-65 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@types%2fcookie-parser: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/3c935817'
+65 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@types%2fcookie-parser: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/6ab6ec14'
     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
@@ -75,7 +75,7 @@
     at async #applyUserRequests (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:405:7)
     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:180:7)
 66 verbose type system
-67 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@types%2fcookie-parser: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/3c935817'
+67 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@types%2fcookie-parser: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/6ab6ec14'
 67 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
 67 verbose stack     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
 67 verbose stack     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
@@ -88,7 +88,7 @@
 67 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:180:7)
 68 error code EACCES
 69 error syscall open
-70 error path /Users/mac/.npm/_cacache/tmp/3c935817
+70 error path /Users/mac/.npm/_cacache/tmp/6ab6ec14
 71 error errno EACCES
 72 error
 72 error Your cache folder contains root-owned files, due to a bug in
@@ -96,13 +96,13 @@
 72 error
 72 error To permanently fix this problem, please run:
 72 error   sudo chown -R 501:20 "/Users/mac/.npm"
-73 silly unfinished npm timer reify 1727459391402
-74 silly unfinished npm timer reify:loadTrees 1727459391428
-75 silly unfinished npm timer idealTree:userRequests 1727459391488
+73 silly unfinished npm timer reify 1727597714497
+74 silly unfinished npm timer reify:loadTrees 1727597714536
+75 silly unfinished npm timer idealTree:userRequests 1727597714604
 76 verbose cwd /Users/mac/Library/Caches/typescript/5.4
 77 verbose os Darwin 19.4.0
 78 verbose node v20.15.1
 79 verbose npm  v10.8.3
 80 verbose exit 1
 81 verbose code 1
-82 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-27T17_49_50_064Z-debug-0.log
+82 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-29T08_15_13_654Z-debug-0.log

@@ -7,13 +7,13 @@
 6 silly config load:file:/usr/local/etc/npmrc
 7 verbose title npm install types-registry@latest
 8 verbose argv "install" "--ignore-scripts" "types-registry@latest"
-9 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-27T17_49_42_922Z-
-10 verbose logfile /Users/mac/.npm/_logs/2024-09-27T17_49_42_922Z-debug-0.log
+9 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-09-29T08_15_10_746Z-
+10 verbose logfile /Users/mac/.npm/_logs/2024-09-29T08_15_10_746Z-debug-0.log
 11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
 12 silly logfile start cleaning logs, removing 1 files
 13 silly logfile done cleaning log files
 14 silly packumentCache corgi:https://registry.npmjs.org/types-registry cache-miss
-15 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/types-registry: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/c60d061f'
+15 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/types-registry: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/5cd2eaeb'
     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
@@ -25,7 +25,7 @@
     at async #applyUserRequests (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:405:7)
     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:180:7)
 16 verbose type system
-17 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/types-registry: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/c60d061f'
+17 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/types-registry: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/5cd2eaeb'
 17 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
 17 verbose stack     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
 17 verbose stack     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
@@ -38,7 +38,7 @@
 17 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:180:7)
 18 error code EACCES
 19 error syscall open
-20 error path /Users/mac/.npm/_cacache/tmp/c60d061f
+20 error path /Users/mac/.npm/_cacache/tmp/5cd2eaeb
 21 error errno EACCES
 22 error
 22 error Your cache folder contains root-owned files, due to a bug in
@@ -46,13 +46,13 @@
 22 error
 22 error To permanently fix this problem, please run:
 22 error   sudo chown -R 501:20 "/Users/mac/.npm"
-23 silly unfinished npm timer reify 1727459387816
-24 silly unfinished npm timer reify:loadTrees 1727459387879
-25 silly unfinished npm timer idealTree:userRequests 1727459388100
+23 silly unfinished npm timer reify 1727597712238
+24 silly unfinished npm timer reify:loadTrees 1727597712284
+25 silly unfinished npm timer idealTree:userRequests 1727597712361
 26 verbose cwd /Users/mac/Library/Caches/typescript/5.4
 27 verbose os Darwin 19.4.0
 28 verbose node v20.15.1
 29 verbose npm  v10.8.3
 30 verbose exit 1
 31 verbose code 1
-32 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-27T17_49_42_922Z-debug-0.log
+32 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-09-29T08_15_10_746Z-debug-0.log
