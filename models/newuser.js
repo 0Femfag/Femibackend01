@@ -15,6 +15,11 @@ const newuserSchema = new mongoose.Schema(
     password: {
       type: String,
     },
+    phoneNumber: {
+      type: Number,
+      required: true,
+      unique: true,
+    },
     credentialAccount: {
       type: Boolean,
       default: true,
@@ -23,18 +28,14 @@ const newuserSchema = new mongoose.Schema(
       type: String,
       enum: ["Male", "Female"],
     },
-    details: {
-      address: String,
-      postcode: Number,
-    },
     role: {
       type: String,
-      enum: ["Basic", "Admin", "SuperAdmin"],
-      default: "Basic",
+      enum: ["User", "Admin", "SuperAdmin"],
+      default: "User",
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
-const newuserModel = mongoose.model("LUMINARY", newuserSchema);
+const newuserModel = mongoose.model("USER", newuserSchema);
 module.exports = newuserModel;

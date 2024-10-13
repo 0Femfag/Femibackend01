@@ -1,0 +1,66 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.0
+2 info using node@v20.15.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/Library/Caches/typescript/5.4/.npmrc
+5 silly config load:file:/Users/mac/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install @types/jws@ts5.4 @types/lodash.includes@ts5.4 @types/lodash.isboolean@ts5.4 @types/lodash.isinteger@ts5.4 @types/lodash.isnumber@ts5.4 @types/lodash.isplainobject@ts5.4 @types/lodash.isstring@ts5.4 @types/lodash.once@ts5.4
+8 verbose argv "install" "--ignore-scripts" "@types/jws@ts5.4" "@types/lodash.includes@ts5.4" "@types/lodash.isboolean@ts5.4" "@types/lodash.isinteger@ts5.4" "@types/lodash.isnumber@ts5.4" "@types/lodash.isplainobject@ts5.4" "@types/lodash.isstring@ts5.4" "@types/lodash.once@ts5.4" "--save-dev" "--user-agent" "typesInstaller/5.4.5"
+9 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-10-12T21_02_33_038Z-
+10 verbose logfile /Users/mac/.npm/_logs/2024-10-12T21_02_33_038Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmjs.org/@types%2fjws cache-miss
+15 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.includes cache-miss
+16 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isboolean cache-miss
+17 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isinteger cache-miss
+18 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isnumber cache-miss
+19 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isplainobject cache-miss
+20 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isstring cache-miss
+21 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.once cache-miss
+22 http fetch GET https://registry.npmjs.org/@types%2fjws attempt 1 failed with ENOTFOUND
+23 http fetch GET https://registry.npmjs.org/@types%2flodash.includes attempt 1 failed with ENOTFOUND
+24 http fetch GET https://registry.npmjs.org/@types%2flodash.isboolean attempt 1 failed with ENOTFOUND
+25 http fetch GET https://registry.npmjs.org/@types%2flodash.isinteger attempt 1 failed with ENOTFOUND
+26 http fetch GET https://registry.npmjs.org/@types%2flodash.isnumber attempt 1 failed with ENOTFOUND
+27 http fetch GET https://registry.npmjs.org/@types%2flodash.isplainobject attempt 1 failed with ENOTFOUND
+28 http fetch GET https://registry.npmjs.org/@types%2flodash.isstring attempt 1 failed with ENOTFOUND
+29 http fetch GET https://registry.npmjs.org/@types%2flodash.once attempt 1 failed with ENOTFOUND
+30 http fetch GET https://registry.npmjs.org/@types%2fjws attempt 2 failed with ENOTFOUND
+31 http fetch GET https://registry.npmjs.org/@types%2flodash.includes attempt 2 failed with ENOTFOUND
+32 http fetch GET https://registry.npmjs.org/@types%2flodash.isboolean attempt 2 failed with ENOTFOUND
+33 http fetch GET https://registry.npmjs.org/@types%2flodash.isinteger attempt 2 failed with ENOTFOUND
+34 http fetch GET https://registry.npmjs.org/@types%2flodash.isnumber attempt 2 failed with ENOTFOUND
+35 http fetch GET https://registry.npmjs.org/@types%2flodash.isplainobject attempt 2 failed with ENOTFOUND
+36 http fetch GET https://registry.npmjs.org/@types%2flodash.isstring attempt 2 failed with ENOTFOUND
+37 http fetch GET https://registry.npmjs.org/@types%2flodash.once attempt 2 failed with ENOTFOUND
+38 http fetch GET https://registry.npmjs.org/@types%2fjws attempt 3 failed with ENOTFOUND
+39 http fetch GET https://registry.npmjs.org/@types%2flodash.includes attempt 3 failed with ENOTFOUND
+40 verbose type system
+41 verbose stack FetchError: request to https://registry.npmjs.org/@types%2fjws failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+41 verbose stack     at ClientRequest.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/index.js:130:14)
+41 verbose stack     at ClientRequest.emit (node:events:519:28)
+41 verbose stack     at _destroy (node:_http_client:880:13)
+41 verbose stack     at onSocketNT (node:_http_client:900:5)
+41 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+42 error code ENOTFOUND
+43 error syscall getaddrinfo
+44 error errno ENOTFOUND
+45 error network request to https://registry.npmjs.org/@types%2fjws failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+46 error network This is a problem related to network connectivity.
+46 error network In most cases you are behind a proxy or have bad network settings.
+46 error network
+46 error network If you are behind a proxy, please make sure that the
+46 error network 'proxy' config is set properly.  See: 'npm help config'
+47 silly unfinished npm timer reify 1728766955948
+48 silly unfinished npm timer reify:loadTrees 1728766955950
+49 silly unfinished npm timer idealTree:userRequests 1728766956014
+50 verbose cwd /Users/mac/Library/Caches/typescript/5.4
+51 verbose os Darwin 19.4.0
+52 verbose node v20.15.1
+53 verbose npm  v10.9.0
+54 verbose exit 1
+55 verbose code 1
+56 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-10-12T21_02_33_038Z-debug-0.log

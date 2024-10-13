@@ -4,10 +4,13 @@ const dotenv = require("dotenv").config();
 // console.log(dotenv);
 const router = require("./routes/newuser");
 const routes = require("./routes/auth");
-const Postroutes = require("./routes/post");
-const Commentrouter = require("./routes/comment");
+const blopPostroute = require("./routes/blogpostauthroute");
+const Postroutes = require("./routes/blogpost");
+const Commentrouter = require("./routes/blogpostcomment");
+const productRoute = require("./routes/products");
+const cartRoute = require("./routes/cartproducts");
+const orderRoute = require("./routes/order");
 
-// const jwt = require("jsonwebtoken");
 const cookieparser = require("cookie-parser");
 // dotenv.config();
 const mongoose = require("mongoose");
@@ -15,16 +18,20 @@ const app = express();
 app.use(express.json());
 app.use(cookieparser());
 app.use(routes);
+app.use(blopPostroute);
 app.use(Postroutes);
 app.use(router);
 app.use(Commentrouter);
+app.use(productRoute);
+app.use(cartRoute);
+app.use(orderRoute);
 
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("connected"))
   .catch((error) => console.log(error));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 7000;
 app.listen(PORT, () => {
   console.log(`app is running at ${PORT}`);
 });
@@ -90,3 +97,22 @@ app.listen(PORT, () => {
 //     res.json({ message: error.message });
 //   }
 // };
+
+// var http = require("http");
+// const express = require("express");
+// const https = express();
+// // http.use(express.json());
+// // app.use(express.json());
+// http.request(express.json());
+
+// http.get("/get", function (req, res) {
+//   const body = req.body;
+//   console.log(body);
+//   // res.writeHead(200, { "Content-Type": "text/plain" });
+//   res.send("Hello World!");
+// });
+
+// const PORT = process.env.PORT || 8000;
+// http.listen(PORT, () => {
+//   console.log(`app is running at ${PORT}`);
+// });

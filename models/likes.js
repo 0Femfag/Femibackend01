@@ -24,9 +24,10 @@ const likeSchema = new mongoose.Schema(
     likes: {
       type: [mongoose.Types.ObjectId],
       default: [],
+      ref: "POST",
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 const likeModel = mongoose.model("POST", likeSchema);

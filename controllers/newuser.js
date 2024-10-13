@@ -31,8 +31,6 @@ const updateUser = async (req, res) => {
   //   }
   // );
   const { id } = req.user;
-  console.log(id);
-
   try {
     const updateoneUser = await newuserModel.findByIdAndUpdate(id, others, {
       new: true,
@@ -54,7 +52,7 @@ const newPassword = async (req, res) => {
     await newuserModel.findByIdAndUpdate(
       id,
       { password: newPassword },
-      { new: true }
+      { new: true },
     );
     if (newPassword === getUser.password) {
       return res.json({ message: "Same as old password" });
@@ -67,20 +65,18 @@ const newPassword = async (req, res) => {
 
 const deleteUser = async (req, res) => {
   const { id } = req.user;
-  console.log(id);
   try {
     await newuserModel.findByIdAndDelete(id);
     res.clearCookie("user_token");
-    res.json({ message: "User deleted successfully" });
+    res.status(200).json({ message: "User deleted successfully" });
   } catch (error) {
-    console.log(error.message);
+    res.status(500).json({ message: error.message });
   }
 };
 
 const updateRole = async (req, res) => {
   const { id } = req.body;
   const { role } = req.user;
-  console.log(role);
   if (role !== "SuperAdmin" && role !== "Admin") {
     return res.json({ message: "You don't have the permission" });
   }
@@ -90,7 +86,6 @@ const updateRole = async (req, res) => {
   } catch (error) {
     res.json(error.message);
   }
-  // console.log(req.user);
-  // res.json({ message: "Hello" });
 };
+
 module.exports = { updateUser, newPassword, deleteUser, updateRole };
