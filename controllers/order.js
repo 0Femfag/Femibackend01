@@ -27,6 +27,7 @@ const createOrder = async (req, res) => {
 
 const getOrders = async (req, res) => {
   const { id } = req.user;
+  console.log(id);
   try {
     const myOrder = await orderModel.find();
     res.status(200).json(myOrder);
