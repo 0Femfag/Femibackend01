@@ -38,6 +38,7 @@ const getOrders = async (req, res) => {
 
 const admingetOrders = async (req, res) => {
   const { role } = req.user;
+  console.log(role);
   try {
     if (role !== "Admin") {
       return res.status(404).json({ message: "You're not permitted" });
