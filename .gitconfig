@@ -5,3 +5,5 @@
 # Please adapt and uncomment the following lines:
 #	name = Mac
 #	email = mac@Macs-MacBook-Air.local
+[http]
+	postBuffer = 524288000
