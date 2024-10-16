@@ -1,4 +1,3 @@
-const { findById } = require("../models/newuser");
 const productModel = require("../models/products");
 
 const createProduct = async (req, res) => {

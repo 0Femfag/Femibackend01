@@ -3,23 +3,31 @@ const cartproductModel = require("../models/cartproducts");
 const productModel = require("../models/products");
 
 const createOrder = async (req, res) => {
-  const { userId, ...others } = req.body;
+  const { totalPrice, quantity, ...others } = req.body;
   console.log(others);
   const { id } = req.user;
   console.log(id);
   try {
-    const cart = await cartproductModel.findOne({ userId: id });
-    if (!cart) {
+    const cartItems = await cartproductModel
+      .find({ userId: id })
+      .populate("productId");
+    if (!cartItems.length) {
       return res.status(400).json({ message: "No cart product" });
     }
-    const totalPrice = cartproductModel.forEach((productId) => {
-      totalPrice += productId.quantity * productId.price;
+    let totalPrice = 0;
+    cartItems.forEach((cartItem) => {
+      totalPrice += cartItem.quantity * cartItem.productId.price;
     });
     console.log(totalPrice);
-    const newOrder = new orderModel({ userId: id, ...others });
+    const newOrder = new orderModel({
+      userId: id,
+      totalPrice,
+      quantity,
+      ...others,
+    });
     await newOrder.save();
     await cartproductModel.findOneAndDelete({ userId: id });
-    res.status(201).json(newOrder);
+    res.status(201).json({ message: "Order sent", newOrder });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -27,9 +35,8 @@ const createOrder = async (req, res) => {
 
 const getOrders = async (req, res) => {
   const { id } = req.user;
-  console.log(id);
   try {
-    const myOrder = await orderModel.find();
+    const myOrder = await orderModel.find(id);
     res.status(200).json(myOrder);
   } catch (error) {
     res.status(500).json({ message: "Server error" });
@@ -38,7 +45,6 @@ const getOrders = async (req, res) => {
 
 const admingetOrders = async (req, res) => {
   const { role } = req.user;
-  console.log(role);
   try {
     if (role !== "Admin") {
       return res.status(404).json({ message: "You're not permitted" });

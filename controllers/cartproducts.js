@@ -3,9 +3,7 @@ const productModel = require("../models/products");
 
 const addCart = async (req, res) => {
   const { quantity, productId } = req.body;
-  console.log(quantity);
   const { id } = req.user;
-  console.log(id);
   try {
     const getProduct = await productModel.findById(productId);
     if (!getProduct) {
@@ -17,9 +15,6 @@ const addCart = async (req, res) => {
       userId: id,
     });
     const savedCart = await newcartProduct.save();
-    await productModel.findByIdAndUpdate(productId, {
-      $push: { cartproducts: savedCart.id },
-    });
     res.status(201).json({ message: "Added to cart" });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -31,7 +26,7 @@ const getCart = async (req, res) => {
   const params = req.params;
   try {
     const getall = await cartproductModel
-      .find()
+      .find(id)
       .populate({ path: "userId", select: "username email gender" })
       .populate({ path: "productId", select: "quantity" });
     const getOne = await cartproductModel

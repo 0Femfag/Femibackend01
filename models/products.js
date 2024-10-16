@@ -33,11 +33,6 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    cartproducts: {
-      type: [mongoose.Types.ObjectId],
-      default: [],
-      ref: "CARTPRODUCT",
-    },
   },
   { timestamps: true },
 );
