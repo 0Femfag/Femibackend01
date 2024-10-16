@@ -1,0 +1,65 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.0
+2 info using node@v20.15.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/Library/Caches/typescript/5.4/.npmrc
+5 silly config load:file:/Users/mac/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install @types/jws@ts5.4 @types/lodash.includes@ts5.4 @types/lodash.isboolean@ts5.4 @types/lodash.isinteger@ts5.4 @types/lodash.isnumber@ts5.4 @types/lodash.isplainobject@ts5.4 @types/lodash.isstring@ts5.4 @types/lodash.once@ts5.4
+8 verbose argv "install" "--ignore-scripts" "@types/jws@ts5.4" "@types/lodash.includes@ts5.4" "@types/lodash.isboolean@ts5.4" "@types/lodash.isinteger@ts5.4" "@types/lodash.isnumber@ts5.4" "@types/lodash.isplainobject@ts5.4" "@types/lodash.isstring@ts5.4" "@types/lodash.once@ts5.4" "--save-dev" "--user-agent" "typesInstaller/5.4.5"
+9 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-10-15T11_58_34_906Z-
+10 verbose logfile /Users/mac/.npm/_logs/2024-10-15T11_58_34_906Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmjs.org/@types%2fjws cache-miss
+15 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.includes cache-miss
+16 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isboolean cache-miss
+17 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isinteger cache-miss
+18 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isnumber cache-miss
+19 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isplainobject cache-miss
+20 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.isstring cache-miss
+21 silly packumentCache corgi:https://registry.npmjs.org/@types%2flodash.once cache-miss
+22 verbose FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@types%2fjws: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/66e4a2e5'
+    at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
+    at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
+    at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
+    at async RegistryFetcher.manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:128:23)
+    at async /usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:515:22
+    at async Promise.all (index 0)
+    at async #add (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:504:5)
+    at async #applyUserRequestsToNode (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:473:7)
+    at async #applyUserRequests (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:408:7)
+    at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:180:7)
+23 verbose type system
+24 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/@types%2fjws: EACCES: permission denied, open '/Users/mac/.npm/_cacache/tmp/66e4a2e5'
+24 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:170:15
+24 verbose stack     at async Response.json (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/body.js:75:17)
+24 verbose stack     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:98:25)
+24 verbose stack     at async RegistryFetcher.manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:128:23)
+24 verbose stack     at async /usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:515:22
+24 verbose stack     at async Promise.all (index 0)
+24 verbose stack     at async #add (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:504:5)
+24 verbose stack     at async #applyUserRequestsToNode (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:473:7)
+24 verbose stack     at async #applyUserRequests (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:408:7)
+24 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:180:7)
+25 error code EACCES
+26 error syscall open
+27 error path /Users/mac/.npm/_cacache/tmp/66e4a2e5
+28 error errno EACCES
+29 error
+29 error Your cache folder contains root-owned files, due to a bug in
+29 error previous versions of npm which has since been addressed.
+29 error
+29 error To permanently fix this problem, please run:
+29 error   sudo chown -R 501:20 "/Users/mac/.npm"
+30 silly unfinished npm timer reify 1728993516320
+31 silly unfinished npm timer reify:loadTrees 1728993516321
+32 silly unfinished npm timer idealTree:userRequests 1728993516389
+33 verbose cwd /Users/mac/Library/Caches/typescript/5.4
+34 verbose os Darwin 19.4.0
+35 verbose node v20.15.1
+36 verbose npm  v10.9.0
+37 verbose exit 1
+38 verbose code 1
+39 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-10-15T11_58_34_906Z-debug-0.log
