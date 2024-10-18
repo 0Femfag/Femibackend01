@@ -1,0 +1,25 @@
+{
+  "build": "py37h9ed2024_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0",
+    "yaml >=0.2.5,<0.3.0a0"
+  ],
+  "features": "",
+  "fn": "ruamel_yaml-0.15.100-py37h9ed2024_0.conda",
+  "legacy_bz2_md5": "7c9a328552dbbc426afe3d4c2b57b1d2",
+  "legacy_bz2_size": 257870,
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "03b612c30b47e9cd59423c4a88ce7224",
+  "name": "ruamel_yaml",
+  "sha256": "674dad9358a94b77b12226e14a2b5bf5201e22e96ed852cd17cd95ee1c682287",
+  "size": 249143,
+  "subdir": "osx-64",
+  "timestamp": 1616016753678,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/ruamel_yaml-0.15.100-py37h9ed2024_0.conda",
+  "version": "0.15.100"
+}

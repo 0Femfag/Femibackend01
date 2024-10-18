@@ -1,0 +1,15 @@
+# tk pkg-config source file
+
+prefix=/opt/concourse/worker/volumes/live/feea9981-eded-465a-7cb5-e6cc30cdd81b/volume/tk_1632504906579/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl
+exec_prefix=/opt/concourse/worker/volumes/live/feea9981-eded-465a-7cb5-e6cc30cdd81b/volume/tk_1632504906579/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl
+libdir=/opt/concourse/worker/volumes/live/feea9981-eded-465a-7cb5-e6cc30cdd81b/volume/tk_1632504906579/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/lib
+includedir=${prefix}/include
+
+Name: The Tk Toolkit
+Description: Tk is a cross-platform graphical user interface toolkit, the standard GUI not only for Tcl, but for many other dynamic languages as well.
+URL: https://www.tcl-lang.org/
+Version: 8.6.11
+Requires: tcl >= 8.6
+Libs: -L${libdir} -ltk8.6 -ltkstub8.6
+Libs.private:  
+Cflags: -I${includedir}

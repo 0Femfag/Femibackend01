@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "py37hca72f7f_0",
+  "build_number": 0,
+  "depends": [
+    "python >=3.7,<3.8.0a0",
+    "tqdm"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "conda-package-handling",
+  "platform": "osx",
+  "subdir": "osx-64",
+  "timestamp": 1649105906625,
+  "version": "1.8.1"
+}

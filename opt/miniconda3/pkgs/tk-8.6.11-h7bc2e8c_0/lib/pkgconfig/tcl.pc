@@ -1,0 +1,15 @@
+# tcl pkg-config source file
+
+prefix=/opt/concourse/worker/volumes/live/feea9981-eded-465a-7cb5-e6cc30cdd81b/volume/tk_1632504906579/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl
+exec_prefix=/opt/concourse/worker/volumes/live/feea9981-eded-465a-7cb5-e6cc30cdd81b/volume/tk_1632504906579/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl
+libdir=/opt/concourse/worker/volumes/live/feea9981-eded-465a-7cb5-e6cc30cdd81b/volume/tk_1632504906579/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/lib
+includedir=${prefix}/include
+
+Name: Tool Command Language
+Description: Tcl is a powerful, easy-to-learn dynamic programming language, suitable for a wide range of uses.
+URL: http://www.tcl.tk/
+Version: 8.6.11
+Requires.private: zlib >= 1.2.3
+Libs: -L${libdir} -ltcl8.6 -ltclstub8.6
+Libs.private:  -lz  -lpthread -framework CoreFoundation 
+Cflags: -I${includedir}

@@ -1,0 +1,61 @@
+{
+  "build": "py37h9ed2024_1003",
+  "build_number": 1003,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "cffi >=1.0.0",
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/mac/opt/miniconda3/pkgs/brotlipy-0.7.0-py37h9ed2024_1003",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/brotli/__init__.py",
+    "lib/python3.7/site-packages/brotli/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/brotli/__pycache__/brotli.cpython-37.pyc",
+    "lib/python3.7/site-packages/brotli/__pycache__/build.cpython-37.pyc",
+    "lib/python3.7/site-packages/brotli/_brotli.abi3.so",
+    "lib/python3.7/site-packages/brotli/brotli.py",
+    "lib/python3.7/site-packages/brotli/build.py",
+    "lib/python3.7/site-packages/brotlipy-0.7.0-py3.7.egg-info/PKG-INFO",
+    "lib/python3.7/site-packages/brotlipy-0.7.0-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.7/site-packages/brotlipy-0.7.0-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.7/site-packages/brotlipy-0.7.0-py3.7.egg-info/not-zip-safe",
+    "lib/python3.7/site-packages/brotlipy-0.7.0-py3.7.egg-info/requires.txt",
+    "lib/python3.7/site-packages/brotlipy-0.7.0-py3.7.egg-info/top_level.txt"
+  ],
+  "fn": "brotlipy-0.7.0-py37h9ed2024_1003.conda",
+  "legacy_bz2_md5": "410378dfab9b88406e864a1a89b6a4cc",
+  "legacy_bz2_size": 366780,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "/Users/mac/opt/miniconda3/pkgs/brotlipy-0.7.0-py37h9ed2024_1003",
+    "type": 1
+  },
+  "md5": "590336b71a40c271d45f30d4cfe07cc0",
+  "name": "brotlipy",
+  "package_tarball_full_path": "/Users/mac/opt/miniconda3/pkgs/brotlipy-0.7.0-py37h9ed2024_1003.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.7/site-packages/brotli/_brotli.abi3.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/concourse/worker/volumes/live/e713f1e7-e17e-4b5a-7500-d0eee6a95b3d/volume/brotlipy_1605539517365/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "c22db7aeb3b116b3fc0c2d7e9d9f1b09d87abd479dad8dbfb5521489e949006e",
+        "sha256_in_prefix": "e886b980a5ebb58a8f2ddd8050655a15f1f163d35d2feec3cda3b55067aa0f01",
+        "size_in_bytes": 783168
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "brotlipy==0.7.0=py37h9ed2024_1003",
+  "sha256": "e0c6039588322481077420c25a0973aa02e75330026eaaba555da6d5f265b923",
+  "size": 341301,
+  "subdir": "osx-64",
+  "timestamp": 1605539601551,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/brotlipy-0.7.0-py37h9ed2024_1003.conda",
+  "version": "0.7.0"
+}

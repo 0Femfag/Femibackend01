@@ -42,7 +42,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-const OuathRegister = async (req, res) => {
+const OauthRegister = async (req, res) => {
   const { username, email, gender } = req.body;
   try {
     const findUser = await taskModel.findOne({ email });
@@ -90,4 +90,4 @@ const logoutUser = async (req, res) => {
   }
 };
 
-module.exports = { signUp, OuathRegister, loginUser, logoutUser };
+module.exports = { signUp, loginUser, OauthRegister, logoutUser };

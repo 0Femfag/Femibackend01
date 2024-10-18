@@ -1,0 +1,49 @@
+{
+  "build": "py37hecd8cb5_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/mac/opt/miniconda3/pkgs/certifi-2021.10.8-py37hecd8cb5_2",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/certifi-2021.10.8-py3.7.egg-info/PKG-INFO",
+    "lib/python3.7/site-packages/certifi-2021.10.8-py3.7.egg-info/SOURCES.txt",
+    "lib/python3.7/site-packages/certifi-2021.10.8-py3.7.egg-info/dependency_links.txt",
+    "lib/python3.7/site-packages/certifi-2021.10.8-py3.7.egg-info/installed-files.txt",
+    "lib/python3.7/site-packages/certifi-2021.10.8-py3.7.egg-info/not-zip-safe",
+    "lib/python3.7/site-packages/certifi-2021.10.8-py3.7.egg-info/top_level.txt",
+    "lib/python3.7/site-packages/certifi/__init__.py",
+    "lib/python3.7/site-packages/certifi/__main__.py",
+    "lib/python3.7/site-packages/certifi/__pycache__/__init__.cpython-37.pyc",
+    "lib/python3.7/site-packages/certifi/__pycache__/__main__.cpython-37.pyc",
+    "lib/python3.7/site-packages/certifi/__pycache__/core.cpython-37.pyc",
+    "lib/python3.7/site-packages/certifi/cacert.pem",
+    "lib/python3.7/site-packages/certifi/core.py"
+  ],
+  "fn": "certifi-2021.10.8-py37hecd8cb5_2.conda",
+  "legacy_bz2_md5": "88e9bb8f92613585eabac4a9f7d52c41",
+  "legacy_bz2_size": 159461,
+  "license": "MPL-2.0",
+  "link": {
+    "source": "/Users/mac/opt/miniconda3/pkgs/certifi-2021.10.8-py37hecd8cb5_2",
+    "type": 1
+  },
+  "md5": "683a259e75ca2303f9e3d68a3e3d57f7",
+  "name": "certifi",
+  "package_tarball_full_path": "/Users/mac/opt/miniconda3/pkgs/certifi-2021.10.8-py37hecd8cb5_2.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "certifi==2021.10.8=py37hecd8cb5_2",
+  "sha256": "960aa45eb8d44a3f8a1c48ad6f1f387a34d7c97a564db0b609b4183c904e32c0",
+  "size": 154527,
+  "subdir": "osx-64",
+  "timestamp": 1641900043288,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/certifi-2021.10.8-py37hecd8cb5_2.conda",
+  "version": "2021.10.8"
+}

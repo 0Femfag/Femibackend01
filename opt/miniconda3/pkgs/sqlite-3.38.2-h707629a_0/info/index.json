@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64",
+  "build": "h707629a_0",
+  "build_number": 0,
+  "depends": [
+    "readline >=8.0,<9.0a0",
+    "zlib >=1.2.11,<1.3.0a0"
+  ],
+  "license": "Unlicense",
+  "name": "sqlite",
+  "platform": "osx",
+  "subdir": "osx-64",
+  "timestamp": 1648718084482,
+  "version": "3.38.2"
+}

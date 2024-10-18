@@ -1,0 +1,21 @@
+{
+  "build": "hca72f7f_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [],
+  "features": "",
+  "fn": "ncurses-6.3-hca72f7f_2.conda",
+  "legacy_bz2_md5": "fd80099408fe4e163dc9d2a619e9f05c",
+  "legacy_bz2_size": 1178891,
+  "license": "Free software (MIT-like)",
+  "md5": "32896581ee96215797b753884720e581",
+  "name": "ncurses",
+  "sha256": "c0769e31126edd29c8f9bf51f37c31f672ef1c426c89c175a6d0a8b61535a2bb",
+  "size": 876109,
+  "subdir": "osx-64",
+  "timestamp": 1636570029158,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/ncurses-6.3-hca72f7f_2.conda",
+  "version": "6.3"
+}

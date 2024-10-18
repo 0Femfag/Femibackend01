@@ -1,0 +1,3 @@
+#!/bin/bash
+export PYTHONEXECUTABLE=/opt/concourse/worker/volumes/live/ddc5cdb0-5de4-4b02-7ff1-a3ba6f1334e5/volume/python.app_1636034821869/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/bin/python
+/opt/concourse/worker/volumes/live/ddc5cdb0-5de4-4b02-7ff1-a3ba6f1334e5/volume/python.app_1636034821869/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/python.app/Contents/MacOS/python "$@"

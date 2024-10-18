@@ -1,0 +1,22 @@
+{
+  "build": "h4dc903c_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [],
+  "features": "",
+  "fn": "zlib-1.2.12-h4dc903c_1.conda",
+  "legacy_bz2_md5": "bcc13aad7004d01fb3184f6c712b1a8b",
+  "legacy_bz2_size": 123599,
+  "license": "Zlib",
+  "license_family": "Other",
+  "md5": "b0488707f1a5300572841cf20a77a732",
+  "name": "zlib",
+  "sha256": "f1e22993ef1c0070c0885310bb5c9c6a7dc34dcfbe9396de89edb6d2e02cf617",
+  "size": 99799,
+  "subdir": "osx-64",
+  "timestamp": 1650301327472,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/zlib-1.2.12-h4dc903c_1.conda",
+  "version": "1.2.12"
+}

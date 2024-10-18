@@ -1,0 +1,17 @@
+{
+  "openssl": "1.1.1",
+  "target_platform": "osx-64",
+  "readline": "8.0",
+  "sqlite": "3",
+  "tk": "8.6",
+  "c_compiler": "clang",
+  "cxx_compiler": "clangxx",
+  "libffi": "3.3",
+  "cxx_compiler_version": "12",
+  "zlib": "1.2",
+  "c_compiler_version": "12",
+  "CONDA_BUILD_SYSROOT": "/opt/MacOSX10.10.sdk",
+  "channel_targets": "defaults",
+  "bzip2": "1.0",
+  "xz": "5"
+}

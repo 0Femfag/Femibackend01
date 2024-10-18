@@ -1,0 +1,24 @@
+{
+  "build": "py37hca72f7f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "features": "",
+  "fn": "python.app-3-py37hca72f7f_0.conda",
+  "legacy_bz2_md5": "7a2d3b43a9dce9b679db6f2d7ab6f00f",
+  "legacy_bz2_size": 16541,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "379e8ff3bfbf75f6b4d6f20abd32b9d0",
+  "name": "python.app",
+  "sha256": "d3d8c129d0dd5f07b946aeb8b9145a56dd43042a92a3d06347cfa8c3ff23a189",
+  "size": 20771,
+  "subdir": "osx-64",
+  "timestamp": 1636034903864,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/python.app-3-py37hca72f7f_0.conda",
+  "version": "3"
+}

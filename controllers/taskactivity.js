@@ -1,4 +1,4 @@
-const taskActivity = require("../models/taskmodel");
+const taskActivity = require("../models/taskactivity");
 
 const createTask = async (req, res) => {
   const { creatorId, ...others } = req.body;
@@ -49,6 +49,50 @@ const getoneTask = async (req, res) => {
   }
 };
 
-const updateTask = async (req, res) => {};
+const updateTask = async (req, res) => {
+  const { id, ...others } = req.body;
+  const { role } = req.user;
+  try {
+    if (role !== "Admin" && role !== "User") {
+      return res
+        .status(403)
+        .json({ message: "You're not authenticated to do this" });
+    }
+    const getTask = await taskActivity.findById(id);
+    if (!getTask) {
+      return res.status(404).json({ message: "Task doesn't exist" });
+    }
+    const updateTask = await taskActivity.findByIdAndUpdate(
+      id,
+      { ...others },
+      { new: true },
+      res
+        .status(200)
+        .json({ message: "Task was updated successfully", updateTask }),
+    );
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 
-module.exports = { createTask, getallTask, getoneTask, updateTask };
+const deleteTask = async (req, res) => {
+  const { id } = req.params;
+  const { role } = req.user;
+  try {
+    if (role !== "Admin" && role !== "User") {
+      return res
+        .status(403)
+        .json({ message: "You're not authenticated to do this" });
+    }
+    const getoneTask = await taskActivity.findById(id);
+    if (!getoneTask) {
+      return res.status(404).json({ message: "Task doesn't exist" });
+    }
+    const deleteTask = await taskActivity.findByIdAndDelete(id);
+    res.status(200).json({ message: "Task was deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = { createTask, getallTask, getoneTask, updateTask, deleteTask };

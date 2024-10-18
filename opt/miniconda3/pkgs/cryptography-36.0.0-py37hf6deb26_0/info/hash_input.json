@@ -1,0 +1,6 @@
+{
+  "channel_targets": "defaults",
+  "rust_compiler": "rust",
+  "target_platform": "osx-64",
+  "rust_compiler_version": "1.46.0"
+}

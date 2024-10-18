@@ -1,0 +1,26 @@
+{
+  "build": "py37hecd8cb5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0",
+    "setuptools",
+    "wheel"
+  ],
+  "features": "",
+  "fn": "pip-21.2.2-py37hecd8cb5_0.conda",
+  "legacy_bz2_md5": "9333c40eab1c154c0665bcf391b8db6f",
+  "legacy_bz2_size": 2123119,
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "cb99fa45afbac900b17f2a4b20dca035",
+  "name": "pip",
+  "sha256": "3e7d9f35f4f0de251d8cebb600a9233bd35b8f82189353f7e57c09a158b579cf",
+  "size": 1916497,
+  "subdir": "osx-64",
+  "timestamp": 1627796643977,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/pip-21.2.2-py37hecd8cb5_0.conda",
+  "version": "21.2.2"
+}

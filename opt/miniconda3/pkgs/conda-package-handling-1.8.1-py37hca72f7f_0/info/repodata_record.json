@@ -1,0 +1,25 @@
+{
+  "build": "py37hca72f7f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0",
+    "tqdm"
+  ],
+  "features": "",
+  "fn": "conda-package-handling-1.8.1-py37hca72f7f_0.conda",
+  "legacy_bz2_md5": "377592df5ad7412f6a9514deb48d9964",
+  "legacy_bz2_size": 1693509,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "8dd15e1ace0e96938659b767c2641b72",
+  "name": "conda-package-handling",
+  "sha256": "cb45cafe6af433754d2fb257827562f3f193068e3984531cab4000683970e643",
+  "size": 1567834,
+  "subdir": "osx-64",
+  "timestamp": 1649105906625,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/conda-package-handling-1.8.1-py37hca72f7f_0.conda",
+  "version": "1.8.1"
+}

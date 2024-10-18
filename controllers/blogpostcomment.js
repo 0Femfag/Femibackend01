@@ -60,7 +60,6 @@ const getComment = async (req, res) => {
 const deleteoneComment = async (req, res) => {
   const { id } = req.params;
   const { role } = req.user;
-  console.log(id);
   try {
     if (role !== "Admin" && role !== "User") {
       return res
