@@ -16,13 +16,8 @@ const getallTask = async (req, res) => {
   const { id } = req.user;
   try {
     const getAll = await taskActivity
-      .find(id)
-      .populate({ path: "creatorId", select: "username email gender role " })
-      .populate({
-        path: "taskId",
-        select: "title description category completed",
-      });
-    res.status(200).json(getAll);
+      .find()
+      .populate({ path: "creatorId", select: "username email gender role " });
     if (!getAll) {
       return res.status(404).json({ message: "No such task" });
     }
@@ -38,11 +33,10 @@ const getoneTask = async (req, res) => {
   try {
     const getOne = await taskActivity
       .findById(taskId)
-      .populate({ path: "creatorId", select: "username email gender role " })
-      .populate({
-        path: "taskId",
-        select: "title description category completed",
-      });
+      .populate({ path: "creatorId", select: "username email gender role " });
+    if (!getOne) {
+      return res.status(404).json({ message: "No such task" });
+    }
     res.status(200).json(getOne);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -62,14 +56,14 @@ const updateTask = async (req, res) => {
     if (!getTask) {
       return res.status(404).json({ message: "Task doesn't exist" });
     }
-    const updateTask = await taskActivity.findByIdAndUpdate(
+    const updatetask = await taskActivity.findByIdAndUpdate(
       id,
       { ...others },
       { new: true },
-      res
-        .status(200)
-        .json({ message: "Task was updated successfully", updateTask }),
     );
+    res
+      .status(200)
+      .json({ message: "Task was updated successfully", updatetask });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -88,7 +82,7 @@ const deleteTask = async (req, res) => {
     if (!getoneTask) {
       return res.status(404).json({ message: "Task doesn't exist" });
     }
-    const deleteTask = await taskActivity.findByIdAndDelete(id);
+    await taskActivity.findByIdAndDelete(id);
     res.status(200).json({ message: "Task was deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
