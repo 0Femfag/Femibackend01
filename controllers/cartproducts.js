@@ -15,7 +15,7 @@ const addCart = async (req, res) => {
       userId: id,
     });
     const savedCart = await newcartProduct.save();
-    res.status(201).json({ message: "Added to cart" });
+    res.status(201).json({ message: "Added to cart", savedCart });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -23,17 +23,12 @@ const addCart = async (req, res) => {
 
 const getCart = async (req, res) => {
   const { id } = req.user;
-  const params = req.params;
   try {
     const getall = await cartproductModel
-      .find(id)
+      .find()
       .populate({ path: "userId", select: "username email gender" })
       .populate({ path: "productId", select: "quantity" });
-    const getOne = await cartproductModel
-      .findOne(params)
-      .populate({ path: "userId", select: "username email gender" })
-      .populate({ path: "productId", select: "quantity" });
-    if (!getOne) {
+    if (!getall) {
       return res.status(404).json({ message: "Cart not found" });
     }
     res.status(200).json(getall);
@@ -42,12 +37,31 @@ const getCart = async (req, res) => {
   }
 };
 
+const getoneCart = async (req, res) => {
+  const { id } = req.user;
+  const { productId } = req.params;
+  try {
+    const getOne = await cartproductModel
+      .findById(productId)
+      .populate({ path: "userId", select: "username email gender" })
+      .populate({ path: "productId", select: "quantity" });
+    if (!getOne) {
+      return res.status(404).json({ message: "Cart not found" });
+    }
+    res.status(200).json(getOne);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 const deleteCart = async (req, res) => {
   const { productId } = req.body;
-  console.log(productId);
   const { id } = req.user;
-  console.log(id);
   try {
+    const findCart = await cartproductModel.findById(productId);
+    if (!findCart) {
+      return res.status(404).json({ message: "Cart not found" });
+    }
     await cartproductModel.findByIdAndDelete(productId);
     res.status(200).json({ message: "cart deleted" });
   } catch (error) {
@@ -55,11 +69,4 @@ const deleteCart = async (req, res) => {
   }
 };
 
-module.exports = { addCart, getCart, deleteCart };
-
-// const productIndex = cart.products.findIndex(p=> p.product.toString()=== productId)
-//  if (!getall) {
-//   return res.status(404).json({ message: "Cart not found" });
-// }
-
-// 670692328562959b4983eb6f
+module.exports = { addCart, getCart, getoneCart, deleteCart };
