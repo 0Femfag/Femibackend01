@@ -1,6 +1,5 @@
 const orderModel = require("../models/order");
 const cartproductModel = require("../models/cartproducts");
-const productModel = require("../models/products");
 
 const createOrder = async (req, res) => {
   const { totalPrice, quantity, ...others } = req.body;

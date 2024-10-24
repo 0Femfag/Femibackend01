@@ -28,6 +28,10 @@ const taskSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    remainder: {
+      type: Date,
+      required: true,
+    },
   },
   { timestamps: true },
 );
