@@ -10,3 +10,9 @@
 9 verbose logfile /Users/mac/.npm/_logs/2024-10-24T07_19_02_707Z-debug-0.log
 10 silly logfile start cleaning logs, removing 1 files
 11 silly logfile done cleaning log files
+12 verbose cwd /Users/mac
+13 verbose os Darwin 19.4.0
+14 verbose node v20.15.1
+15 verbose npm  v10.9.0
+16 verbose exit 130
+17 verbose code 130
