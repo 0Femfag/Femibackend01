@@ -11,9 +11,8 @@ const orderRoute = require("./routes/order");
 const taskRoute = require("./routes/taskuser");
 const activityRoute = require("./routes/taskactivity");
 const cookieparser = require("cookie-parser");
-const cron = require("node-cron");
-// const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
+require("./remainderScheduler");
 const app = express();
 
 app.use(express.json());
@@ -31,7 +30,7 @@ app.use(activityRoute);
 
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => console.log("connected"))
+  .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
 const PORT = process.env.PORT || 7000;

@@ -30,7 +30,10 @@ const taskSchema = new mongoose.Schema(
     },
     remainder: {
       type: Date,
-      required: true,
+    },
+    notified: {
+      type: Boolean,
+      default: false,
     },
   },
   { timestamps: true },
