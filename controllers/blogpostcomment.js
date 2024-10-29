@@ -1,18 +1,18 @@
 const commentModel = require("../models/blogpostcomment");
-const postModel = require("../models/blogpostcontent");
+const postModel = require("../models/blogpost");
 
 const makeComment = async (req, res) => {
   const { comment, postId } = req.body;
-  const { id, role } = req.user;
+  const { role } = req.user;
   try {
+    const getPost = await postModel.findById(postId);
+    if (!getPost) {
+      return res.status(404).json({ message: "No such post" });
+    }
     if (role !== "Admin" && role !== "User") {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
-    }
-    const getPost = await postModel.findById(postId);
-    if (!getPost) {
-      return res.status(404).json({ message: "No such post" });
     }
     const newestComment = new commentModel({
       comment,
@@ -30,9 +30,10 @@ const makeComment = async (req, res) => {
 };
 
 const getallComment = async (req, res) => {
+  const { postId } = req.params;
   try {
     const getAll = await commentModel
-      .find()
+      .find(postId)
       .populate({ path: "postId", select: "title desc content" })
       .populate({ path: "commentorsId", select: "username gender email" });
     if (!getAll) {
@@ -58,19 +59,19 @@ const getComment = async (req, res) => {
 };
 
 const deleteoneComment = async (req, res) => {
-  const { id } = req.params;
-  const { role } = req.user;
+  const { commentId } = req.params;
+  const { id, role } = req.user;
   try {
-    if (role !== "Admin" && role !== "User") {
+    const getComment = await commentModel.findById(commentId);
+    if (!getComment) {
+      return res.status(404).json({ message: "No such comment" });
+    }
+    if (getComment.creatorId.toString() !== id && role !== "Admin") {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    const getComment = await commentModel.findById(id);
-    if (!getComment) {
-      return res.status(404).json({ message: "No such comment" });
-    }
-    const deleteOne = await commentModel.findByIdAndDelete(id);
+    const deleteOne = await commentModel.findByIdAndDelete(commentId);
     res.status(200).json({ message: "comment was deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -78,20 +79,20 @@ const deleteoneComment = async (req, res) => {
 };
 
 const updatoneComment = async (req, res) => {
-  const { id, ...others } = req.body;
-  const { role } = req.user;
+  const { commentId, ...others } = req.body;
+  const { id } = req.user;
   try {
-    if (role !== "Admin" && role !== "User") {
+    const getoneCommment = await commentModel.findById(commentId);
+    if (!getoneCommment) {
+      return res.status(404).json({ message: "No such comment" });
+    }
+    if (getoneComment.creatorId.toString() !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    const getoneCommment = await commentModel.findById(id);
-    if (!getoneCommment) {
-      return res.status(404).json({ message: "No such comment" });
-    }
     const updateOne = await commentModel.findByIdAndUpdate(
-      id,
+      commentId,
       { ...others },
       { new: true },
     );

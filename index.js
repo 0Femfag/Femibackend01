@@ -1,10 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 // const router = require("./routes/newuser");
-const routes = require("./routes/auth");
-const blopPostroute = require("./routes/blogpostauthroute");
+const blopPostroute = require("./routes/blogpostauth");
 const PostRoute = require("./routes/blogpost");
 const CommentRoute = require("./routes/blogpostcomment");
+const routes = require("./routes/auth");
 const productRoute = require("./routes/products");
 const cartRoute = require("./routes/cartproducts");
 const orderRoute = require("./routes/order");

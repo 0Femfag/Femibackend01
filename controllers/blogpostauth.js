@@ -1,4 +1,4 @@
-const userModel = require("../models/blogpostauthmodel");
+const userModel = require("../models/blogpostauth");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 

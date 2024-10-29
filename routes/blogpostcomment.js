@@ -10,9 +10,9 @@ const {
 const { verify } = require("../middlewares/verify");
 
 routes.post("/comment", verify, makeComment);
-routes.get("/getcomment", getallComment);
+routes.get("/getcomment/:postId", getallComment);
 routes.get("/getcomment/:commentId", getComment);
-routes.delete("/deletecomment/:id", verify, deleteoneComment);
+routes.delete("/deletecomment/:commentId", verify, deleteoneComment);
 routes.put("/putcomment", verify, updatoneComment);
 
 module.exports = routes;

@@ -1,4 +1,4 @@
-const postModel = require("../models/blogpostcontent");
+const postModel = require("../models/blogpost");
 const makePost = async (req, res) => {
   const { creatorId, ...others } = req.body;
   const { id } = req.user;
@@ -24,11 +24,10 @@ const getallPost = async (req, res) => {
 };
 
 const getonePost = async (req, res) => {
-  const { id } = req.params;
-  console.log(id);
+  const { postId } = req.params;
   try {
     const onePost = await postModel
-      .findById(id)
+      .findById(postId)
       .populate({ path: "creatorId", select: "username email gender" })
       .populate({ path: "comments", select: "comment commentorsId" });
     if (!onePost) {
@@ -41,23 +40,21 @@ const getonePost = async (req, res) => {
 };
 
 const updatePost = async (req, res) => {
-  const { id, ...others } = req.body;
-  const { role } = req.user;
+  const { postId, ...others } = req.body;
+  const { id, role } = req.user;
   try {
-    if (role !== "Admin" && role !== "User") {
+    const getPost = await postModel.findById(postId);
+    if (!getPost) {
+      return res.status(400).json({ message: "No such post" });
+    }
+    if (getPost.creatorId.toString() !== id && role !== "Admin") {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    const getPost = await postModel.findById(id);
-    if (!getPost) {
-      return res.status(400).json({ message: "No such post" });
-    }
-    const updatePost = await postModel.findByIdAndUpdate(
-      id,
-      { ...others },
-      { new: true },
-    );
+    const updatePost = await postModel
+      .findByIdAndUpdate(postId, { ...others }, { new: true })
+      .populate({ path: "creatorId", select: "username email gender" });
     res.status(200).json({ message: "Post updated successfully", updatePost });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -65,19 +62,19 @@ const updatePost = async (req, res) => {
 };
 
 const deletePost = async (req, res) => {
-  const { id } = req.params;
-  const { role } = req.user;
+  const { postId } = req.params;
+  const { id, role } = req.user;
   try {
-    if (role !== "Admin" && role !== "User") {
+    const getPost = await postModel.findById(postId);
+    if (!getPost) {
+      return res.status(404).json({ message: "No such post" });
+    }
+    if (getPost.creatorId.toString() !== id && role !== "Admin") {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    const getPost = await postModel.findById(id);
-    if (!getPost) {
-      return res.status(404).json({ message: "No such post" });
-    }
-    const deletePost = await postModel.findByIdAndDelete(id);
+    const deletePost = await postModel.findByIdAndDelete(postId);
     res.status(200).json({ message: "This post was deleted" });
   } catch (error) {
     res.status(500).json({ message: error.message });

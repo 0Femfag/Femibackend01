@@ -9,7 +9,7 @@ const createOrder = async (req, res) => {
       .find({ userId: id })
       .populate("productId");
     if (!cartItems.length) {
-      return res.status(400).json({ message: "No cart product" });
+      return res.status(404).json({ message: "No cart product" });
     }
     let totalPrice = 0;
     cartItems.forEach((cartItem) => {
