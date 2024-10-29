@@ -5,16 +5,21 @@ const createOrder = async (req, res) => {
   const { totalPrice, ...others } = req.body;
   const { id } = req.user;
   try {
-    const cartItems = await cartproductModel
-      .find({ userId: id })
-      .populate("productId");
-    if (!cartItems.length) {
-      return res.status(404).json({ message: "No cart product" });
-    }
-    let totalPrice = 0;
-    cartItems.forEach((cartItem) => {
-      totalPrice += cartItem.quantity * cartItem.productId.price;
+    const cartItems = await cartproductModel.findOne({ userId: id }).populate({
+      path: "productId",
+      select: "quantity description productName price inventoryCount category",
     });
+    if (!cartItems) {
+      return res.status(404).json({ message: "No product in cart" });
+    }
+    // let totalPrice = 0;
+    // cartItems.forEach((cartItem) => {
+    //   totalPrice += cartItem.quantity * cartItem.productId.price;
+    // });
+    let totalPrice = cartItems.reduce(
+      (total, cartItem) => total + cartItem.quantity * cartItem.productId.price,
+      0,
+    );
     const newOrder = new orderModel({
       userId: id,
       totalPrice,
@@ -31,7 +36,7 @@ const createOrder = async (req, res) => {
 const getOrders = async (req, res) => {
   const { id } = req.user;
   try {
-    const myOrder = await orderModel.find();
+    const myOrder = await orderModel.findById(id);
     if (!myOrder) {
       return res.status(404).json({ message: "No order" });
     }
@@ -70,7 +75,7 @@ const updateorderStatus = async (req, res) => {
     }
     order.orderStatus = orderStatus;
     await order.save();
-    res.status(201).json({ message: "Shipped" });
+    res.status(201).json({ message: "Shipped", order });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }

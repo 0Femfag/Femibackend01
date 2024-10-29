@@ -49,8 +49,8 @@ const getCart = async (req, res) => {
 };
 
 const getoneCart = async (req, res) => {
-  const { id } = req.user;
   const { productId } = req.params;
+  const { id } = req.user;
   try {
     const getOne = await cartproductModel
       .findById(productId)

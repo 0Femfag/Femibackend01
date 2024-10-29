@@ -41,13 +41,13 @@ const getonePost = async (req, res) => {
 
 const updatePost = async (req, res) => {
   const { postId, ...others } = req.body;
-  const { id, role } = req.user;
+  const { id } = req.user;
   try {
     const getPost = await postModel.findById(postId);
     if (!getPost) {
       return res.status(400).json({ message: "No such post" });
     }
-    if (getPost.creatorId.toString() !== id && role !== "Admin") {
+    if (getPost.creatorId.toString() !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });

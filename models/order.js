@@ -12,23 +12,18 @@ const orderSchema = new mongoose.Schema(
       required: true,
       ref: "PRODUCT",
     },
-    orderId: {
-      type: mongoose.Types.ObjectId,
-      required: true,
-      ref: "CARTPRODUCT",
-    },
     quantity: {
       type: Number,
       required: true,
     },
     orderStatus: {
       type: String,
-      required: true,
       enum: ["Pending", "Shipped", "Delivered"],
       default: "Pending",
     },
     totalPrice: {
       type: Number,
+      required: true,
     },
     shippingAddress: {
       type: {
