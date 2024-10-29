@@ -1,16 +1,5 @@
 const likeModel = require("../models/likes");
 
-// const createPost = async (req, res) => {
-//   const body = req.body;
-//   const newPost = new likeModel(body);
-//   try {
-//     await newPost.save();
-//     res.json("post successfully created");
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-
 const likePost = async (req, res) => {
   const { id, userId } = req.body;
   try {

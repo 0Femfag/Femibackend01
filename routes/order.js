@@ -11,6 +11,6 @@ const routes = express.Router();
 routes.post("/neworder", verify, createOrder);
 routes.get("/getuser", verify, getOrders);
 routes.get("/getadmin", verify, admingetOrders);
-routes.put("/put", verify, updateorderStatus);
+routes.put("/updatestatus", verify, updateorderStatus);
 
 module.exports = routes;

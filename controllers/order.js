@@ -2,10 +2,8 @@ const orderModel = require("../models/order");
 const cartproductModel = require("../models/cartproducts");
 
 const createOrder = async (req, res) => {
-  const { totalPrice, quantity, ...others } = req.body;
-  console.log(others);
+  const { totalPrice, ...others } = req.body;
   const { id } = req.user;
-  console.log(id);
   try {
     const cartItems = await cartproductModel
       .find({ userId: id })
@@ -17,11 +15,9 @@ const createOrder = async (req, res) => {
     cartItems.forEach((cartItem) => {
       totalPrice += cartItem.quantity * cartItem.productId.price;
     });
-    console.log(totalPrice);
     const newOrder = new orderModel({
       userId: id,
       totalPrice,
-      quantity,
       ...others,
     });
     await newOrder.save();
@@ -35,7 +31,10 @@ const createOrder = async (req, res) => {
 const getOrders = async (req, res) => {
   const { id } = req.user;
   try {
-    const myOrder = await orderModel.find(id);
+    const myOrder = await orderModel.find();
+    if (!myOrder) {
+      return res.status(404).json({ message: "No order" });
+    }
     res.status(200).json(myOrder);
   } catch (error) {
     res.status(500).json({ message: "Server error" });
@@ -49,6 +48,9 @@ const admingetOrders = async (req, res) => {
       return res.status(404).json({ message: "You're not permitted" });
     }
     const Orders = await orderModel.find();
+    if (!Orders) {
+      return res.status(404).json({ message: "No order" });
+    }
     res.status(200).json(Orders);
   } catch (error) {
     res.status(500).json({ message: "Server error" });
@@ -68,7 +70,7 @@ const updateorderStatus = async (req, res) => {
     }
     order.orderStatus = orderStatus;
     await order.save();
-    res.status(201).json({ message: "Pending" });
+    res.status(201).json({ message: "Shipped" });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }

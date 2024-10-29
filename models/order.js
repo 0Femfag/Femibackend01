@@ -19,6 +19,7 @@ const orderSchema = new mongoose.Schema(
     },
     quantity: {
       type: Number,
+      required: true,
     },
     orderStatus: {
       type: String,
@@ -28,7 +29,6 @@ const orderSchema = new mongoose.Schema(
     },
     totalPrice: {
       type: Number,
-      required: true,
     },
     shippingAddress: {
       type: {

@@ -1,6 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
-const router = require("./routes/newuser");
+// const router = require("./routes/newuser");
 const routes = require("./routes/auth");
 const blopPostroute = require("./routes/blogpostauthroute");
 const PostRoute = require("./routes/blogpost");
@@ -20,7 +20,7 @@ app.use(cookieparser());
 app.use(routes);
 app.use(blopPostroute);
 app.use(PostRoute);
-app.use(router);
+// app.use(router);
 app.use(CommentRoute);
 app.use(productRoute);
 app.use(cartRoute);

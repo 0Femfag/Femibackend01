@@ -16,34 +16,35 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-cron.schedule("0 * * * *", async () => {
+cron.schedule("* * * * *", async () => {
   try {
     const now = new Date();
-    const tasksWithRemainders = await taskActivity.find({
+    // const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);
+    const tasksRemainders = await taskActivity.find({
       remainder: { $lte: now },
       completed: false,
+      notified: false,
     });
-    tasksWithRemainders.forEach(async (task) => {
-      const user = await taskActivity;
+    for (const task of tasksRemainders) {
       const mailOptions = {
         from: "Femimane1@gmail.com",
-        to: "Floydmartin001@gmail.com",
+        to: "femfag305@gmail.com",
         subject: "Task project Remainder",
         text: `Hi remainder about your task activity: ${task.title}. Deadline:${task.deadline}`,
       };
-      transporter.sendMail(mailOptions, function (err, data) {
+      transporter.sendMail(mailOptions, async function (err, data) {
         if (err) {
           console.log("Error sending remainder", err);
         } else {
-          console.log("Email sent successfully", data);
+          console.log("Email sent successfully", data.response);
+          task.notified = true;
+          await task.save();
         }
       });
-    });
+    }
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.log("Error in setting cron remainder", error.message);
   }
 });
 
-// res.status(404).json({ message: "Error sending remainder", err });
-
-// res.status(200).json({ message: "Email sent successfully", data });
+// const oneHourLater = new Date(now.getTime() + 60 * 60 * 1000);
