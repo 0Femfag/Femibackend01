@@ -16,10 +16,9 @@ const createOrder = async (req, res) => {
     // cartItems.forEach((cartItem) => {
     //   totalPrice += cartItem.quantity * cartItem.productId.price;
     // });
-    let totalPrice = cartItems.reduce(
-      (total, cartItem) => total + cartItem.quantity * cartItem.productId.price,
-      0,
-    );
+    let totalPrice = cartItems.quantity.productId.reduce((total, cartItem) => {
+      return total + cartItem.quantity * cartItem.productId.price;
+    }, 0);
     const newOrder = new orderModel({
       userId: id,
       totalPrice,
