@@ -28,10 +28,7 @@ const taskSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    remainder: {
-      type: Date,
-    },
-    notified: {
+    remainderSent: {
       type: Boolean,
       default: false,
     },

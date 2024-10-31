@@ -17,6 +17,9 @@ const getallPost = async (req, res) => {
       .find()
       .populate({ path: "creatorId", select: "username email gender" })
       .populate({ path: "comments", select: "comment commentorsId" });
+    if (!allPost) {
+      return res.status(404).json({ message: "No such post" });
+    }
     res.status(200).json(allPost);
   } catch (error) {
     res.status(500).json({ message: error.message });

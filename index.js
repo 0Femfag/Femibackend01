@@ -12,7 +12,7 @@ const taskRoute = require("./routes/taskuser");
 const activityRoute = require("./routes/taskactivity");
 const cookieparser = require("cookie-parser");
 const mongoose = require("mongoose");
-require("./remainderScheduler");
+const remainder = require("./taskremainder");
 const app = express();
 
 app.use(express.json());

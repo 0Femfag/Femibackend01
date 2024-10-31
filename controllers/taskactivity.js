@@ -16,7 +16,7 @@ const getallTask = async (req, res) => {
   const { id } = req.user;
   try {
     const getAll = await taskActivity
-      .find()
+      .find(id)
       .populate({ path: "creatorId", select: "username email gender role " });
     if (!getAll) {
       return res.status(404).json({ message: "No such task" });

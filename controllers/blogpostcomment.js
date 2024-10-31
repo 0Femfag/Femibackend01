@@ -3,7 +3,7 @@ const postModel = require("../models/blogpost");
 
 const makeComment = async (req, res) => {
   const { comment, postId } = req.body;
-  const { role } = req.user;
+  const { id, role } = req.user;
   try {
     const getPost = await postModel.findById(postId);
     if (!getPost) {
@@ -33,8 +33,8 @@ const getallComment = async (req, res) => {
   const { postId } = req.params;
   try {
     const getAll = await commentModel
-      .find(postId)
-      .populate({ path: "postId", select: "title desc content" })
+      .find({ postId })
+      .populate({ path: "postId", select: "title description content" })
       .populate({ path: "commentorsId", select: "username gender email" });
     if (!getAll) {
       return res.status(404).json({ message: "No comments on this post yet" });
@@ -50,7 +50,7 @@ const getComment = async (req, res) => {
   try {
     const oneComment = await commentModel
       .findById(commentId)
-      .populate({ path: "postId", select: "title desc content" })
+      .populate({ path: "postId", select: "title description content" })
       .populate({ path: "commentorsId", select: "username gender email" });
     res.status(200).json(oneComment);
   } catch (error) {
@@ -59,19 +59,22 @@ const getComment = async (req, res) => {
 };
 
 const deleteoneComment = async (req, res) => {
-  const { commentId } = req.params;
+  const { commentId, postId } = req.body;
   const { id, role } = req.user;
   try {
     const getComment = await commentModel.findById(commentId);
     if (!getComment) {
       return res.status(404).json({ message: "No such comment" });
     }
-    if (getComment.creatorId.toString() !== id && role !== "Admin") {
+    if (getComment.commentorsId.toString() !== id && role !== "Admin") {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    const deleteOne = await commentModel.findByIdAndDelete(commentId);
+    const deleteComment = await commentModel.findByIdAndDelete(commentId);
+    await postModel.findByIdAndUpdate(postId, {
+      $pull: { comments: deleteComment.id },
+    });
     res.status(200).json({ message: "comment was deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -82,11 +85,11 @@ const updatoneComment = async (req, res) => {
   const { commentId, ...others } = req.body;
   const { id } = req.user;
   try {
-    const getoneCommment = await commentModel.findById(commentId);
-    if (!getoneCommment) {
+    const getoneComment = await commentModel.findById(commentId);
+    if (!getoneComment) {
       return res.status(404).json({ message: "No such comment" });
     }
-    if (getoneComment.creatorId.toString() !== id) {
+    if (getoneComment.commentorsId.toString() !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
