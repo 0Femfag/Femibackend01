@@ -1,0 +1,44 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.0
+2 info using node@v20.15.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/Library/Caches/typescript/5.4/.npmrc
+5 silly config load:file:/Users/mac/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install @types/uuid@ts5.4
+8 verbose argv "install" "--ignore-scripts" "@types/uuid@ts5.4" "--save-dev" "--user-agent" "typesInstaller/5.4.5"
+9 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-10-31T11_41_16_925Z-
+10 verbose logfile /Users/mac/.npm/_logs/2024-10-31T11_41_16_925Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly logfile done cleaning log files
+14 silly packumentCache corgi:https://registry.npmjs.org/@types%2fuuid cache-miss
+15 http fetch GET https://registry.npmjs.org/@types%2fuuid attempt 1 failed with ENOTFOUND
+16 http fetch GET https://registry.npmjs.org/@types%2fuuid attempt 2 failed with ENOTFOUND
+17 http fetch GET https://registry.npmjs.org/@types%2fuuid attempt 3 failed with ENOTFOUND
+18 verbose type system
+19 verbose stack FetchError: request to https://registry.npmjs.org/@types%2fuuid failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+19 verbose stack     at ClientRequest.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/index.js:130:14)
+19 verbose stack     at ClientRequest.emit (node:events:519:28)
+19 verbose stack     at _destroy (node:_http_client:880:13)
+19 verbose stack     at onSocketNT (node:_http_client:900:5)
+19 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+20 error code ENOTFOUND
+21 error syscall getaddrinfo
+22 error errno ENOTFOUND
+23 error network request to https://registry.npmjs.org/@types%2fuuid failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+24 error network This is a problem related to network connectivity.
+24 error network In most cases you are behind a proxy or have bad network settings.
+24 error network
+24 error network If you are behind a proxy, please make sure that the
+24 error network 'proxy' config is set properly.  See: 'npm help config'
+25 silly unfinished npm timer reify 1730374879035
+26 silly unfinished npm timer reify:loadTrees 1730374879036
+27 silly unfinished npm timer idealTree:userRequests 1730374879135
+28 verbose cwd /Users/mac/Library/Caches/typescript/5.4
+29 verbose os Darwin 19.4.0
+30 verbose node v20.15.1
+31 verbose npm  v10.9.0
+32 verbose exit 1
+33 verbose code 1
+34 error A complete log of this run can be found in: /Users/mac/.npm/_logs/2024-10-31T11_41_16_925Z-debug-0.log
