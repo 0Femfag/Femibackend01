@@ -9,7 +9,7 @@ const addCart = async (req, res) => {
   const { quantity, productId } = req.body;
   const { id } = req.user;
   try {
-    let getCart = await cartproductModel.findOne({ userId: id });
+    let getCart = await cartproductModel.findOne(id);
     // if (getCart) {
     //   if (cartOwner(_id, { userId: id })) {
     //     return res
@@ -17,7 +17,7 @@ const addCart = async (req, res) => {
     //       .json({ message: "You're not authorised to do this" });
     //   }
     // }
-    if (getCart.userId.toString() !== id) {
+    if (getCart.toString() !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
@@ -94,7 +94,12 @@ const updateCart = async (req, res) => {
     if (getCart) {
       return res.status(404).json({ message: "cart not found" });
     }
-    if (cartOwner(_id, { userId: id })) {
+    // if (cartOwner(_id, { userId: id })) {
+    //   return res
+    //     .status(403)
+    //     .json({ message: "You're not authorised to do this" });
+    // }
+    if (getCart.toString() !== userId) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });

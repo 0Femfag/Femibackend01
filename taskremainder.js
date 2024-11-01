@@ -1,4 +1,5 @@
 const taskActivity = require("./models/taskactivity");
+const taskModel = require("./models/taskuser");
 const cron = require("node-cron");
 const nodemailer = require("nodemailer");
 
@@ -16,11 +17,25 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-cron.schedule("0 * * * *", async () => {
+cron.schedule("0 * * * *", async (req, res) => {
+  const { taskId } = req.body;
+  const { id, role } = req.user;
   try {
+    const task = await taskActivity.findById(taskId);
+    if (!task) {
+      return res.status(404).json({ message: "task not found" });
+    }
+    const user = await taskModel.findById(id);
+    if (role !== "Admin") {
+      return res
+        .status(403)
+        .json({ message: "You're not authorised to do this" });
+    }
     const currentDate = new Date();
+    console.log(currentDate);
     const oneHourLater = new Date(currentDate.getTime() + 60 * 60 * 1000);
-    const tasksRemainders = await taskActivity.find({
+    console.log(oneHourLater);
+    const tasksRemainders = await taskActivity.findById(taskId, {
       deadline: { $gte: currentDate, $lte: oneHourLater },
       completed: false,
       remainderSent: false,
@@ -44,6 +59,6 @@ cron.schedule("0 * * * *", async () => {
       });
     }
   } catch (error) {
-    console.log("Error in setting cron remainder", error.message);
+    res.status(500).json({ message: "Error in setting cron remainder", error });
   }
 });
