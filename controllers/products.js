@@ -44,7 +44,7 @@ const getoneProduct = async (req, res) => {
 
 const updateProduct = async (req, res) => {
   const { productId, creatorId, ...others } = req.body;
-  const { role } = req.user;
+  const { id, role } = req.user;
   try {
     const oneProduct = await productModel.findById(productId);
     if (!oneProduct) {

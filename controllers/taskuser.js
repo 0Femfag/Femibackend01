@@ -29,7 +29,7 @@ const loginUser = async (req, res) => {
     if (!verify) {
       return res.status(400).json({ message: "Password doesn't match" });
     }
-    const aboutUser = { id: userInfo.id, role: userInfo.role };
+    const aboutUser = { id: userInfo.id };
     const token = jwt.sign(aboutUser, process.env.JWT_SECRET, {
       expiresIn: "24h",
     });
@@ -50,7 +50,7 @@ const OauthRegister = async (req, res) => {
       return res.status(404).json({ message: "illegal parameters" });
     }
     if (findUser) {
-      const aboutUser = { id: findUser.id, role: findUser.role };
+      const aboutUser = { id: findUser.id };
       const token = jwt.sign(aboutUser, process.env.JWT_SECRET, {
         expiresIn: "24h",
       });
@@ -66,7 +66,7 @@ const OauthRegister = async (req, res) => {
       credentialAccount: false,
     });
     const savedUser = await newUser.save();
-    const aboutUser = { id: savedUser.id, role: savedUser.role };
+    const aboutUser = { id: savedUser.id };
     const token = jwt.sign(aboutUser, process.env.JWT_SECRET, {
       expiresIn: "24h",
     });

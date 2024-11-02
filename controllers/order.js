@@ -1,5 +1,14 @@
 const orderModel = require("../models/order");
 const cartproductModel = require("../models/cartproducts");
+const productModel = require("../models/products");
+
+const taxRate = (userLocation) => 0.1;
+const shippingCost = (shippingMethod) => shippingMethod === "express";
+"standard" ? 15 : 5;
+const discount = (discountCode) => {
+  const validCodes = { FEMI10: 0.1, PRETERNATURAL: 0 };
+  return validCodes[discountCode] || 0;
+};
 
 const createOrder = async (req, res) => {
   const { totalPrice, ...others } = req.body;

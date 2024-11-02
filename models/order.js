@@ -25,6 +25,22 @@ const orderSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    shippingCost: {
+      type: Number,
+      default: 0,
+    },
+    tax: {
+      type: Number,
+      default: 0,
+    },
+    discount: {
+      type: Number,
+      default: 0,
+    },
+    finalPrice: {
+      type: Number,
+      required: true,
+    },
     shippingAddress: {
       type: {
         street: String,

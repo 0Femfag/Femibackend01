@@ -13,6 +13,6 @@ routes.post("/createtask", verify, createTask);
 routes.get("/gettask", verify, getallTask);
 routes.get("/gettask/:taskId", verify, getoneTask);
 routes.put("/updatetask", verify, updateTask);
-routes.delete("/deletetask/:id", verify, deleteTask);
+routes.delete("/deletetask/:taskId", verify, deleteTask);
 
 module.exports = routes;
