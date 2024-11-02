@@ -19,17 +19,20 @@ const transporter = nodemailer.createTransport({
 
 cron.schedule("0 * * * *", async (req, res) => {
   const { taskId } = req.body;
-  const { id, role } = req.user;
+  const { id } = req.user;
   try {
     const task = await taskActivity.findById(taskId);
     if (!task) {
       return res.status(404).json({ message: "task not found" });
     }
     const user = await taskModel.findById(id);
-    if (role !== "Admin") {
+    if (!user) {
+      return res.status(404).json({ message: "No such task" });
+    }
+    if (user.creatorId.toString() !== id) {
       return res
         .status(403)
-        .json({ message: "You're not authorised to do this" });
+        .json({ message: "You're not authenticated to do this" });
     }
     const currentDate = new Date();
     console.log(currentDate);
@@ -42,19 +45,19 @@ cron.schedule("0 * * * *", async (req, res) => {
     });
     for (const task of tasksRemainders) {
       const mailOptions = {
-        from: "Femimane1@gmail.com",
+        from: process.env.MAIL_USER,
         to: "femfag305@gmail.com",
-        subject: "Task project Remainder",
+        subject: `Reminder: Task "${task.title}" project Remainder"`,
         text: `Hi remainder about your task activity: ${task.title}. Deadline:${task.deadline}`,
       };
       transporter.sendMail(mailOptions, async function (err, data) {
         if (err) {
           res.status(404).json({ message: "Error sending remainder", err });
         } else {
-          res.status(200).json({ message: "Email sent successfully", data });
           task.remainderSent = true;
           await task.save();
-          res.status(200).json({ message: `Task remainder sent: task.title` });
+          res.status(200).json({ message: "Email sent successfully", data });
+          // res.status(200).json({ message: `Task remainder sent: task.title` });
         }
       });
     }

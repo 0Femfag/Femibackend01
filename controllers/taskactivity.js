@@ -16,7 +16,7 @@ const getallTask = async (req, res) => {
   const { id } = req.user;
   try {
     const getAll = await taskActivity
-      .find()
+      .find({ id })
       .populate({ path: "creatorId", select: "username email gender role " });
     if (!getAll) {
       return res.status(404).json({ message: "No such task" });
@@ -37,6 +37,11 @@ const getoneTask = async (req, res) => {
     if (!getOne) {
       return res.status(404).json({ message: "No such task" });
     }
+    if (getOne.creatorId.toString() !== id) {
+      return res
+        .status(403)
+        .json({ message: "You're not authenticated to do this" });
+    }
     res.status(200).json(getOne);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -45,13 +50,13 @@ const getoneTask = async (req, res) => {
 
 const updateTask = async (req, res) => {
   const { taskId, ...others } = req.body;
-  const { id, role } = req.user;
+  const { id } = req.user;
   try {
     const getTask = await taskActivity.findById(taskId);
     if (!getTask) {
       return res.status(404).json({ message: "Task doesn't exist" });
     }
-    if (role !== "Admin" && getTask.creatorId.toString() !== id) {
+    if (getTask.creatorId.toString() !== id) {
       return res
         .status(403)
         .json({ message: "You're not authenticated to do this" });
@@ -71,13 +76,13 @@ const updateTask = async (req, res) => {
 
 const deleteTask = async (req, res) => {
   const { taskId } = req.params;
-  const { id, role } = req.user;
+  const { id } = req.user;
   try {
     const getoneTask = await taskActivity.findById(taskId);
     if (!getoneTask) {
       return res.status(404).json({ message: "Task doesn't exist" });
     }
-    if (role !== "Admin" && getoneTask.creatorId.toString() !== id) {
+    if (getoneTask.creatorId.toString() !== id) {
       return res
         .status(403)
         .json({ message: "You're not authenticated to do this" });

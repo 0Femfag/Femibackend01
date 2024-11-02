@@ -23,11 +23,6 @@ const taskUser = new mongoose.Schema(
       type: String,
       enum: ["Male", "Female"],
     },
-    role: {
-      type: String,
-      enum: ["User", "Admin"],
-      default: "User",
-    },
   },
   { timestamps: true },
 );
