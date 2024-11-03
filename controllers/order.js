@@ -1,37 +1,53 @@
 const orderModel = require("../models/order");
 const cartproductModel = require("../models/cartproducts");
-const productModel = require("../models/products");
-
-const taxRate = (userLocation) => 0.1;
-const shippingCost = (shippingMethod) => shippingMethod === "express";
-"standard" ? 15 : 5;
-const discount = (discountCode) => {
-  const validCodes = { FEMI10: 0.1, PRETERNATURAL: 0 };
-  return validCodes[discountCode] || 0;
-};
 
 const createOrder = async (req, res) => {
-  const { totalPrice, ...others } = req.body;
+  const { shippingMethod, discountCode, shippingAddress } = req.body;
   const { id } = req.user;
   try {
-    const cartItems = await cartproductModel.findOne({ userId: id }).populate({
-      path: "productId",
-      select: "quantity description productName price inventoryCount category",
-    });
+    const cartItems = await cartproductModel.findOne({ userId: id });
     if (!cartItems) {
       return res.status(404).json({ message: "No product in cart" });
     }
-    // let totalPrice = 0;
-    // cartItems.forEach((cartItem) => {
-    //   totalPrice += cartItem.quantity * cartItem.productId.price;
-    // });
-    let totalPrice = cartItems.quantity.productId.reduce((total, cartItem) => {
-      return total + cartItem.quantity * cartItem.productId.price;
+    if (cartItems !== id) {
+      return res
+        .status(403)
+        .json({ message: "You're not authorised to do this" });
+    }
+
+    let totalPrice = cartItems.products.reduce((total, cartItem) => {
+      return total + cartItem.quantity * cartItem.product.price;
     }, 0);
+
+    const tax = (Lagos) => 0.1;
+    const shippingCost = (shippingMethod) =>
+      shippingMethod === "Express" ? 15 : 5;
+    const discount = (discountCode) => {
+      const validCodes = { FEMI10: 0.1, PRETERNATURAL: 0 };
+      return validCodes[discountCode] || 0;
+    };
+
+    const discountRate = discount(discountCode);
+    const discountPrice = totalPrice * discountRate;
+    const afterDiscount = totalPrice - discountPrice;
+
+    const taxRate = tax(id.Lagos);
+    const taxPrice = afterDiscount * taxRate;
+
+    const shipCost = shippingCost(shippingMethod);
+    const finalPrice = afterDiscount + taxPrice + shipCost;
+
     const newOrder = new orderModel({
       userId: id,
       totalPrice,
-      ...others,
+      shipCost,
+      taxPrice,
+      discountCode,
+      discountPrice,
+      finalPrice,
+      orderStatus: "Pending",
+      products: cartItems.products,
+      shippingAddress,
     });
     await newOrder.save();
     await cartproductModel.findOneAndDelete({ userId: id });
@@ -44,7 +60,7 @@ const createOrder = async (req, res) => {
 const getOrders = async (req, res) => {
   const { id } = req.user;
   try {
-    const myOrder = await orderModel.findById(id);
+    const myOrder = await orderModel.find({ userId: id });
     if (!myOrder) {
       return res.status(404).json({ message: "No order" });
     }
@@ -57,12 +73,15 @@ const getOrders = async (req, res) => {
 const admingetOrders = async (req, res) => {
   const { role } = req.user;
   try {
-    if (role !== "Admin") {
-      return res.status(404).json({ message: "You're not permitted" });
-    }
-    const Orders = await orderModel.find();
+    const Orders = await orderModel.find().populate("userId").populate({
+      path: "products.product",
+      select: "productName category description price ",
+    });
     if (!Orders) {
       return res.status(404).json({ message: "No order" });
+    }
+    if (role !== "Admin") {
+      return res.status(404).json({ message: "You're not permitted" });
     }
     res.status(200).json(Orders);
   } catch (error) {
@@ -74,16 +93,16 @@ const updateorderStatus = async (req, res) => {
   const { orderId, orderStatus } = req.body;
   const { role } = req.user;
   try {
-    if (role !== "Admin") {
-      return res.status(404).json({ message: "You're not permitted" });
-    }
     const order = await orderModel.findById(orderId);
     if (!order) {
       return res.status(404).json({ message: "No order" });
     }
+    if (role !== "Admin") {
+      return res.status(404).json({ message: "You're not permitted" });
+    }
     order.orderStatus = orderStatus;
     await order.save();
-    res.status(201).json({ message: "Shipped", order });
+    res.status(201).json(order);
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }

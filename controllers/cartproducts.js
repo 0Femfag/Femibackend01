@@ -1,65 +1,34 @@
 const cartproductModel = require("../models/cartproducts");
 const productModel = require("../models/products");
 
-// const cartOwner = (_id, userId) => {
-//   return _id.toString() === userId.toString();
-// };
-
 const addCart = async (req, res) => {
   const { quantity, productId } = req.body;
   const { id } = req.user;
   try {
     const getCart = await cartproductModel.findOne({ userId: id });
-    // if (getCart) {
-    //   if (cartOwner(_id, { userId: id })) {
-    //     return res
-    //       .status(403)
-    //       .json({ message: "You're not authorised to do this" });
-    //   }
-    // }
-    if (getCart.userId.toString() !== id) {
+    if (getCart !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    const getProduct = await productModel.findById(productId);
-    if (!getProduct) {
-      return res.status(404).json({ message: "Product doesn't exist" });
-    }
-    const checkproductinCart = getProduct.includes({ userId: id });
-    console.log(checkproductinCart);
-    if (!checkproductinCart) {
-      getProduct.push({ userId: id }, quantity, productId);
+    if (getCart) {
+      const productValue = getCart.products.findIndex(
+        (item) => item.product.toString() === productId,
+      );
+      if (productValue > -1) {
+        getCart.products[productValue].quantity += quantity;
+      } else {
+        getCart.products.push({ product: productId, quantity });
+      }
     }
     const newcartProduct = new cartproductModel({
-      quantity,
-      productId,
+      products: [{ product: productId, quantity }],
       userId: id,
     });
-    const savedCart = await newcartProduct.save();
+    await newcartProduct.save();
     res
       .status(201)
-      .json({ message: "Product succesfully added to cart", savedCart });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
-
-const getCart = async (req, res) => {
-  try {
-    const getAll = await cartproductModel
-      .find()
-      .populate({ path: "userId", select: "username email gender" })
-      .populate({
-        path: "productId",
-        select:
-          "quantity description productName price inventoryCount category",
-      });
-    if (!getAll) {
-      return res.status(404).json({ message: "Cart not found" });
-    }
-
-    res.status(200).json(getAll);
+      .json({ message: "Product succesfully added to cart", newcartProduct });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -72,14 +41,12 @@ const getcartProduct = async (req, res) => {
       .findOne({ userId: id })
       .populate({ path: "userId", select: "username email gender" })
       .populate({
-        path: "productId",
-        select:
-          "quantity description productName price inventoryCount category",
+        path: "products.product",
+        select: "productName category description price ",
       });
     if (!usergetCart) {
       return res.status(404).json({ message: "Cart not found" });
     }
-
     res.status(200).json(usergetCart);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -87,55 +54,60 @@ const getcartProduct = async (req, res) => {
 };
 
 const updateCart = async (req, res) => {
-  const { productId, ...others } = req.body;
+  const { productId, quantity } = req.body;
   const { id } = req.user;
   try {
     const getCart = await cartproductModel.findOne({ userId: id });
-    if (getCart) {
+    if (!getCart) {
       return res.status(404).json({ message: "cart not found" });
     }
-    // if (cartOwner(_id, { userId: id })) {
-    //   return res
-    //     .status(403)
-    //     .json({ message: "You're not authorised to do this" });
-    // }
-    if (getCart.toString() !== id) {
+    if (getCart !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    const getProduct = await cartproductModel.findById(productId);
-    if (!getProduct) {
-      return res.status(404).json({ message: "No such product" });
-    }
-    const checkproductinCart = thePost.likes.includes(userId);
-
-    await cartproductModel.findByIdAndUpdate(
-      productId,
-      { ...others },
-      { new: true },
+    const productValue = getCart.products.findIndex(
+      (item) => item.product.toString() === productId,
     );
+    if (productValue > -1) {
+      if (quantity <= 0) {
+        getCart.products.splice(productValue, 1);
+      } else {
+        getCart.products[productValue].quantity = quantity;
+      }
+    }
+    await cartproductModel.findByIdAndUpdate(productId, quantity, {
+      new: true,
+    });
     res.status(200).json({ message: "Item quantity has been updated" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
 
-const deleteCart = async (req, res) => {
+const deletecartItem = async (req, res) => {
   const { productId } = req.body;
   const { id } = req.user;
   try {
-    const findCart = await cartproductModel.findById(productId);
+    const findCart = await cartproductModel.findOne({ userId: id });
     if (!findCart) {
       return res.status(404).json({ message: "Cart not found" });
     }
-    if (findCart.creatorId.toString() !== id) {
+    if (findCart !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    await cartproductModel.findByIdAndDelete(productId);
-    res.status(200).json({ message: "cart deleted" });
+    const productValue = findCart.products.findIndex(
+      (item) => item.product.toString() === productId,
+    );
+    if (productValue > -1) {
+      findCart.products.splice(productValue, 1);
+      await findCart.save();
+      return res.status(200).json({ message: "Item deleted successfully" });
+    } else {
+      return res.status(404).json({ message: "Product not in cart" });
+    }
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -144,17 +116,17 @@ const deleteCart = async (req, res) => {
 const clearCart = async (req, res) => {
   const { id } = req.user;
   try {
-    const getCart = await cartproductModel.findOne({ id });
+    const getCart = await cartproductModel.findOne({ userId: id });
     if (!getCart) {
       return res.status(404).json({ message: "cart not found" });
     }
-    if (cartOwner(_id, { userId: id })) {
+    if (getCart !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });
     }
-    getCart.productId.quantity = [];
-    await getCart.save();
+    await cartproductModel.findByIdAndDelete({ userId: id });
+    res.status(200).json({ message: "cart deleted" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -162,9 +134,8 @@ const clearCart = async (req, res) => {
 
 module.exports = {
   addCart,
-  getCart,
   getcartProduct,
   updateCart,
-  deleteCart,
+  deletecartItem,
   clearCart,
 };
