@@ -1,4 +1,5 @@
 const postModel = require("../models/blogpost");
+
 const makePost = async (req, res) => {
   const { creatorId, ...others } = req.body;
   const { id } = req.user;

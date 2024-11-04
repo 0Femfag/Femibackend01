@@ -82,7 +82,7 @@ const deleteoneComment = async (req, res) => {
 };
 
 const updatoneComment = async (req, res) => {
-  const { commentId, ...others } = req.body;
+  const { commentId, postId, ...others } = req.body;
   const { id } = req.user;
   try {
     const getoneComment = await commentModel.findById(commentId);
@@ -96,6 +96,7 @@ const updatoneComment = async (req, res) => {
     }
     const updateOne = await commentModel.findByIdAndUpdate(
       commentId,
+      postId,
       { ...others },
       { new: true },
     );

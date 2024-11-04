@@ -27,7 +27,7 @@ cron.schedule("0 * * * *", async (req, res) => {
     }
     const user = await taskModel.findById(id);
     if (!user) {
-      return res.status(404).json({ message: "No such task" });
+      return res.status(404).json({ message: "No such user" });
     }
     if (user.creatorId.toString() !== id) {
       return res
