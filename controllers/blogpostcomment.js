@@ -81,7 +81,7 @@ const deleteoneComment = async (req, res) => {
   }
 };
 
-const updatoneComment = async (req, res) => {
+const updateoneComment = async (req, res) => {
   const { commentId, postId, ...others } = req.body;
   const { id } = req.user;
   try {
@@ -111,5 +111,5 @@ module.exports = {
   getallComment,
   getComment,
   deleteoneComment,
-  updatoneComment,
+  updateoneComment,
 };

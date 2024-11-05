@@ -6,7 +6,7 @@ const {
   getoneTask,
   updateTask,
   deleteTask,
-  Reminder,
+  tasksRemainders,
 } = require("../controllers/taskactivity");
 const routes = express.Router();
 
@@ -15,6 +15,6 @@ routes.get("/gettask", verify, getallTask);
 routes.get("/gettask/:taskId", verify, getoneTask);
 routes.put("/updatetask", verify, updateTask);
 routes.delete("/deletetask/:taskId", verify, deleteTask);
-routes.post("/reminder", verify, Reminder);
+routes.post("/reminder", verify, tasksRemainders);
 
 module.exports = routes;

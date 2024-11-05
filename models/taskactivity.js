@@ -34,6 +34,10 @@ const taskSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    userEmail: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true },
 );

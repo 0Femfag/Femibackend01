@@ -4,7 +4,7 @@ const {
   makeComment,
   getallComment,
   deleteoneComment,
-  updatoneComment,
+  updateoneComment,
   getComment,
 } = require("../controllers/blogpostcomment");
 const { verify } = require("../middlewares/verify");
@@ -13,6 +13,6 @@ routes.post("/comment", verify, makeComment);
 routes.get("/getcomment/:postId", verify, getallComment);
 routes.get("/getcomment/:commentId", verify, getComment);
 routes.delete("/deletecomment", verify, deleteoneComment);
-routes.put("/putcomment", verify, updatoneComment);
+routes.put("/putcomment", verify, updateoneComment);
 
 module.exports = routes;

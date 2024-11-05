@@ -60,7 +60,7 @@ const updateTask = async (req, res) => {
     if (getTask.creatorId.toString() !== id) {
       return res
         .status(403)
-        .json({ message: "You're not authenticated to do this" });
+        .json({ message: "You're not authorized to do this" });
     }
     const updatetask = await taskActivity.findByIdAndUpdate(
       taskId,
@@ -95,64 +95,88 @@ const deleteTask = async (req, res) => {
   }
 };
 
-const Reminder = async (req, res) => {
-  cron.schedule("0 * * * *", async () => {
-    const { taskId } = req.body;
-    const { id } = req.user;
-    try {
-      const task = await taskActivity.findById(taskId);
-      if (!task) {
-        return res.status(404).json({ message: "task not found" });
-      }
-      const user = await taskModel.findOne({ creatorId: id });
-      if (!user) {
-        return res.status(404).json({ message: "No such user" });
-      }
-      if (user !== id) {
-        return res
-          .status(403)
-          .json({ message: "You're not authenticated to do this" });
-      }
-      const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false,
-        auth: {
-          user: process.env.MAIL_USER,
-          pass: process.env.MAIL_PASSWORD,
-        },
-      });
-      const currentDate = new Date();
-      const oneHourLater = new Date(currentDate.getTime() + 60 * 60 * 1000);
-      const tasksRemainders = await taskActivity.findById(taskId, {
-        deadline: { $gte: currentDate, $lte: oneHourLater },
-        completed: false,
-        remainderSent: false,
-      });
-      for (const task of tasksRemainders) {
-        const mailOptions = {
-          from: process.env.MAIL_USER,
-          to: "femfag305@gmail.com",
-          subject: `Reminder: Task "${task.title}" project Remainder"`,
-          text: `Hi remainder about your task activity: ${task.title}. Deadline:${task.deadline}`,
-        };
-        transporter.sendMail(mailOptions, async function (err, data) {
-          if (err) {
-            res.status(404).json({ message: "Error sending remainder", err });
-          } else {
-            task.remainderSent = true;
-            await task.save();
-            res.status(200).json({ message: "Email sent successfully", data });
-          }
-        });
-      }
-    } catch (error) {
-      res
-        .status(500)
-        .json({ message: "Error in setting cron remainder", error });
-    }
-  });
+// if (task.creatorId.toString() !== id) {
+//   return res.status(403).json({ message: "You're not authorized to do this" });
+// }
+
+// try {
+//   await transporter.sendMail(mailOptions, async function (err, data) {
+//     if (err) {
+//       res.status(404).json({ message: "Error sending remainder", err });
+//     } else {
+//       res.status(200).json({ message: "Email sent successfully", data });
+//     }
+//   });
+// } catch (error) {
+//   res
+//     .status(500)
+//     .json({ message: "Error in setting and sending remainder", error });
+// }
+
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASSWORD,
+  },
+});
+
+const Reminder = async (task) => {
+  const mailOptions = {
+    from: process.env.MAIL_USER,
+    to: task.userEmail,
+    subject: `Reminder: Task "${task.title}" project Remainder"`,
+    text: `Hi remainder about your task activity: ${task.title}. Deadline:${task.deadline}`,
+  };
 };
+
+const tasksRemainders = async (req, res) => {
+  const { taskId } = req.body;
+  const { id } = req.user;
+  const currentDate = new Date();
+  console.log(currentDate);
+  const oneHourLater = new Date(currentDate.getTime() + 60 * 60 * 1000);
+  console.log(oneHourLater);
+  try {
+    const task = await taskActivity.findOne({
+      _id: taskId,
+      deadline: { $gte: currentDate, $lte: oneHourLater },
+      completed: false,
+      remainderSent: false,
+    });
+    if (!task) {
+      return res.status(404).json({ message: "task not found" });
+    }
+    if (task.creatorId.toString() !== id) {
+      return res
+        .status(403)
+        .json({ message: "You're not authorized to do this" });
+    }
+    transporter.sendMail(Reminder, async function (err, data) {
+      if (err) {
+        console.error("error sending reminder", err);
+        return res
+          .status(500)
+          .json({ message: "Error sending remainder", err });
+      }
+      task.remainderSent = true;
+      await task.save();
+      return res
+        .status(200)
+        .json({ message: "Remainder sent successfully", data });
+    });
+
+    // Reminder(task);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+// const startRemainder = () => {
+//   setInterval(tasksRemainders, 60 * 60 * 1000);
+// };
 
 module.exports = {
   createTask,
@@ -160,5 +184,5 @@ module.exports = {
   getoneTask,
   updateTask,
   deleteTask,
-  Reminder,
+  tasksRemainders,
 };
