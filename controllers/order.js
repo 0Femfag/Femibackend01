@@ -9,7 +9,7 @@ const createOrder = async (req, res) => {
     if (!cartItems) {
       return res.status(404).json({ message: "No product in cart" });
     }
-    if (cartItems !== id) {
+    if (cartItems.userId.toString() !== id) {
       return res
         .status(403)
         .json({ message: "You're not authorised to do this" });

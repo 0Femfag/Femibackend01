@@ -1,7 +1,7 @@
 const taskActivity = require("../models/taskactivity");
-const taskModel = require("../models/taskuser");
-const cron = require("node-cron");
+// const cron = require("node-cron");
 const nodemailer = require("nodemailer");
+const { google } = require("google-auth-library");
 
 const createTask = async (req, res) => {
   const { creatorId, ...others } = req.body;
@@ -95,10 +95,6 @@ const deleteTask = async (req, res) => {
   }
 };
 
-// if (task.creatorId.toString() !== id) {
-//   return res.status(403).json({ message: "You're not authorized to do this" });
-// }
-
 // try {
 //   await transporter.sendMail(mailOptions, async function (err, data) {
 //     if (err) {
@@ -113,24 +109,29 @@ const deleteTask = async (req, res) => {
 //     .json({ message: "Error in setting and sending remainder", error });
 // }
 
+// const oauth2Client = new google.auth.OAuth2();
+
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
   secure: false,
   auth: {
     user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASSWORD,
+    clientId: process.env.OAUTH_CLIENTID,
+    clientSecret: process.env.OAUTH_CLIENT_SECRET,
+    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+    accessToken: process.env.ACCESSTOKEN,
   },
 });
 
-const Reminder = async (task) => {
-  const mailOptions = {
-    from: process.env.MAIL_USER,
-    to: task.userEmail,
-    subject: `Reminder: Task "${task.title}" project Remainder"`,
-    text: `Hi remainder about your task activity: ${task.title}. Deadline:${task.deadline}`,
-  };
-};
+// const Reminder = async (task) => {
+//   const mailOptions = {
+//     from: process.env.MAIL_USER,
+//     to: task.userEmail,
+//     subject: `Reminder: Task "${task.title}" project Remainder"`,
+//     text: `Hi remainder about your task activity: ${task.title}. Deadline:${task.deadline}`,
+//   };
+// };
 
 const tasksRemainders = async (req, res) => {
   const { taskId } = req.body;
@@ -141,7 +142,7 @@ const tasksRemainders = async (req, res) => {
   console.log(oneHourLater);
   try {
     const task = await taskActivity.findOne({
-      _id: taskId,
+      taskId,
       deadline: { $gte: currentDate, $lte: oneHourLater },
       completed: false,
       remainderSent: false,
@@ -154,29 +155,23 @@ const tasksRemainders = async (req, res) => {
         .status(403)
         .json({ message: "You're not authorized to do this" });
     }
-    transporter.sendMail(Reminder, async function (err, data) {
-      if (err) {
-        console.error("error sending reminder", err);
-        return res
-          .status(500)
-          .json({ message: "Error sending remainder", err });
-      }
-      task.remainderSent = true;
-      await task.save();
-      return res
-        .status(200)
-        .json({ message: "Remainder sent successfully", data });
+    transporter.sendMail({
+      from: process.env.MAIL_USER,
+      to: task.userEmail,
+      subject: `Reminder: Task "${task.title}" project Remainder`,
+      text: `Hi remainder about your task activity: ${task.title}. Deadline:${task.deadline}`,
     });
+    task.remainderSent = true;
+    await task.save();
+    return res
+      .status(200)
+      .json({ message: "Remainder sent successfully", data });
 
     // Reminder(task);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
-
-// const startRemainder = () => {
-//   setInterval(tasksRemainders, 60 * 60 * 1000);
-// };
 
 module.exports = {
   createTask,
