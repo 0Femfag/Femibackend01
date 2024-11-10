@@ -5,7 +5,9 @@ const createOrder = async (req, res) => {
   const { shippingMethod, discountCode, shippingAddress } = req.body;
   const { id } = req.user;
   try {
-    const cartItems = await cartproductModel.findOne({ userId: id });
+    const cartItems = await cartproductModel
+      .findOne({ userId: id })
+      .populate("products.product");
     if (!cartItems) {
       return res.status(404).json({ message: "No product in cart" });
     }
@@ -60,7 +62,9 @@ const createOrder = async (req, res) => {
 const getOrders = async (req, res) => {
   const { id } = req.user;
   try {
-    const myOrder = await orderModel.find({ userId: id });
+    const myOrder = await orderModel
+      .find({ userId: id })
+      .populate("products.product");
     if (!myOrder) {
       return res.status(404).json({ message: "No order" });
     }
