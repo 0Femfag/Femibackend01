@@ -1,0 +1,19 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.0
+2 info using node@v20.15.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/.npmrc
+5 silly config load:file:/usr/local/etc/npmrc
+6 verbose title npm view unpipe description dist-tags.latest homepage version time
+7 verbose argv "view" "--json" "--" "unpipe" "description" "dist-tags.latest" "homepage" "version" "time"
+8 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-11-11T09_42_38_164Z-
+9 verbose logfile /Users/mac/.npm/_logs/2024-11-11T09_42_38_164Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmjs.org/unpipe 500ms (cache revalidated)
+13 verbose cwd /Users/mac
+14 verbose os Darwin 19.4.0
+15 verbose node v20.15.1
+16 verbose npm  v10.9.0
+17 verbose exit 0
+18 info ok

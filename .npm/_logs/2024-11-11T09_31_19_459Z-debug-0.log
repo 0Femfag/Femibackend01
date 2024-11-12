@@ -1,0 +1,54 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.0
+2 info using node@v20.15.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/.npmrc
+5 silly config load:file:/usr/local/etc/npmrc
+6 verbose title npm login
+7 verbose argv "login"
+8 verbose logfile logs-max:10 dir:/Users/mac/.npm/_logs/2024-11-11T09_31_19_459Z-
+9 verbose logfile /Users/mac/.npm/_logs/2024-11-11T09_31_19_459Z-debug-0.log
+10 silly logfile start cleaning logs, removing 1 files
+11 silly logfile done cleaning log files
+12 notice Log in on https://registry.npmjs.org/
+13 verbose web login before first POST
+14 http fetch POST 200 https://registry.npmjs.org/-/v1/login 1228ms
+15 verbose web auth got response {
+15 verbose web auth   loginUrl: 'https://www.npmjs.com/login?next=/login/cli/f12dbbb8-c14a-4a3e-8ee7-22f7db12daf2',
+15 verbose web auth   doneUrl: 'https://registry.npmjs.org/-/v1/done?sessionId=f12dbbb8-c14a-4a3e-8ee7-22f7db12daf2'
+15 verbose web auth }
+16 verbose web auth opening url pair
+17 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 355ms
+18 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 326ms
+19 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 351ms
+20 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 320ms
+21 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 354ms
+22 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 332ms
+23 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 329ms
+24 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 455ms
+25 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 333ms
+26 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 362ms
+27 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 335ms
+28 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 324ms
+29 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 372ms
+30 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 332ms
+31 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 349ms
+32 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 355ms
+33 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 364ms
+34 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 330ms
+35 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 370ms
+36 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 335ms
+37 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 353ms
+38 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 345ms
+39 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 361ms
+40 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 336ms
+41 http fetch GET 202 https://registry.npmjs.org/-/v1/done?sessionId=*** 329ms
+42 http fetch GET 200 https://registry.npmjs.org/-/v1/done?sessionId=*** 598ms
+43 verbose web auth done-check finished
+44 info login Logged in on https://registry.npmjs.org/.
+45 verbose cwd /Users/mac
+46 verbose os Darwin 19.4.0
+47 verbose node v20.15.1
+48 verbose npm  v10.9.0
+49 verbose exit 0
+50 info ok
