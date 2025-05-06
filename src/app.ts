@@ -1,4 +1,4 @@
 let firstName: string = "Dylan";
 console.log(firstName);
-
-System.out.printIn("Hello World");
+const figure: number = 45;
+console.log(figure);

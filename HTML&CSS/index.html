@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing around</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>A Nested List</h2>
+
+    <div class="container">
+      <ul>
+        <li>Coffee</li>
+        <li>
+          Tea
+          <ul>
+            <li>Green tea</li>
+            <li>
+              Black tea
+              <ul>
+                <li>China</li>
+                <li>Japanese</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Milk</li>
+      </ul>
+    </div>
+
+    <h2>Navigation Menu</h2>
+    <p>
+      In this example, we use CSS to style the list horizontally, to create a
+      navigation menu:
+    </p>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <h2>Using The id Attribute in JavaScript</h2>
+    <p>
+      JavaScript can access an element with a specified id by using the
+      getElementById() method:
+    </p>
+
+    <h1 id="myHeader">Hello World!</h1>
+
+    <button onclick="displayResult()">Change text</button>
+
+    <script>
+      function displayResult() {
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+      }
+    </script>
+
+    <p id="demo">A paragraph</p>
+
+    <button type="button" onclick="Femimane()">Try It</button>
+
+    <script>
+      function Femimane() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+      }
+    </script>
+  </body>
+</html>

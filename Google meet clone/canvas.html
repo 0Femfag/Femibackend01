@@ -1,0 +1,628 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML CANVAS</title>
+    <style>
+      #div {
+        width: 350px;
+        height: 70px;
+        padding: 10px;
+        border: 3px solid #aaaaaa;
+      }
+      table,
+      th,
+      td {
+        width: 50%;
+        height: 100%;
+        border: 2px solid #000000;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+      }
+      th {
+        text-align: left;
+      }
+    </style>
+
+    <script>
+      function dragstartHandler(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function dragoverHandler(ev) {
+        ev.preventDefault();
+      }
+
+      function dropHandler(ev) {
+        ev.preventDefault();
+        const data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+
+    <script>
+      function clickCounter() {
+        const w = document.getElementById("result");
+        if (typeof Storage !== "undefined") {
+          if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+          } else {
+            localStorage.clickcount = 1;
+          }
+          x.innerHTML =
+            "You have clicked the button" +
+            localStorage.clickcount +
+            "time(s)!";
+        } else {
+          x.innerHTML = "Sorry, no Web storage support!";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript on a web page.
+    The <canvas> element is only a container
+    for graphics. You must use JavaScript to
+    actually draw the graphics.
+    -->
+
+    <!-- A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+    -->
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 5px solid #000000"
+    ></canvas>
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 100);
+      ctx.stroke();
+    </script>
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+    </script>
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Arial";
+      ctx.fillText("Hello World", 10, 50);
+    </script>
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Arial";
+      ctx.strokeText("Hello World", 10, 50);
+    </script>
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+      // Create gradient
+      var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
+
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+      //   create gradient
+      var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
+
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 50, 80);
+    </script>
+
+    <script>
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      var img = document.getElementById("scream");
+      ctx.drawImage(img, 10, 10);
+    </script>
+
+    <!-- The HTML <svg> element is a container for SVG graphics. -->
+    <p>
+      <svg width="100" height="100">
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
+          stroke="green"
+          stroke-width="4"
+          fill="yellow"
+        ></circle>
+      </svg>
+    </p>
+
+    <p>
+      <svg width="400" height="120">
+        <rect
+          x="10"
+          y="10"
+          width="200"
+          height="100"
+          stroke="red"
+          stroke-width="6"
+          fill="blue"
+        />
+      </svg>
+    </p>
+
+    <p>
+      <svg width="400" height="180">
+        <rect
+          x="50"
+          y="20"
+          rx="20"
+          ry="20"
+          widtth="150"
+          height="150"
+          style="fill: red; stroke: black; stroke-width: 5; opacity: 0.5"
+        />
+      </svg>
+    </p>
+
+    <svg width="300" height="200">
+      <polygon
+        points="100,10 40,198 190,78 10,78 160,198"
+        style="fill: lime; stroke: purple; stroke-width: 5; fill-rule: evenodd"
+      />
+    </svg>
+
+    <p>
+      <svg height="130" width="500">
+        <defs>
+          <linearGradient id="grad1">
+            <stop offset="0%" stop-color="yellow" />
+            <stop offset="100%" stop-color="red" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+          SVG
+        </text>
+        Sorry, your browser does not support inline SVG.
+      </svg>
+    </p>
+
+    <p>
+      <video width="320" height="240" controls>
+        <source src="img/20221207_142555.mp4" type="video/mp4" />
+        <source
+          src="img/00000144-GIF-2024-08-24-22-52-06.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag
+      </video>
+    </p>
+
+    <p>
+      <audio controls>
+        <source src="img/06. Can't Express (1).mp3" type="audio/mpeg" />
+        YOUR BROWSER DOES NOT SUPPORT THE AUDIO ELEMENT.
+      </audio>
+    </p>
+
+    <p>
+      <object
+        width="320"
+        height="500px"
+        data="img/ henry & bergkamp.jpeg"
+      ></object>
+    </p>
+
+    <p>
+      <embed width="320" height="500px" src="img/3 goat.jpeg" />
+    </p>
+
+    <div>
+      <iframe
+        width="420"
+        height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1"
+      >
+      </iframe>
+    </div>
+
+    <p>Click the button to get your coordinates</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+      const x = document.getElementById("demo");
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      function success(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude" +
+          position.coords.longitude;
+      }
+      function error() {
+        alert("Sorry, no position available.");
+      }
+    </script>
+
+    <p>Click the button to get your Geolocation</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function error(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            arguments;
+            x.innerHTML = "User denied the request for Geolocation.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            arguments;
+            x.innerHTML = "Location information is unavailable.";
+            break;
+          case error.TIMEOUT:
+            arguments;
+            x.innerHTML = "The request to get user location timed out.";
+            break;
+          case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred";
+            break;
+        }
+      }
+    </script>
+
+    <p>WATCH POSITION</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+      const y = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.watchPosition(success, error);
+        } else {
+          y.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function success(position) {
+        y.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+
+      function error(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            y.innerHTML = "User denied the request for exact watch position.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            y.innerHTML = "Location information is unavailable.";
+            break;
+          case error.TIMEOUT:
+            y.innerHTML = "The request to get user location timed out.";
+            break;
+          case error.UNKNOWN_ERROR:
+            y.innerHTML = "An unknown error occurred.";
+            break;
+        }
+      }
+    </script>
+
+    <h1>Drag and Drop AP1</h1>
+    <p>Drag the W3Schools image into the rectangle:</p>
+    <div
+      id="div1"
+      ondrop="dropHandler(event)"
+      ondragover="dragoverHandler(event)"
+    ></div>
+    <br />
+    <img
+      id="img1"
+      src="img_logo.gif"
+      draggable="true"
+      ondragstart="dragstartHandler(event)"
+      width="336"
+      height="69"
+    />
+
+    <h1>BROWSER TEST FOR WEB STORAGE API</h1>
+
+    <div id="result"></div>
+
+    <script>
+      const X = document.getElementById("result");
+      if (typeof Storage !== "undefined") {
+        X.innerHTML = "Your browser supports Web storage!";
+      } else {
+        X.innerHTML = "Sorry, no Web storage support!";
+      }
+    </script>
+
+    <!-- Use the localStorage.setItem() method to create name/value pairs
+Use the localStorage.getItem() method to retrieve the values set
+Retrieve the value of "lastname" and insert it into an element with id="result"
+Retrieve the value of "bgcolor" and insert it into the style backgroundColor of the element with id="result"
+ -->
+
+    <h1>LOCAL STORAGE API</h1>
+
+    <div id="Femi" style:background-color: skyblue></div>
+
+    <script>
+      const f = document.getElementById("Femi");
+      if (typeof Storage !== "undefined") {
+        // Store
+        localStorage.setItem("lastname", "Femi");
+        localStorage.setItem("bgcolor", "skyblue");
+        // Retrieve
+        f.innerHTML = localStorage.getItem("lastname");
+        f.style.backgroundColor = localStorage.getItem("bgcolor");
+      } else {
+        f.innerHTML = "Sorry, no web storage support";
+      }
+    </script>
+
+    <script>
+      function clickCounter() {
+        const w = document.getElementById("telsa");
+        if (typeof Storage !== "undefined") {
+          if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+          } else {
+            localStorage.clickcount = 1;
+          }
+          x.innerHTML =
+            "You have clicked the button" +
+            localStorage.clickcount +
+            "time(s)!";
+        } else {
+          x.innerHTML = "Sorry, no Web storage support!";
+        }
+      }
+    </script>
+
+    <h1>localStorage</h1>
+    <button onclick="clickCounter()" type="button">Click Me!</button>
+    <p id="telsa"></p>
+    <p>Click the button to see the counter increase</p>
+    <p>
+      Close the browser tab (or window), and try again, and the counter will
+      continue to count.
+    </p>
+
+    <script>
+      function clickCounter() {
+        const x = document.getElementById("outcome");
+        if (typeof Storage !== "undefined") {
+          if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+          } else {
+            sessionStorage.clickcount = 1;
+          }
+          x.innerHTML =
+            "You have clicked the button " +
+            sessionStorage.clickcount +
+            " time(s) in this session!";
+        } else {
+          x.innerHTML = "Sorry, no Web storage support!";
+        }
+      }
+    </script>
+
+    <h1>sessionStorage</h1>
+    <button onclick="clickCounter()" type="button">Click Me!</button>
+    <p id="outcome"></p>
+    <p>Click the button to see the counter increase</p>
+    <p>
+      Close the browser tab (or window), and try again, and the counter is
+      reset.
+    </p>
+
+    <h1>Browser test for Web Worker API</h1>
+    <div id="profit"></div>
+    <script>
+      const t = document.getElementById("profit");
+      if (typeof Worker !== "undefined") {
+        t.innerHTML = "Your browser support Web Workers!";
+      } else {
+        t.innerHTML = "Sorry, your browser does not support Web Workers.";
+      }
+    </script>
+
+    <p>Count numbers: <output id="jungle"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <script>
+      let w;
+
+      function startWorker() {
+        const x = document.getElementById("jungle");
+        if (typeof Worker !== "undefined") {
+          if (typeof W == "undefined") {
+            w = new Worker("demo_workers.js");
+          }
+          w.onmessage = function (event) {
+            x.innerHTML = event.data;
+          };
+        } else {
+          x.innerHTML = "Sorry! No Web Worker support.";
+        }
+      }
+      function stopWorker() {
+        w.terminate();
+        w = undefined;
+      }
+    </script>
+
+    <!-- <h1>Getting Server Updates</h1>
+    <div id="man"></div>
+    <script>
+      const h = document.getElementById("man");
+      // check browser support for SSE
+      if (typeof EventSource !== "undefined") {
+        var source = new EventSource("demo_sse.php");
+        source.onmessage = function (event) {
+          h.innerHTML += event.data + "<br>";
+        };
+      } else {
+        h.innerHTML = "Sorry, no support for server-sent events.";
+      }
+    </script> -->
+
+    <?php header('Content-Type: text/event-stream'); header('Cache-Control:
+    no-cache'); $time = date('r'); echo "data: The server time is: {$time}\n\n";
+    flush(); ?>
+
+    <h1>Getting Server Updates</h1>
+
+    <div id="man"></div>
+
+    <script>
+      const h = document.getElementById("man");
+      if (typeof EventSource !== "undefined") {
+        var source = new EventSource("demo_sse.php");
+        source.onmessage = function (event) {
+          h.innerHTML += event.data + "<br>";
+        };
+      } else {
+        h.innerHTML = "Sorry, no support for server-sent events.";
+      }
+    </script>
+    <p>Use the CSS border property to add a border to the table</p>
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Femi</td>
+        <td>Mane</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <td>Tolu</td>
+        <td>Sunday</td>
+        <td>29</td>
+      </tr>
+      <tr>
+        <td>Victor</td>
+        <td>Pawo</td>
+        <td>29</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<!-- SVG (Scalable Vector Graphics)
+SVG defines vector-based graphics in XML, which can be directly embedded in HTML pages.
+
+SVG graphics are scalable, and do not lose any quality if they are zoomed or resized:
+
+SVG stands for Scalable Vector Graphics
+SVG is used to define vector-based graphics for the Web
+SVG defines graphics in XML format
+Each element and attribute in SVG files can be animated
+SVG is a W3C recommendation
+SVG integrates with other standards, such as CSS, DOM, XSL and JavaScript
+-->
+
+<!-- The HTML <video> element is used to show a video on a web page. -->
+
+<!-- 
+    Plug-ins are computer programs that extend the standard functionality of the browser.
+    Plug-ins were designed to be used for many different purposes:
+
+To run Java applets
+To run Microsoft ActiveX controls
+To display Flash movies
+To display maps
+To scan for viruses
+To verify a bank id
+ -->
+
+<!-- A Web API is a developer's dream.
+
+It can extend the functionality of the browser
+It can greatly simplify complex functions
+It can provide easy syntax to complex code
+-->
+
+<!-- API stands for Application Programming Interface. An API is some kind of interface that includes a set of functions and subroutines that allow programmers to access specific features or data of an application, operating system or other services.
+-->
+
+<!-- watchPosition() - Returns the current location of the user and continues to return updated location as the user moves (like the GPS in a car).
+clearWatch() - Stops the watchPosition() method. 
+-->
+
+<!-- With web storage, applications can store data locally within the user's browser.
+
+Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance.
+
+Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.
+-->
+
+<!-- Web storage provides two objects for storing data in the browser:
+
+window.localStorage object- stores data with no expiration date (data is not lost when the browser tab is closed, and will be available the next day, week or year)
+window.sessionStorage - stores data for only one session (data is lost / deleted when the user's browser tab is closed)
+-->
+
+<!-- A web worker is an external JavaScript file that runs in the background, independently of other scripts, without affecting the performance of the page.
+-->
+
+<!--The Server-Sent Events (SSE) API enables pushing messages/updates from a server to the web page via HTTP connection. 
+
+
+A server-sent event is when a web page automatically gets messages/updates from a server.
+
+Normally, a web page has to request data from the server, but with server-sent events, the updates are pushed automatically.
+
+Examples: Facebook/Twitter updates, stock market updates, news feeds, sport results, etc.
+
+-->
+
+<!-- 
+Events	Description
+onopen	When a connection to the server is opened
+onmessage	When a message is received
+onerror	When an error occurs
+ -->

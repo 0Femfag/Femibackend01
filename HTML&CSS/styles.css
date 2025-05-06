@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(230, 99, 71);
+  color: #000099;
+}
+
+
+h2 {
+  margin-bottom: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+  width: 160px;
+}
+
+.container ul {
+  text-align: center;
+  text-transform: none;
+  text-decoration: underline;
+}
+
+.container ul li {
+  color: #fffefe;
+  cursor: pointer;
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; /*to make the font bolder*/
+  gap: 10px;
+  justify-self: /*start*/ start;
+  list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+CSS stands for Cascading Style Sheets: used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+It can control the layout of multiple web pages all at once
+HTML was NEVER intended to contain tags for formatting a web page!
+
+HTML was created to describe the content of a web page
+You can also specify that only specific HTML elements should be affected by a class.
+The universal selector (*) selects all HTML elements on the page.
+CSS comments are not displayed in the browser, but they can help document your source code
+
+In CSS, a color can be specified using a hexadecimal value in the form:
+
+#rrggbb
+
+Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).
+
+For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).hsl(hue, saturation, lightness)
+
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+
+Saturation is a percentage value. 0% means a shade of gray, and 100% is the full color.
+
+Lightness is also a percentage. 0% is black, 50% is neither light or dark, 100% is white
+*/
+
+<!-- -->

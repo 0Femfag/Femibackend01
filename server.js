@@ -214,21 +214,21 @@ const life = ["Water", "Tissue", "Water", "Glass", " Cotton", "Water"];
 console.log(life.lastIndexOf("Water")) + 1;
 
 // This example finds the index of the first element that's larger than 18:
-const numbers = [4, 9, 16, 25, 29];
-let first = numbers.findIndex(myFunction);
-function myFunction(value, index, array) {
-  return value > 18;
-}
-console.log(first);
+// const numbers = [4, 9, 16, 25, 29];
+// let first = numbers.findIndex(myFunction);
+// function myFunction(value, index, array) {
+//   return value > 18;
+// }
+// console.log(first);
 
 // the find() method returns the value of the first array element that passes a test function.
 // this example finds and returns the value of the first element that's larger than 18:
-const Numbers = [4, 9, 16, 25, 29];
-let second = Numbers.find(myFunction);
-function myFunction(value, index, array) {
-  return value > 18;
-}
-console.log(second);
+// const Numbers = [4, 9, 16, 25, 29];
+// let second = Numbers.find(myFunction);
+// function myFunction(value, index, array) {
+//   return value > 18;
+// }
+// console.log(second);
 
 // findLast() start from the end of an array and return the value of the first element that satisfies a condition:
 const temp = [27, 28, 30, 40, 42, 35, 30];
@@ -302,7 +302,7 @@ console.log(figures2);
 const myArr2 = [1, 2, 3, 4, 5, 6];
 console.log(myArr2.flatMap((x) => x * 2));
 
-// filter() method creates a new array with array elements that pass a test and this exmaple creates a new array from elements with a value larger than 18
+// filter() method creates a new array with array elements that pass a test and this example creates a new array from elements with a value larger than 18
 const digits = [45, 4, 9, 16, 25];
 const over18 = digits.filter(myFunction);
 function myFunction(value, index, array) {
@@ -359,21 +359,21 @@ console.log(de);
 let msec2 = Date.parse("October 02, 2024");
 console.log(msec2);
 
-const years = new Date("2024-10-02");
+const years = new Date();
 console.log(years.getFullYear());
 
-const month = new Date("2024-10-02");
+const month = new Date();
 // let monthy = month[d.getMonth()];
 console.log(month.getMonth());
 // console.log(monthy);
 
-const date1 = new Date("2024-10-02");
+const date1 = new Date();
 console.log(date1.getDate());
 
-const hours = new Date("2024-10-02");
+const hours = new Date();
 console.log(hours.getHours());
 
-const minute = new Date("2024-10-02");
+const minute = new Date();
 console.log(minute.getMinutes());
 
 // const seconds = new Date("2024-10-02");
@@ -392,7 +392,7 @@ console.log(minute.getMinutes());
 // console.log(diff.getTimezoneOffset());
 
 const Year = new Date();
-console.log(Year.setFullYear(2024));
+console.log(Year.setFullYear(2025));
 
 // const Month = new Date();
 // console.log(Month.setMonth(10));
@@ -639,6 +639,7 @@ console.log(itinery.size);
 console.log(itinery);
 console.log(typeof itinery);
 console.log(itinery.has(true));
+
 const apples = { name: "Apples" };
 const bananas = { name: "Bananas" };
 const oranges = { name: "Oranges" };

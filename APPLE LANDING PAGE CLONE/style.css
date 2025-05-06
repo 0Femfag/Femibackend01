@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Display", sans-serif;
+  background: #f5f5f7;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.hero {
+  padding: 120px 20px;
+  background: url(https://www.apple.com/v/iphone-15-pro/a/images/overview/hero/hero_endframe__ov6ewwmbhiem_large.jpg)
+    no-repeat center center/cover;
+  color: hsl(0, 100%, 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headline {
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+
+.subheadline {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 10px 0 30px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #2997ff;
+  position: relative;
+}
+
+.link::after {
+  content: " >";
+  font-weight: bold;
+}
