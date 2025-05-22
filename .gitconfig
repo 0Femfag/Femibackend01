@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Femimane
+	email = Femimane1@gmail.com
+# Please adapt and uncomment the following lines:
+#	name = Mac
+#	email = mac@Macs-MacBook-Air.local
+[http]
+	postBuffer = 524288000
+[credential]
+	helper = osxkeychain

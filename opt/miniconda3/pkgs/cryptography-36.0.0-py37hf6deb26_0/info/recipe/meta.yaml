@@ -1,0 +1,119 @@
+# This file created by conda-build 3.21.7
+# meta.yaml template originally from:
+# /opt/concourse/worker/volumes/live/dfab5924-fd99-4f24-7939-7dbf6f1585f3/volume/rsync-recipes/cryptography-36.0.0-python_3.7-on-osx, last modified Mon Dec 13 08:53:02 2021
+# ------------------------------------------------
+
+package:
+  name: cryptography
+  version: 36.0.0
+source:
+  sha256: 52f769ecb4ef39865719aedc67b4b7eae167bafa48dbc2a26dd36fa56460507f
+  url: https://pypi.io/packages/source/c/cryptography/cryptography-36.0.0.tar.gz
+build:
+  number: '0'
+  script: /opt/concourse/worker/volumes/live/dfab5924-fd99-4f24-7939-7dbf6f1585f3/volume/cryptography_1639414584824/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/bin/python
+    -m pip install . -vv
+  string: py37hf6deb26_0
+requirements:
+  build:
+    - cctools_osx-64 949.0.1 hc7db93f_23
+    - clang 12.0.0 hecd8cb5_2
+    - clang-12 12.0.0 default_hfcad0e5_2
+    - clang_osx-64 12.0.0 h7ad7729_2
+    - clangxx 12.0.0 default_hfcad0e5_2
+    - clangxx_osx-64 12.0.0 he0c6f94_2
+    - compiler-rt 12.0.0 hd87ff74_2
+    - compiler-rt_osx-64 12.0.0 hfb26b64_2
+    - ld64_osx-64 530 h70f3046_23
+    - ldid 2.1.2 h2d21305_2
+    - libclang-cpp12 12.0.0 default_hfcad0e5_2
+    - libcxx 12.0.0 h2f01273_0
+    - libllvm12 12.0.0 h9b2ccf5_3
+    - llvm-tools 12.0.0 h9b2ccf5_3
+    - rust 1.54.0 h9ed2024_0
+    - rust_osx-64 1.46.0 h0a44026_0
+    - tapi 1000.10.8 ha1b3eb9_0
+    - zlib 1.2.11 h1de35cc_3
+  host:
+    - ca-certificates 2021.10.26 hecd8cb5_2
+    - certifi 2021.10.8 py37hecd8cb5_0
+    - cffi 1.14.6 py37h2125817_0
+    - libcxx 12.0.0 h2f01273_0
+    - libffi 3.3 hb1e8313_2
+    - ncurses 6.3 hca72f7f_2
+    - openssl 1.1.1l h9ed2024_0
+    - pip 21.2.2 py37hecd8cb5_0
+    - pycparser 2.21 pyhd3eb1b0_0
+    - python 3.7.11 h88f2d9e_0
+    - readline 8.1 h9ed2024_0
+    - semantic_version 2.8.5 pyhd3eb1b0_0
+    - setuptools 58.0.4 py37hecd8cb5_0
+    - setuptools-rust 0.12.1 pyhd3eb1b0_0
+    - sqlite 3.36.0 hce871da_0
+    - tk 8.6.11 h7bc2e8c_0
+    - toml 0.10.2 pyhd3eb1b0_0
+    - wheel 0.37.0 pyhd3eb1b0_1
+    - xz 5.2.5 h1de35cc_0
+    - zlib 1.2.11 h1de35cc_3
+  run:
+    - cffi >=1.12
+    - openssl
+    - python >=3.7,<3.8.0a0
+test:
+  commands:
+    - pip check
+    - pytest
+  imports:
+    - cryptography
+    - cryptography.fernet
+    - cryptography.hazmat
+    - cryptography.hazmat.backends
+    - cryptography.hazmat.backends.openssl
+    - cryptography.hazmat.bindings
+    - cryptography.hazmat.bindings.openssl
+    - cryptography.hazmat.primitives
+    - cryptography.hazmat.primitives.asymmetric
+    - cryptography.hazmat.primitives.ciphers
+    - cryptography.hazmat.primitives.kdf
+    - cryptography.hazmat.primitives.twofactor
+    - cryptography.x509
+  requires:
+    - cryptography-vectors 36.0.0.*
+    - hypothesis >=1.11.4,!=3.79.2
+    - iso8601
+    - pip
+    - pretend
+    - pytest >=6.2.0
+    - pytest-subtests
+    - pytz
+  source_files:
+    - tests
+about:
+  description: 'Cryptography is a package which provides cryptographic recipes and
+
+    primitives to Python developers. Our goal is for it to be your
+
+    "cryptographic standard library". It supports Python 2.6-2.7, Python 3.3+,
+
+    and PyPy 2.6+. Cryptography includes both high level recipes, and low level
+
+    interfaces to common cryptographic algorithms such as symmetric ciphers,
+
+    message digests and key derivation functions.
+
+    '
+  dev_url: https://github.com/pyca/cryptography
+  doc_source_url: https://github.com/pyca/cryptography/blob/master/docs/index.rst
+  doc_url: https://cryptography.io/
+  home: https://github.com/pyca/cryptography
+  license: Apache-2.0 AND BSD-3-Clause AND PSF-2.0 AND MIT
+  license_family: BSD
+  license_file: LICENSE
+  summary: Provides cryptographic recipes and primitives to Python developers
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - chenghlee
+    - jakirkham
+    - ocefpaf

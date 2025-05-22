@@ -1,0 +1,9 @@
+prefix=/opt/concourse/worker/volumes/live/6532e873-130f-47ac-7c5a-68f741265f72/volume/openssl_1647850602712/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: OpenSSL
+Description: Secure Sockets Layer and cryptography libraries and tools
+Version: 1.1.1n
+Requires: libssl libcrypto

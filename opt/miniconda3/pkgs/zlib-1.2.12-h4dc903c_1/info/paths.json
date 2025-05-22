@@ -1,0 +1,41 @@
+{
+  "paths": [
+    {
+      "_path": "include/zconf.h",
+      "path_type": "hardlink",
+      "sha256": "289c8044a0e13ce2ea2183fe899f65c7ed8d091030b9c056ae6acdc39a8e1405",
+      "size_in_bytes": 16344
+    },
+    {
+      "_path": "include/zlib.h",
+      "path_type": "hardlink",
+      "sha256": "045cf777c6c9109b28ddcf3a413c5ca15e39fc513c13ef87bd9a3132a59d1b51",
+      "size_in_bytes": 97317
+    },
+    {
+      "_path": "lib/libz.1.2.12.dylib",
+      "path_type": "hardlink",
+      "sha256": "a0d585a17a4e512cbf2b6d48d8c69279f05e996c62128173e4a3d01cafb05af0",
+      "size_in_bytes": 109540
+    },
+    {
+      "_path": "lib/libz.1.dylib",
+      "path_type": "softlink",
+      "sha256": "a0d585a17a4e512cbf2b6d48d8c69279f05e996c62128173e4a3d01cafb05af0",
+      "size_in_bytes": 109540
+    },
+    {
+      "_path": "lib/libz.a",
+      "path_type": "hardlink",
+      "sha256": "5d694df01182112c7aa3d38f876cda2ccf2dace88ba889668ea3fa6d111b1726",
+      "size_in_bytes": 126384
+    },
+    {
+      "_path": "lib/libz.dylib",
+      "path_type": "softlink",
+      "sha256": "a0d585a17a4e512cbf2b6d48d8c69279f05e996c62128173e4a3d01cafb05af0",
+      "size_in_bytes": 109540
+    }
+  ],
+  "paths_version": 1
+}

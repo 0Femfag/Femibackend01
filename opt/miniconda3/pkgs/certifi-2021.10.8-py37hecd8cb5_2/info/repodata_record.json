@@ -1,0 +1,23 @@
+{
+  "build": "py37hecd8cb5_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "features": "",
+  "fn": "certifi-2021.10.8-py37hecd8cb5_2.conda",
+  "legacy_bz2_md5": "88e9bb8f92613585eabac4a9f7d52c41",
+  "legacy_bz2_size": 159461,
+  "license": "MPL-2.0",
+  "md5": "683a259e75ca2303f9e3d68a3e3d57f7",
+  "name": "certifi",
+  "sha256": "960aa45eb8d44a3f8a1c48ad6f1f387a34d7c97a564db0b609b4183c904e32c0",
+  "size": 154527,
+  "subdir": "osx-64",
+  "timestamp": 1641900043288,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/certifi-2021.10.8-py37hecd8cb5_2.conda",
+  "version": "2021.10.8"
+}

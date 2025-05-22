@@ -1,0 +1,14 @@
+{
+  "arch": "x86_64",
+  "build": "py37hecd8cb5_2",
+  "build_number": 2,
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "license": "MPL-2.0",
+  "name": "certifi",
+  "platform": "osx",
+  "subdir": "osx-64",
+  "timestamp": 1641900043288,
+  "version": "2021.10.8"
+}

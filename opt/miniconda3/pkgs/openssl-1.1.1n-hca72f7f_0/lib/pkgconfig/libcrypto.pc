@@ -1,0 +1,12 @@
+prefix=/opt/concourse/worker/volumes/live/6532e873-130f-47ac-7c5a-68f741265f72/volume/openssl_1647850602712/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+enginesdir=${libdir}/engines-1.1
+
+Name: OpenSSL-libcrypto
+Description: OpenSSL cryptography library
+Version: 1.1.1n
+Libs: -L${libdir} -lcrypto
+Libs.private:  
+Cflags: -I${includedir}

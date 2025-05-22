@@ -1,0 +1,15 @@
+.env
+.env.vault
+/node_modules
+.Trash 
+/Applications
+/Desktop
+/Documents
+/Downloads
+/Library
+/Movies
+/Music
+/Pictures
+/Public
+.zsh_history
+.DS_Store

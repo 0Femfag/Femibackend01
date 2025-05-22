@@ -1,0 +1,10 @@
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if ( -f "/Users/mac/opt/miniconda3/etc/profile.d/conda.csh" ) then
+    source "/Users/mac/opt/miniconda3/etc/profile.d/conda.csh"
+else
+    setenv PATH "/Users/mac/opt/miniconda3/bin:$PATH"
+endif
+# <<< conda initialize <<<
+

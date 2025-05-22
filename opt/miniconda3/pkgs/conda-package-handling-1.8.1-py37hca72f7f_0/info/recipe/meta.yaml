@@ -1,0 +1,90 @@
+# This file created by conda-build 3.21.8
+# meta.yaml template originally from:
+# /opt/concourse/worker/volumes/live/5ea27fa0-a2bc-4000-6d10-4fb80b886f93/volume/rsync-recipes/conda-package-handling-1.8.1-python_3.7-on-osx, last modified Mon Apr  4 15:51:01 2022
+# ------------------------------------------------
+
+package:
+  name: conda-package-handling
+  version: 1.8.1
+source:
+  sha256: 22d89206f55616b774a775038a6777b0d2e9b8706c23068c4d3091f114c8a4e8
+  url: https://github.com/conda/conda-package-handling/archive/1.8.1.tar.gz
+build:
+  entry_points:
+    - cph = conda_package_handling.cli:main
+  missing_dso_whitelist: null
+  number: '0'
+  script: /opt/concourse/worker/volumes/live/5ea27fa0-a2bc-4000-6d10-4fb80b886f93/volume/conda-package-handling_1649105818303/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/bin/python
+    -m pip install . --no-deps -vv
+  string: py37hca72f7f_0
+requirements:
+  build:
+    - cctools_osx-64 949.0.1 hc7db93f_23
+    - clang 12.0.0 hecd8cb5_2
+    - clang-12 12.0.0 default_hfcad0e5_2
+    - clang_osx-64 12.0.0 h7ad7729_2
+    - clangxx 12.0.0 default_hfcad0e5_2
+    - compiler-rt 12.0.0 hd87ff74_2
+    - compiler-rt_osx-64 12.0.0 hfb26b64_2
+    - ld64_osx-64 530 h70f3046_23
+    - ldid 2.1.2 h2d21305_2
+    - libclang-cpp12 12.0.0 default_hfcad0e5_2
+    - libcxx 12.0.0 h2f01273_0
+    - libllvm12 12.0.0 h9b2ccf5_3
+    - llvm-tools 12.0.0 h9b2ccf5_3
+    - tapi 1000.10.8 ha1b3eb9_0
+    - zlib 1.2.11 h4dc903c_4
+  host:
+    - _libarchive_static_for_cph 3.4.3 h1de35cc_2
+    - ca-certificates 2022.3.29 hecd8cb5_0
+    - certifi 2021.10.8 py37hecd8cb5_2
+    - cython 0.29.28 py37he9d5cce_0
+    - libcxx 12.0.0 h2f01273_0
+    - libffi 3.3 hb1e8313_2
+    - ncurses 6.3 hca72f7f_2
+    - openssl 1.1.1n hca72f7f_0
+    - pip 21.2.2 py37hecd8cb5_0
+    - python 3.7.13 hdfd78df_0
+    - readline 8.1.2 hca72f7f_1
+    - setuptools 58.0.4 py37hecd8cb5_0
+    - sqlite 3.38.2 h707629a_0
+    - tk 8.6.11 h7bc2e8c_0
+    - wheel 0.37.1 pyhd3eb1b0_0
+    - xz 5.2.5 h1de35cc_0
+    - zlib 1.2.11 h4dc903c_4
+  run:
+    - python >=3.7,<3.8.0a0
+    - tqdm
+test:
+  commands:
+    - pytest tests -k "not test_secure_refusal_to_extract_abs_paths"
+  imports:
+    - conda_package_handling
+    - conda_package_handling.archive_utils_cy
+  requires:
+    - mock
+    - pytest
+    - pytest-cov
+    - pytest-mock
+  source_files:
+    - tests
+about:
+  dev_url: https://github.com/conda/conda-package-handling
+  home: https://github.com/conda/conda-package-handling
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file:
+    - LICENSE
+    - static_deps_licenses/bzip2.txt
+    - static_deps_licenses/libarchive.txt
+    - static_deps_licenses/libiconv.txt
+    - static_deps_licenses/zlib.txt
+    - static_deps_licenses/zstd.txt
+  summary: Create and extract conda packages of various formats
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - beckermr
+    - dbast
+    - msarahan

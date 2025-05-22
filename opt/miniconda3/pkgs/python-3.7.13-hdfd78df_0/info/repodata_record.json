@@ -1,0 +1,31 @@
+{
+  "build": "hdfd78df_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "libffi >=3.3,<3.4.0a0",
+    "ncurses >=6.3,<7.0a0",
+    "openssl >=1.1.1n,<1.1.2a",
+    "readline >=8.0,<9.0a0",
+    "sqlite >=3.37.2,<4.0a0",
+    "tk >=8.6.11,<8.7.0a0",
+    "xz >=5.2.5,<6.0a0",
+    "zlib >=1.2.11,<1.3.0a0"
+  ],
+  "features": "",
+  "fn": "python-3.7.13-hdfd78df_0.conda",
+  "legacy_bz2_md5": "46cabc5e0b3367e617f7a19f1fb4568a",
+  "legacy_bz2_size": 25863883,
+  "license": "PSF-2.0",
+  "license_family": "PSF",
+  "md5": "fea1dc61f809fae83c64f4ac53a99a51",
+  "name": "python",
+  "sha256": "a4fa039fc7cb8db63be6891a75cd4c405ac8bfa8710006cc2dc85b9c345d3d05",
+  "size": 21308713,
+  "subdir": "osx-64",
+  "timestamp": 1648470493481,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/python-3.7.13-hdfd78df_0.conda",
+  "version": "3.7.13"
+}

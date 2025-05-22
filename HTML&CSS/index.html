@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing around</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>A Nested List</h2>
+
+    <div class="container">
+      <ul>
+        <li>Coffee</li>
+        <li>
+          Tea
+          <ul>
+            <li>Green tea</li>
+            <li>
+              Black tea
+              <ul>
+                <li>China</li>
+                <li>Japanese</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Milk</li>
+      </ul>
+    </div>
+
+    <h2>Navigation Menu</h2>
+    <p>
+      In this example, we use CSS to style the list horizontally, to create a
+      navigation menu:
+    </p>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <h2>Using The id Attribute in JavaScript</h2>
+    <p>
+      JavaScript can access an element with a specified id by using the
+      getElementById() method:
+    </p>
+
+    <h1 id="myHeader">Hello World!</h1>
+
+    <button onclick="displayResult()">Change text</button>
+
+    <script>
+      function displayResult() {
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+      }
+    </script>
+
+    <p id="demo">A paragraph</p>
+
+    <button type="button" onclick="Femimane()">Try It</button>
+
+    <script>
+      function Femimane() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+      }
+    </script>
+  </body>
+</html>
+
+<!-- We can see the new branch with the name "hello-world-images", but the * beside master specifies that we are currently on that branch.
+
+checkout is the command used to check out a branch. Moving us from the current branch, to the one specified at the end of the command:
+
+
+Now we have moved our current workspace from the master branch, to the new branch
+
+
+merge combines the current branch, with a specified branch.
+
+We have confirmed that the updates are as expected, and we can merge our current branch (master) with origin/master:
+
+pull is a combination of fetch and merge. It is used to pull all changes from a remote repository into the branch you are working on.
+
+
+When we have made changes locally, we want to update our remote repository with the changes.
+
+Transferring our local changes to our remote is done with a push command.
+
+There are several commands we can use to push changes to GitHub.
+
+-->

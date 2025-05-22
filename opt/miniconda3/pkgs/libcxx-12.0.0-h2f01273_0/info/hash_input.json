@@ -1,0 +1,5 @@
+{
+  "dummy_var": "0",
+  "target_platform": "osx-64",
+  "channel_targets": "defaults"
+}

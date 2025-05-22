@@ -1,0 +1,67 @@
+{
+  "build": "py37hca72f7f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/mac/opt/miniconda3/pkgs/python.app-3-py37hca72f7f_0",
+  "features": "",
+  "files": [
+    "bin/.python.app-post-link.sh",
+    "bin/.python.app-pre-unlink.sh",
+    "bin/python.app",
+    "bin/pythonw",
+    "pythonapp/Contents/Info.plist",
+    "pythonapp/Contents/MacOS/python",
+    "pythonapp/Contents/PkgInfo",
+    "pythonapp/Contents/Resources/empty.lproj",
+    "pythonapp/Contents/Resources/qt_menu.nib/classes.nib",
+    "pythonapp/Contents/Resources/qt_menu.nib/info.nib",
+    "pythonapp/Contents/Resources/qt_menu.nib/keyedobjects.nib"
+  ],
+  "fn": "python.app-3-py37hca72f7f_0.conda",
+  "legacy_bz2_md5": "7a2d3b43a9dce9b679db6f2d7ab6f00f",
+  "legacy_bz2_size": 16541,
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/Users/mac/opt/miniconda3/pkgs/python.app-3-py37hca72f7f_0",
+    "type": 1
+  },
+  "md5": "379e8ff3bfbf75f6b4d6f20abd32b9d0",
+  "name": "python.app",
+  "package_tarball_full_path": "/Users/mac/opt/miniconda3/pkgs/python.app-3-py37hca72f7f_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/python.app",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/concourse/worker/volumes/live/ddc5cdb0-5de4-4b02-7ff1-a3ba6f1334e5/volume/python.app_1636034821869/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "c834600e229925762ed7d54b6a5d46116829df83d6851fe76b5ef3ea7baf3367",
+        "sha256_in_prefix": "3d41f89ae6191224d289dda2a3abafdd2ad60725ca2019fb9936a639ed836505",
+        "size_in_bytes": 597
+      },
+      {
+        "_path": "bin/pythonw",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/concourse/worker/volumes/live/ddc5cdb0-5de4-4b02-7ff1-a3ba6f1334e5/volume/python.app_1636034821869/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "c834600e229925762ed7d54b6a5d46116829df83d6851fe76b5ef3ea7baf3367",
+        "sha256_in_prefix": "3d41f89ae6191224d289dda2a3abafdd2ad60725ca2019fb9936a639ed836505",
+        "size_in_bytes": 597
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "python.app==3=py37hca72f7f_0",
+  "sha256": "d3d8c129d0dd5f07b946aeb8b9145a56dd43042a92a3d06347cfa8c3ff23a189",
+  "size": 20771,
+  "subdir": "osx-64",
+  "timestamp": 1636034903864,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/python.app-3-py37hca72f7f_0.conda",
+  "version": "3"
+}

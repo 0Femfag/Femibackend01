@@ -1,0 +1,100 @@
+body {
+  /* background-color: #000; */
+  background-image: url(../img/moroccan-flower.png);
+  background-repeat: repeat-x;
+  /* color: rgb(24, 188, 76); */
+  font-size: 20px;
+  font-family: sans-serif;
+
+  text-align: center;
+}
+
+h1 {
+  font-size: 70px;
+  color: pink;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 40px;
+  color: blue;
+  margin-top: 0px;
+}
+
+h1 {
+  color: blueviolet;
+}
+
+/* p {
+  color: #05000361;
+  line-height: 1.4;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: left;
+  color: red;
+  clear: both;
+}
+
+.red-box {
+  width: 500px;
+  background: rgba(255, 0, 0, 0.5);
+  float: left;
+}
+
+.blue-box {
+  width: 500px;
+  background: blue;
+  float: right;
+}
+
+img {
+  float: left;
+  margin-right: 20px;
+  width: 200px;
+}  */
+
+.box {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.box1 {
+  background: pink;
+}
+
+.box2 {
+  background: red;
+}
+
+.box3 {
+  background: firebrick;
+}
+
+.box4 {
+  background: orange;
+}
+
+.box5 {
+  background: yellow;
+}
+
+.box6 {
+  background: greenyellow;
+}
+
+.box7 {
+  background: green;
+}
+
+.box8 {
+  background: blue;
+}
+
+.box9 {
+  background: purple;
+}
+
+.box10 {
+  background: indigo;
+}

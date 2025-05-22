@@ -1,0 +1,1685 @@
+commit e5f36604e59c460c717aed8280cfc0c5a6002e3b
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Tue Aug 3 22:47:33 2021 +0200
+
+    fix typo ...
+
+commit 8e1e9ff67fe7676da49beff1130ba1341d27e5bd
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Tue Aug 3 22:40:54 2021 +0200
+
+    add 12.0.0 support
+
+commit 2f232218232f1ff057e7e9592b247f3e33f70bf1
+Author: Kai Tietz <ktietz@anaconda.com>
+Date:   Mon May 11 17:09:08 2020 +0200
+
+    Diable some test due they are not present
+
+commit a2c4dbb56220c6a2cea1dc9dc73e71f5f8626352
+Merge: 3e5f5bb 506a5b7
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Apr 23 20:41:09 2020 -0500
+
+    Merge pull request #59 from isuruf/test-travis
+    
+    Use travis-ci for osx
+
+commit 3e5f5bba4864aae5847cd61b63c6462a4f35c6a0
+Merge: 9fe5368 d9c9ec6
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Apr 23 20:40:19 2020 -0500
+
+    Merge pull request #60 from isuruf/revert
+    
+    Revert "Don't use system libc++abi when building libc++"
+
+commit d9c9ec6bd73819b11e9f38ad332c2af237d0b970
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Apr 20 01:09:52 2020 -0500
+
+    Bump build number
+
+commit 506a5b796db3d3d579d6f2aedd2e1fef6ccafc0b
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Apr 18 12:42:41 2020 -0500
+
+    Enable openturns
+
+commit 06eefc3270ff91cf103419a0ee47cb53598caf3d
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Fri Apr 17 23:08:22 2020 -0500
+
+    Bump build number
+
+commit eac963b1973884a54c31f5063d26031b05cb7316
+Merge: fd50808 3a3221f
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Fri Apr 17 23:00:05 2020 -0500
+
+    Merge branch 'revert' of github.com:isuruf/libcxx-feedstock into test-travis
+
+commit 3a3221f513b63857b309bf570058d06d478f2d33
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Sat Apr 18 03:54:03 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.6.16, and conda-forge-pinning 2020.04.18.00.00.57
+
+commit f8d6172703540aab98df909b4678b86e5010ec3c
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Fri Apr 17 22:51:59 2020 -0500
+
+    Try clang 9.0.0
+
+commit c40b4dd50556edcd6000860c5b36ecc8539bb5a4
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Fri Apr 17 22:51:02 2020 -0500
+
+    Revert "Don't use system libc++abi when building libc++"
+    
+    This reverts commit 6fc7fd83492c8c87774928e33f5c3455d2a1b1b3.
+
+commit fd50808482e7376c68848f127b755811816fc60b
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Fri Apr 17 18:04:48 2020 -0500
+
+    remove outdated pr failing
+
+commit b492f0e0e6b8ed326a6ffb0d84e37946b4d42650
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Fri Apr 17 18:02:33 2020 -0500
+
+    python3
+
+commit 95827befab47b13070e0d0a5557b91e036adf427
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Fri Apr 17 22:54:55 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.6.16, and conda-forge-pinning 2020.04.17.22.20.20
+
+commit b590f05460767faead2fecf2e2a17ba37d06c9e1
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Fri Apr 17 17:52:33 2020 -0500
+
+    Use travis-ci for osx
+
+commit 9fe53686a35aff963d3683287f76abb5cd51741e
+Merge: 2edeca0 1bc22a9
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Wed Apr 8 06:14:12 2020 -0500
+
+    Merge pull request #57 from regro-cf-autotick-bot/10.0.0_h244ae1
+    
+    libcxx v10.0.0
+
+commit 1bc22a9682975f494db82580e26e43b8a8e33c69
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Tue Apr 7 12:43:31 2020 +0000
+
+    updated v10.0.0
+
+commit 2edeca05beddf1619e4aada9dac7b7e2465b51a4
+Merge: d51b5f7 bb8ec50
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Apr 6 23:12:28 2020 -0500
+
+    [skip ci] [ci skip] ***NO_CI*** Merge pull request #56 from mattwala/remove-mattwala
+    
+    Remove mattwala from maintainers
+
+commit bb8ec501bd2957bb379b3591d20e24d6de92e859
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Tue Apr 7 03:55:35 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.2, conda-smithy 3.6.15, and conda-forge-pinning 2020.04.07
+
+commit 03b8ad975a1b8a7cbd7d7a998b5d461a9a39dc9f
+Author: Matt Wala <wala1@illinois.edu>
+Date:   Mon Apr 6 22:32:19 2020 -0500
+
+    Remove mattwala from maintainers
+
+commit d51b5f7654263285f6fe09be46aeb548c827a716
+Merge: b0287d4 5065891
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Apr 6 17:31:26 2020 -0500
+
+    Merge pull request #55 from timsnyder/54_fix_recipe_for_autotick
+    
+    fix recipe for autotick
+
+commit 506589121d8bfbdde14ac8a5573b2d0e21d02ff7
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Apr 6 21:43:49 2020 +0000
+
+    remove openturns checking for now
+
+commit 6fc7fd83492c8c87774928e33f5c3455d2a1b1b3
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Apr 6 21:38:42 2020 +0000
+
+    Don't use system libc++abi when building libc++
+
+commit 1aeff131c10afc2ffd22086c5ca67db12209e6d1
+Author: Tim Snyder <snyder.tim@gmail.com>
+Date:   Mon Apr 6 07:00:50 2020 -0500
+
+    don't use jinja for build_number per @beckermr
+
+commit 5d15b9fd7579955c8f6bce3590c4ed7631a1e1d8
+Author: Tim Snyder <snyder.tim@gmail.com>
+Date:   Mon Apr 6 06:56:27 2020 -0500
+
+    SPDX'ify license info
+
+commit 4c0fabd52f46fd7d640b26d24c532cb2fea9e71b
+Author: Tim Snyder <snyder.tim@gmail.com>
+Date:   Mon Apr 6 06:21:47 2020 -0500
+
+    MNT: Re-rendered with conda-build 3.19.0, conda-smithy 3.6.15, and conda-forge-pinning 2020.04.06
+
+commit d46835b019254eeb332c940461b9465691f57700
+Author: Tim Snyder <snyder.tim@gmail.com>
+Date:   Mon Apr 6 06:19:58 2020 -0500
+
+    Use '{{ version }}' everywhere and add @timsnyder
+    
+    Fixes #54 and adds @timsnyder to maintainers
+
+commit b0287d4e2aa07dbe91ba59ac782b3e6d3734a8ef
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Mon Mar 2 21:27:36 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration AutomergeAndRerender
+
+commit cdfc81dd22e5aa9a1c28f78fcd3b0f7fda6dacc2
+Merge: 01e533e bbe5355
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Jan 4 20:41:03 2020 +0530
+
+    Merge pull request #51 from beckermr/beckermr-patch-1
+    
+    BUG refix libcxxabi issues on osx
+
+commit bbe53551b39e763f661f0be23458cc0f91502301
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Sat Jan 4 14:08:13 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.18.11, conda-smithy 3.6.5, and conda-forge-pinning 2019.12.18
+
+commit c2e0563b60451bfe8c996df3ae37be6dd6e83af8
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Sat Jan 4 08:07:04 2020 -0600
+
+    DOC comment spelling
+
+commit f929a3fbb38471383e3d7e6780f1cf5f39aef09e
+Merge: ad1d1b3 a763523
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Sat Jan 4 08:01:33 2020 -0600
+
+    Merge branch 'beckermr-patch-1' of https://github.com/beckermr/libcxx-feedstock into beckermr-patch-1
+
+commit ad1d1b33d9b8ed42c4835fc187fd99d76ee7fd73
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Sat Jan 4 07:59:25 2020 -0600
+
+    TST add an extra test
+
+commit a763523da8a17435aa0df55e55ef93eff7f8bd98
+Author: Matthew R. Becker <beckermr@users.noreply.github.com>
+Date:   Sat Jan 4 07:50:14 2020 -0600
+
+    BUG wrong skip
+
+commit eede8fcf10d6cf3eb84aebdae58e3ad021ee3218
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Sat Jan 4 07:42:35 2020 -0600
+
+    bump build number
+
+commit d207c02548b344c6a6d34d5bfb27d5d3b7d4861a
+Author: Matthew R Becker <becker.mr@gmail.com>
+Date:   Sat Jan 4 07:41:21 2020 -0600
+
+    skip build in meta.yaml
+
+commit 15f78f02e097e57642c1ee119e5aea50edc489af
+Author: Matthew R. Becker <beckermr@users.noreply.github.com>
+Date:   Sat Jan 4 07:34:43 2020 -0600
+
+    Update compile_test.sh
+
+commit 0c9d19f778b31b8e542991b8b6b991ee633c16d5
+Author: Matthew R. Becker <beckermr@users.noreply.github.com>
+Date:   Sat Jan 4 07:31:00 2020 -0600
+
+    BUG refix libcxx abi issues
+
+commit 01e533e435d5a5bc1f8799da1ecee9a3cba58e9f
+Merge: eae8c0f 5688de5
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Jan 4 12:18:46 2020 +0530
+
+    Merge pull request #50 from chrisburr/update-9.0.1
+    
+    Update 9.0.1
+
+commit 5688de5a166d08adf971a26cd14b2c0109d3d2a1
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Jan 4 06:25:10 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.18.11, conda-smithy 3.6.5, and conda-forge-pinning 2019.12.18
+
+commit ee4d5e6effcf6dc5af6708b929192eada7d50ca1
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Jan 4 06:23:27 2020 +0000
+
+    Skip ppc64le and aarch64 (#46)
+
+commit 0ca4d9cbf4db8e69eb3c6d0e20ca1e13768a3c19
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Jan 4 06:14:28 2020 +0000
+
+    Fix libcxxabi sources
+
+commit d5ba630d7b9e84de1673fa7ba31bb3ef554c7125
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Jan 4 05:59:52 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.18.11, conda-smithy 3.6.5, and conda-forge-pinning 2019.12.18
+
+commit 96d0d7d6dd8b6478363cce5b4ac42c42bfcded20
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Jan 4 05:58:49 2020 +0000
+
+    Tidy up dependencies slightly
+
+commit cd9f51825cbb6858a8820ce465ed56c65a2078b0
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Jan 4 05:55:58 2020 +0000
+
+    Update to 9.0.1
+
+commit dbb21e7a3c8d42ed1a058be06f58dd378e9d9495
+Author: Chris Burr <christopher.burr@cern.ch>
+Date:   Sat Jan 4 05:53:04 2020 +0000
+
+    Revert "Merge pull request #48 from SylvainCorlay/rebuild-5.x"
+
+commit eae8c0f9fb16afdb748ab47a4f050768dfe355ba
+Merge: 12e10c2 7bb8d7a
+Author: Sylvain Corlay <sylvain.corlay@gmail.com>
+Date:   Thu Dec 5 00:46:56 2019 +0100
+
+    Merge pull request #48 from SylvainCorlay/rebuild-5.x
+    
+    Rebuild 5.x
+
+commit 7bb8d7ab6ed7ca583b3aac0add95532e864d9b88
+Author: Sylvain Corlay <sylvain.corlay@gmail.com>
+Date:   Thu Dec 5 00:37:19 2019 +0100
+
+    skip not osx
+
+commit 382509afd77ac8ac7701f10503b7d103b2b541e2
+Author: Sylvain Corlay <sylvain.corlay@gmail.com>
+Date:   Thu Dec 5 00:23:30 2019 +0100
+
+    Rebuild 5.x
+
+commit 12e10c254e9d9e36c8bf52e3f56fcbd037b64eef
+Author: Matthew R. Becker <beckermr@users.noreply.github.com>
+Date:   Sat Oct 19 08:27:14 2019 -0500
+
+    ENH fix rtti issues on osx (#45)
+    
+    * fix rtti issues on osx
+    
+    * MNT: Re-rendered with conda-build 3.18.10, conda-smithy 3.6.0, and conda-forge-pinning 2019.10.11
+    
+    * try this
+    
+    * display the symbols
+    
+    * actually run the tests
+    
+    * try this
+    
+    * try this
+    
+    * try this again
+    
+    * roll back conda build
+    
+    * roll back conda build
+    
+    * remove test due to conda build bug
+    
+    * MNT: Re-rendered with conda-build 3.18.10, conda-smithy 3.6.0, and conda-forge-pinning 2019.10.11
+    
+    * formatting
+    
+    * try this
+    
+    * this is still needed
+    
+    * this is still needed
+    
+    * maybe this
+    
+    * weird conflict
+    
+    * try this
+    
+    * maybe this?
+    
+    * maybe this?
+    
+    * wtf
+    
+    * try this
+    
+    * this one
+    
+    * try this
+    
+    * no abi
+    
+    * try again
+    
+    * try this
+    
+    * try this again
+    
+    * add back windows stuff
+    
+    * maybe this
+    
+    * much simpler build
+    
+    * put back ignore run exports
+    
+    * bundle not on osx
+    
+    * bugz and tweaks
+    
+    * add linking flag for linux
+    
+    * Update compile_test.sh
+    
+    * Use $INSTALL_NAME_TOOL
+
+commit c32d39c498de75c39b51de61a5656a191ee31384
+Merge: b9ed993 6de67e1
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Sep 22 21:37:20 2019 -0500
+
+    Merge pull request #43 from isuruf/9.0.0
+    
+    9.0.0
+
+commit 6de67e167315ff358bd82dbb190c3702b1a4eaa0
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Sep 22 21:22:09 2019 -0500
+
+    Update to 9.0.0
+
+commit 84eb23f8f16ecd30610dd120b0f0aa8b352e6112
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Sep 22 21:20:53 2019 -0500
+
+    MNT: Re-rendered with conda-build 3.18.9, conda-smithy 3.4.8, and conda-forge-pinning 2019.09.08
+
+commit b9ed993a6b7de3a300f4ede2cc31d5be3c847cbe
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Fri Sep 6 19:00:43 2019 -0500
+
+    [ci skip] ***NO_CI*** Move from appveyor to azure.
+    
+    See https://github.com/conda-forge/conda-forge.github.io/issues/857
+
+commit 07dcf4553792eed2ee828459934dc4a2ee1afbb3
+Merge: 5895dc2 6024d71
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Aug 19 16:12:09 2019 -0500
+
+    Merge pull request #42 from isuruf/8.0.1
+    
+    update to 8.0.1
+
+commit 6024d718b264506c161ff0929e92daa4a1164f08
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Aug 19 15:50:45 2019 -0500
+
+    update to 8.0.1
+
+commit 5895dc21b529e8b863917b80330fe19a110cf147
+Merge: 948ab98 6ac1383
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Jun 29 01:56:28 2019 -0400
+
+    Merge pull request #41 from xhochy/avoid-cycles
+    
+    Avoid cycles
+
+commit 6ac138375483cfab583e38cc3b1a3aed8a9d5bcc
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Fri Jun 28 18:59:15 2019 -0400
+
+    Avoid cycles with make on osx
+
+commit 17ef4288e503356b793c051dcd78e3f02db3d5e3
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Fri Jun 28 10:58:04 2019 +0200
+
+    Add make as a build dependency
+
+commit ab5dc1182a2f1724583b1b4b75d7e53788399e00
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Fri Jun 28 10:42:23 2019 +0200
+
+    Bump build number
+
+commit 4310ff3bb1f1fe8e5c69357f8fc274327b55df7c
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Fri Jun 28 10:42:01 2019 +0200
+
+    MNT: Re-rendered with conda-build 3.18.6, conda-smithy 3.4.0, and conda-forge-pinning 2019.06.27
+
+commit 948ab98e7a3820772916af50ec696fae215148e4
+Merge: b5fb68b 4f1c8e9
+Author: Jonathan J. Helmus <jjhelmus@gmail.com>
+Date:   Thu Jun 27 10:00:59 2019 -0500
+
+    Merge pull request #40 from xhochy/rebuildaarch64_and_ppc64le_addition1_arch
+    
+    Rebuild for aarch64 and ppc64le
+
+commit 4f1c8e9470c994acb09e66e9f0e519d9975e3d3f
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Thu Jun 27 14:54:05 2019 +0200
+
+    Workaround constexpr bug in gcc on ppc64
+
+commit d1cd44d44bf4e8ab57e9eba030c0faddf0c638fc
+Author: Uwe L. Korn <uwe.korn@quantco.com>
+Date:   Thu Jun 27 14:07:53 2019 +0200
+
+    Add cmake and ninja as build dependencies
+
+commit a5bf38d04dd0003db8c55278a621126aa960635f
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Apr 11 03:32:42 2019 +0000
+
+    Rebuild for aarch64 and ppc64le
+
+commit b5fb68be3b2b6d648212fa02cc5f79780f8ecb5e
+Merge: 94a3107 16d53a7
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Apr 11 20:59:16 2019 -0500
+
+    Merge pull request #39 from isuruf/outputs1
+    
+    Fix files in libcxx output
+
+commit 16d53a7e66f06e37d68fd6a5f7db37f3c8d6b53d
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Apr 11 15:40:48 2019 -0500
+
+    Fix files in libcxx output
+
+commit 94a3107232a6da007ca2f71c959a01f4c46f7ceb
+Merge: 21ee997 d1ff872
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Wed Apr 10 00:27:58 2019 -0500
+
+    Merge pull request #36 from isuruf/split
+    
+    Split libcxx and libcxxabi
+
+commit d1ff8726dcd1e59773c6f4241dc607acd3c99b84
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Wed Apr 10 00:12:56 2019 -0500
+
+    Make linter happy
+
+commit 43f34720aa7a3fdff0bb70bbb0913b15bc7c5b88
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 17:30:00 2019 -0500
+
+    Split libcxx and libcxxabi
+
+commit 21ee99799023df05c71aa935172709e46d10c2ce
+Merge: 94e5734 dc5a776
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 08:36:05 2019 -0500
+
+    Merge pull request #34 from regro-cf-autotick-bot/8.0.0
+    
+    libcxx v8.0.0
+
+commit dc5a776587efd00ca2e5dbe2565857a5685ead4c
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 08:16:40 2019 -0500
+
+    No python in meta.yaml for osx
+
+commit 04a53f7a584ab76e6b67955bfe698663fb87ffba
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 04:15:27 2019 -0500
+
+    Need python for building
+
+commit 894b4519c593015bd840eee4cb0ad0f0198e0ae5
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 04:12:54 2019 -0500
+
+    MNT: Re-rendered with conda-build 3.17.8, conda-smithy 3.3.2, and conda-forge-pinning 2019.03.17
+
+commit 759f0e78157f35843fb6724eee86b840abcefdf6
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 04:12:10 2019 -0500
+
+    Skip win for now
+
+commit 81b1e1ccff3227812f52c28999a48a0f218b915a
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 03:32:49 2019 -0500
+
+    Fix path
+
+commit 85dd5d3e08b720d890550111d47b8c46dc039ac1
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 03:08:06 2019 -0500
+
+    Add version
+
+commit cb651a7377919c178ea1b58ca89539dd109ece36
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 02:52:08 2019 -0500
+
+    no compiler on osx for test
+
+commit b6bceea8e3e15fa8079a6f837057921fa02dc783
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 02:38:24 2019 -0500
+
+    Update sha256
+
+commit da6990f209a4ee196853db5f32b4068c1f32ba8d
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 02:16:44 2019 -0500
+
+    no version
+
+commit e8abfdda1f5a2c6c53720a60743096dc1f91adb5
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 02:14:33 2019 -0500
+
+    Add llvmdev as well
+
+commit 59cb0ef20a6a93ddc328c99c9a2c114c9b88ae9f
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 02:13:59 2019 -0500
+
+    Add downstreams
+
+commit 1e4143e3151ff4dda60610217951148b39cd5f1e
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 02:03:32 2019 -0500
+
+    Add rpath
+
+commit 917b374c70d54317b056fe953a7e95f63d8ba054
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Tue Apr 9 02:03:22 2019 -0500
+
+    Break cycle by using conda inside build.sh
+
+commit 2762c736f856895f64b752fae235238b794939ac
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Mar 21 00:28:06 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.8, conda-smithy 3.3.1, and conda-forge-pinning 2019.03.17
+
+commit 82eb2d11110bdc4a570ee918cd1aa915eb2dde20
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Thu Mar 21 00:27:54 2019 +0000
+
+    updated v8.0.0
+
+commit 94e5734a1f6e45a7714573a4d726d827b160d9de
+Merge: dc5ad4a 7e32cee
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Jan 28 16:24:02 2019 -0600
+
+    Merge pull request #33 from regro-cf-autotick-bot/7.0.1
+    
+    libcxx v7.0.1
+
+commit 7e32cee3f94473634920957cc4e235b7dbcf33d5
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 11:49:51 2019 -0600
+
+    Set flags for build prefix
+
+commit cbc92791c5258d9311d98a40669cc00edc30e2bf
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 11:49:21 2019 -0600
+
+    Move libcxxabi to build
+
+commit def9b3dc5bb891c5199c2c10ca8b07b5c72d5792
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 08:46:22 2019 -0600
+
+    Add CFLAGS and LDFLAGS
+
+commit d0d38f25cf6f74e592cf2fdfeaa3b1ea09333680
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 08:44:58 2019 -0600
+
+    Add libcxxabi to osx
+
+commit e1fbccccadd702cf3278be05c8e1ea04b3b601aa
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 02:39:43 2019 -0600
+
+    Update libcxxabi hash
+
+commit 65b337c8b519ccebbbacdd7e06fbfb2a6f399f09
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 01:29:22 2019 -0600
+
+    Update patch
+
+commit 3c3e55a5020a6048f9bffaa835ea81fe4122fc48
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 01:01:54 2019 -0600
+
+    Update patch
+
+commit a8c61304bb2d820c11a906bd8c528422a05f4243
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 00:51:16 2019 -0600
+
+    Use conda-build=3.15
+
+commit 5a616e7e67dabd4379a689d38b52e6656bc26c31
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 00:38:13 2019 -0600
+
+    Use any version of clangdev for tests
+
+commit 04d00e4a0602f69ca2875ef3420336538b8ba0c9
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Jan 17 00:09:51 2019 -0600
+
+    Need clangdev only on windows
+
+commit 7570c667f2637c7b8d05f7efa5559f2ab96f893f
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Thu Jan 17 05:57:44 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.17.5, conda-smithy 3.2.9, and conda-forge-pinning 2019.01.16
+
+commit adbf60b70f33eeb981ba0246394ccf7e022cdfc1
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Wed Jan 16 23:55:33 2019 -0600
+
+    Remove toolchain
+
+commit 73a1f7e9ea2debd78f3e2100f5e0b0d3717d11f9
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Wed Jan 16 23:54:59 2019 -0600
+
+    Remove llvm-meta run dependency
+
+commit 560a971c1e4a8ea3c1bfc3afc1b7c8166d52080a
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Dec 15 06:16:55 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2018.12.12
+
+commit 570a5fda9a4ef6e8172122765facc3df60b92c94
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Sat Dec 15 06:16:50 2018 +0000
+
+    updated v7.0.1
+
+commit dc5ad4afaa5cf4075388e8a7b61762357f1cd4c6
+Merge: ab05eba f1d632b
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Nov 3 00:17:55 2018 -0500
+
+    Merge pull request #27 from isuruf/rebuild
+    
+     rebuild for new compilers
+
+commit f1d632b2ecce7a650ed55a109e1b14414a214e58
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 28 11:46:59 2018 -0500
+
+    Update meta.yaml
+
+commit 14b392bd9212f9fc1a53d2666272a04fe0f4a1d6
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 28 03:17:32 2018 -0500
+
+    Skip tests for now
+
+commit 31cf3283495e9d6df30aa41cd6dc8d01d58ccfd2
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 16:13:36 2018 -0500
+
+    Add C++ compiler to test
+
+commit 99224e4e090883b06ecc627632d3eda2fd869b63
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 16:12:30 2018 -0500
+
+    Use clang on Linux toolchain_cxx
+
+commit fd270f1b77bec9f65612382b1c10b5f364adb804
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 16:04:38 2018 -0500
+
+    Move clangdev back to host
+
+commit 4f554b19e26aef6c77b3b619e6f2cf0a6170b17d
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:56:03 2018 -0500
+
+    Use gcc on linux
+
+commit df0af696c941316b1e14764c4e494527b300411a
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:48:33 2018 -0500
+
+    Use cmake binary
+
+commit 9bccf2d490c8a0d59be22f80cabd960350c9d0dc
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:38:45 2018 -0500
+
+    Need toolchain
+
+commit 42a689923e08bc9fbabdf156390c244420eaf96e
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:38:21 2018 -0500
+
+    Move clangdev to build
+
+commit 4c5740df3c6e4a3d5518d46b2b5488d18972b068
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:23:24 2018 -0500
+
+    Don't skip osx
+
+commit 98af5e634ce72fd6f0f9a4fefde47d6d2d0ba6f6
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:19:37 2018 -0500
+
+    Update meta.yaml
+
+commit c3b858879ca27d1a9f58469e4cd0d89509bb7250
+Merge: f059e46 ab05eba
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:11:57 2018 -0500
+
+    Merge branch 'master' into rebuild
+
+commit f059e46e11059b718f4353cf6fce724f61acf292
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:11:15 2018 -0500
+
+    Don't use conda compilers for osx
+
+commit ab05eba54eeb0a6e22d2bf05506e0880df915d0b
+Merge: f1f32d2 31211ac
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 15:03:14 2018 -0500
+
+    Merge pull request #30 from isuruf/system
+    
+    Fix system libcxxabi leaking in
+
+commit 31211ac236852bbcdf8a93fad27d6da209a2d79d
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 14:29:35 2018 -0500
+
+    Update patch
+
+commit 972da1067c9226fe9105a47ce73d33ff94c801fe
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 27 14:18:39 2018 -0500
+
+    Fix system libcxxabi leaking in
+
+commit 366d2987b6ddd3b3916b2720e923ea14eb7aa3e1
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 12:34:18 2018 -0500
+
+    Update meta.yaml
+
+commit bfb00537147b84930ee0f20bd209f23a14069e8b
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 02:48:53 2018 -0500
+
+    rebuild for new compilers
+
+commit f0a64cc3c3757cd544a6a3b778ae85d434eda4b2
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 02:47:39 2018 -0500
+
+    MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.10.16
+
+commit f1f32d267514ae5e03a8f062057a09e967e37679
+Merge: 972ef18 0768f1d
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 02:38:12 2018 -0500
+
+    Merge pull request #26 from regro-cf-autotick-bot/7.0.0
+    
+    libcxx v7.0.0
+
+commit 0768f1d195d4cbead4db89bb5356968942c6b03c
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 02:28:34 2018 -0500
+
+    Revert "Try fix tests in windows"
+    
+    This reverts commit 4f2cc077d813c85e5190396a111fdb165d111a72.
+
+commit f0d27ae9fabf502e634e7d2de626a13d23411076
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 02:17:54 2018 -0500
+
+    Install dll
+
+commit bbe3a3e4228fb57f2f10d80ba50a7308f273dfbc
+Merge: 4f2cc07 5e48a32
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 00:55:37 2018 -0500
+
+    Merge branch '7.0.0' of github.com:regro-cf-autotick-bot/libcxx-feedstock into 7.0.0
+
+commit 4f2cc077d813c85e5190396a111fdb165d111a72
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 00:55:03 2018 -0500
+
+    Try fix tests in windows
+
+commit 5e48a323325efa6e3ead1a4735e8105aaabc3e9a
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 00:41:08 2018 -0500
+
+    Update compile_test.bat
+
+commit cde226ab167b6d83fd979860a7a37a4f28edb79d
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 00:23:15 2018 -0500
+
+    Build libc++ static library too
+
+commit 4acd53ece993f775039728cce9467af54689cc69
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sun Oct 21 00:04:12 2018 -0500
+
+    windows fixes
+
+commit db1311caef7763b601246b41bbedecd461a9a8fe
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Oct 20 23:42:41 2018 -0500
+
+    Fix windows build
+
+commit 18dce23fda0a0fb4c347c71aa0bf6285067c608e
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Oct 15 01:10:11 2018 -0500
+
+    Add clangdev to test requirements
+
+commit 8fd85b68c5a18148b1dab378ee432fb40ed51e98
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Oct 15 01:03:37 2018 -0500
+
+    Remove extra line
+
+commit 5e96425c628dfbb9d41460ba673f4f5c04b46b67
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Oct 15 01:02:50 2018 -0500
+
+    Use multiple sources
+
+commit 804fe060d7bb66a31d2d08164bb11c8597ab4862
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Oct 15 00:57:05 2018 -0500
+
+    MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.10.11
+
+commit 42afcb3c010319d1f6c77319c9977894704e3890
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Oct 15 00:52:24 2018 -0500
+
+    update for cb3
+
+commit 754fd6768298e39f7aa532b04f0d77450de0284a
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Wed Sep 19 12:15:24 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.12 and pinning 2018.09.17
+
+commit 88412d525b113ef455e6e3f49242dbb18e4709b6
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Wed Sep 19 12:15:18 2018 +0000
+
+    updated v7.0.0
+
+commit 972ef185c2d8cd207660f82503205ca5897c5355
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sat Aug 11 01:00:23 2018 -0400
+
+    Update token in CIs
+
+commit 63df5fd7e4e8966ef6af7c1a7c8510f4cb15a95c
+Merge: 99f50d1 5d01fa7
+Author: jakirkham <jakirkham@gmail.com>
+Date:   Sat Aug 11 00:13:49 2018 -0400
+
+    Merge pull request #24 from jakirkham-feedstocks/revert_cs_3.1.6
+    
+    Revert "MNT: Re-rendered with conda-smithy 3.1.6 and pinning 2018.06.28"
+
+commit 5d01fa7a51fe4464c55db353810c28543c4bf00a
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Aug 10 23:07:46 2018 -0400
+
+    Drop Windows 32-bit
+    
+    There are no more `llvmdev` builds for Windows 32-bit. So drop 32-bit
+    Windows builds of `clangdev`. Ultimately this will happen anyways when
+    this feedstock is migrated to `conda-smithy` 3, but that will take a bit
+    more work. For now just drop this from the AppVeyor build matrix
+    manually.
+
+commit ee61aec47098224bf28c72fca45f50828e6e13b8
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Aug 10 22:59:46 2018 -0400
+
+    Revert "MNT: Re-rendered with conda-smithy 3.1.6 and pinning 2018.06.28"
+    
+    This reverts commit 3873da382dca5c2e74b678050b36ab0de8d66b03.
+
+commit 99f50d18284ff69750a593cc7cfdcc1e71356e4b
+Author: Travis CI User <travis@example.org>
+Date:   Sat Aug 4 17:46:28 2018 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit 0545473ad096f2dc79d3d239094b59cc0df44391
+Merge: 5ba37a7 3873da3
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Mon Jul 23 19:46:51 2018 -0300
+
+    Merge pull request #19 from regro-cf-autotick-bot/6.0.1
+    
+    libcxx v6.0.1
+
+commit 3873da382dca5c2e74b678050b36ab0de8d66b03
+Author: Travis CI User <travis@example.org>
+Date:   Fri Jun 29 07:07:14 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 3.1.6 and pinning 2018.06.28
+
+commit 4845b69345c58cf3bdcd47455916485776bfe963
+Author: Travis CI User <travis@example.org>
+Date:   Fri Jun 29 07:07:08 2018 +0000
+
+    updated v6.0.1
+
+commit 5ba37a7f200239755cee9d686aaa838a19a5158f
+Merge: c1bf40b 4a1f133
+Author: Andreas Klöckner <inform@tiker.net>
+Date:   Sat Mar 10 21:59:43 2018 -0600
+
+    Merge pull request #18 from inducer/master
+    
+    Upgrade to LLVM 6.0
+
+commit 4a1f133945a94cd83283cd8ebda7fb9d27c5670f
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Sat Mar 10 19:55:30 2018 -0600
+
+    Temporarily prevent CMake 3.10
+
+commit 45c2a544cd1a07b91fe42c974b639d3266bff773
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Sat Mar 10 22:03:03 2018 +0000
+
+    MNT: Re-rendered with conda-smithy 2.4.5
+
+commit 1bef4f64e6f68716ae17f9c61da59202ac462470
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Fri Mar 9 16:02:55 2018 -0600
+
+    Upgrade to LLVM 6.0
+
+commit c1bf40bcc99e8967ec455b4609efcc3e1704e53e
+Merge: bfec270 6cf22e3
+Author: Andreas Klöckner <inform@tiker.net>
+Date:   Thu Dec 7 17:38:00 2017 -0600
+
+    Merge pull request #17 from inducer/master
+    
+    Bump to 5.0, rerender
+
+commit 6cf22e324668c712c0eeb614653af893b94b2b87
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Thu Dec 7 14:28:57 2017 -0600
+
+    Clean up dependencies
+
+commit f835cfb207a339cd2a6eda23cc8a7b5d94e933aa
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Thu Dec 7 14:15:19 2017 -0600
+
+    MNT: Re-rendered with conda-smithy 2.4.4
+
+commit fb33656d30dcc156dea35666d83a039d7d76830f
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Thu Dec 7 14:14:11 2017 -0600
+
+    Bump version to 5.0.0
+
+commit bfec270e15b4a93038efac6291ca37bb8ab44306
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Sat Aug 26 21:43:44 2017 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit c29e3106c27426c7ebd2739c3a2c0b773facb4f5
+Merge: bfbdd6f 3d45436
+Author: Isuru Fernando <isuru.11@cse.mrt.ac.lk>
+Date:   Mon Jul 24 09:48:14 2017 +0530
+
+    Merge pull request #16 from jakirkham/tst_cxx14
+    
+    Add C++14 test case
+
+commit 3d45436fcdca65f647791d7d4592fdcbcfc8e057
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 23 23:19:57 2017 -0400
+
+    Build and run the C++14 test code
+
+commit 9ddbd9e0fc1d447e6db7ebe5d1f9698f211bcb74
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 23 23:18:40 2017 -0400
+
+    Add some C++14 test code
+
+commit bfbdd6f06fe812a0a0bd4da75c180cbb90b531ee
+Merge: 9f22f20 e4505af
+Author: jakirkham <jakirkham@gmail.com>
+Date:   Sun Jul 23 19:26:36 2017 -0400
+
+    Merge pull request #14 from jakirkham/add_win_noabi
+    
+    Add Windows (w/o libcxxabi)
+
+commit e4505af32526576207fe01fb14f06726dd957fac
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Wed Jul 19 00:25:08 2017 -0400
+
+    Revert "Dropped `-nostdlib` and system libraries"
+    
+    This reverts commit f28c7311c697c743023cdda2b26bc220f846c07e.
+
+commit f28c7311c697c743023cdda2b26bc220f846c07e
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Wed Jul 19 00:14:04 2017 -0400
+
+    Dropped `-nostdlib` and system libraries
+    
+    As part of the debugging process of this test, it appeared that we
+    needed the `-nostdlib` argument and, as a consequence, needed to
+    explicitly link `vcruntime`, `ucrt`, and `msvcrt`. However given various
+    changes since, it appears those arguments are no longer necessary. So we
+    are now dropping them. This should simplify the testing commands quite a
+    bit.
+
+commit 9f22f207b384fb365163267dcde3bc58ce344f89
+Merge: 78df52d 5ee218b
+Author: Isuru Fernando <isuru.11@cse.mrt.ac.lk>
+Date:   Wed Jul 19 09:13:10 2017 +0530
+
+    Merge pull request #15 from jakirkham/check_libcxx_used
+    
+    Test that libcxx is used
+
+commit 5ee218b32b8b07ecded09d675b1853d5dc86e51c
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 23:18:26 2017 -0400
+
+    Test that libcxx is used
+    
+    Simply add a test that will pass if libcxx is used, but fail otherwise.
+    Does this by checking that `_LIBCPP_VERSION` is defined during compile
+    time. If it is, then it creates a `main` function that passes otherwise
+    it creates one that fails. In either case, it prints out a message
+    informing either the value of `_LIBCPP_VERSION` or that
+    `_LIBCPP_VERSION` is undefined.
+
+commit 976a55714afc55133ce54f95034ffc5db0a4239e
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 15:58:20 2017 -0400
+
+    Drop nostdlibinc as we need some system headers
+    
+    As we now override where C++ includes are searched for, this should be
+    ok to add back. Plus it is needed to handle the C includes, which the
+    C++ includes of clang rely upon.
+
+commit 637093a822761cf78ced2b656d729aa2be9972ba
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 15:44:57 2017 -0400
+
+    Add clang C++ headers to system includes
+
+commit dfa25028a42f83b3114078bb8f349f584bd37414
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 15:29:20 2017 -0400
+
+    Use C++11 flag instead of C++14
+
+commit 92c3fd9be894f7bb236b724307a923e0e64ee874
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 15:26:41 2017 -0400
+
+    Disable search of system includes
+    
+    Though still search the compiler's builtin includes. The paths of the
+    builtin includes are explicitly added to the compiler's search path as
+    well.
+
+commit 3c473338091bd2dc134e3a9ae5f982219f1d09a9
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 14:17:37 2017 -0400
+
+    Revert "Use C++11 flag instead of C++14"
+    
+    This reverts commit 8191c729f31d6a01ea5fe270e643bf3033da46db.
+
+commit 8191c729f31d6a01ea5fe270e643bf3033da46db
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 14:07:46 2017 -0400
+
+    Use C++11 flag instead of C++14
+
+commit 927352aedb4161a300f083abc5b81101445f6362
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 14:01:27 2017 -0400
+
+    Link some select system libraries as well
+
+commit a27fc3a26e6c0345b20f131443fba7e1ad1741f4
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 13:13:41 2017 -0400
+
+    Add include search path
+
+commit 6bf810b6c2e3833b57a5d844171bf8c1a2e832bc
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 13:12:04 2017 -0400
+
+    Add library search path
+
+commit aaecc7ae325222b9fd2d2603b1c29941ca98d06a
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 12:41:35 2017 -0400
+
+    Disable std includes and libs add c++ lib manually
+
+commit d80cf4bc69c6e95c5a9a10252a64a3977d4866a6
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 11:37:41 2017 -0400
+
+    Revert "Use clang-cl to build tests on Windows"
+    
+    This reverts commit be137f28d97f25464ee544b3e72c4ef4cb3f5a6b.
+
+commit be137f28d97f25464ee544b3e72c4ef4cb3f5a6b
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 11:12:27 2017 -0400
+
+    Use clang-cl to build tests on Windows
+
+commit 616fdf9baf3c80cf8a22c353df2281b989a667ba
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 10:46:08 2017 -0400
+
+    Disable the static library
+
+commit fe21b07c7239d2018b364343e4b4de5ff7b02255
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 03:19:51 2017 -0400
+
+    Use C++14 with C++11 tests on Windows
+    
+    Appears some system headers get pulled in on Windows that use C++14
+    features even though the test code does not. So to avoid having those
+    Windows headers from causing us false failures, simply enable C++14
+    support during compilation.
+
+commit a19af9c4621fda63a6cbf84c4dfdb759909a7836
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 03:12:51 2017 -0400
+
+    Add compilation tests for Windows
+
+commit acd9cd8245bb312d75115eaa185f9b445fc28e9f
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 02:55:04 2017 -0400
+
+    Revert "Run tests on Windows too"
+    
+    This reverts commit f585c6376636e86b8cb954d0401212b75bf91996.
+
+commit f585c6376636e86b8cb954d0401212b75bf91996
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 02:46:25 2017 -0400
+
+    Run tests on Windows too
+
+commit ec7e10b1acf5cc3fe0bba7b14a7ed7562ffa47aa
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 02:25:11 2017 -0400
+
+    Use nmake for build/install steps
+
+commit 9df2b511ce1f4e2b7b67fa6f471a23e2eb20da1c
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 02:24:21 2017 -0400
+
+    Use shortened version of comments
+
+commit f5251c787c5a3fd5d6e75e082c910e48c50ce65f
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Tue Jul 18 02:23:40 2017 -0400
+
+    Raise for exist code in more cases
+
+commit ff6aa4b8d104092c2a6057a2ac32ce6d63a1e88f
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Mon Jul 17 00:05:19 2017 -0400
+
+    Get xcopy to create missing directories for us
+
+commit a433d0c367e97785aa7065c7ac72a96d4013d2d8
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 23:56:34 2017 -0400
+
+    Require msinttypes on Windows
+
+commit fc4bc3f393b9f235cd5c6923515ed243516feaf6
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 23:47:32 2017 -0400
+
+    Add a hack to detect the LLVM CMake module
+    
+    Appears the libcxx and libcxxabi are very particular about where they
+    expect to find the LLVM CMake modules for an out-of-tree build. So this
+    adds a hack that moves them into the expected location during the build
+    and removes them afterwards.
+
+commit 251218651ab15898b5d068a5edd933cbc5e7dd07
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 23:28:18 2017 -0400
+
+    Drop HandleOutOfTreeLLVM.cmake.diff
+
+commit 715a3f85656e8275e983f344d9b7f52ae3dc2522
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 23:27:56 2017 -0400
+
+    Set CMAKE_MODULE_PATH and drop LLVM_CMAKE_PATH
+
+commit 3757ef6b8cf16111ca1e7d7f3b288c86aa7e0858
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 20:31:04 2017 -0400
+
+    Adjust LLVM_CMAKE_PATH patch
+
+commit 0a4b23d62d88939c059ce5121f747f8e9bc41539
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 20:05:14 2017 -0400
+
+    Fix path in patch
+
+commit bc14de6838bdc5fe6e686f8cc40bbe16ed4f7189
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 20:00:19 2017 -0400
+
+    Set LLVM CMake path on Windows
+
+commit 5929c80a3d87cb283368edfd3d1ef0606702f2bf
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 19:55:46 2017 -0400
+
+    Cache LLVM_CMAKE_PATH
+    
+    This is needed for the Windows build so as to correctly identify where
+    these modules live instead of letting the CMake build guess this
+    incorrectly.
+
+commit 6c410345be707f18f08f84dc20b32940698758e0
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 14 22:42:32 2017 -0400
+
+    Disable libcxx's experimental library on Windows
+    
+    The experimental library doesn't seem to build correctly on Windows yet.
+    So just skip it for now. This seems to be what the LLVM devs recommend
+    as well.
+    
+    ref: http://libcxx.llvm.org/docs/BuildingLibcxx.html#cmake-visual-studio
+
+commit 6e4480573bb521a407071095f9768a63240dee06
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 14 22:02:50 2017 -0400
+
+    Require dirent compatibility header on Windows
+    
+    Appears that Microsoft Visual Studio lacks the dirent header file. So
+    include a compatibility header that implements dirent for Windows
+    mimicking the Unix dirent API.
+
+commit 688792ce9fe5b0309eb5b9e3bf189281160b799b
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 14 21:21:39 2017 -0400
+
+    Use clang-cl on Windows
+    
+    Appears this is the way to go to get around Visual Studio's lack of
+    `include_next` support.
+
+commit c1c5016c71d6d5c3b924476edee4e21e069e3b8c
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 02:02:51 2017 -0400
+
+    Seems that LLVM_PATH must be LIBRARY_LIB
+    
+    As we can't specify where to search for CMake modules apparently, the
+    only way to influence this is to set `LLVM_PATH` to be correct relative
+    to the CMake modules, which puts it at `LIBRARY_LIB`. Also drop
+    `LLVM_CMAKE_PATH` as it will simply be ignored.
+
+commit c5d296df4db916f96738840e2d2c76498e1d022b
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 01:54:12 2017 -0400
+
+    Manually specify paths to LLVM content
+    
+    In order to make sure configuration doesn't get confused with `\` in
+    paths. Make sure to specify all relevant paths for configuration of the
+    build.
+
+commit 00293ef905e47dcf6c0cf2a6dd8d074e7f447a49
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 01:43:09 2017 -0400
+
+    Mark `LLVM_CONFIG_PATH` as a path
+
+commit 24ebf1694dcbbfea7e9650c286b99b15773e0c29
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 01:36:59 2017 -0400
+
+    Specify `LLVM_CONFIG_PATH` explicitly
+    
+    While the CMake build has no problem finding this, it seems to mangle
+    the path and get confused by `\`. So just specify this outright to see
+    if it will fix the issue.
+
+commit e41e343d7fb63e4d0a126735218fa17bb40df58d
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 01:22:55 2017 -0400
+
+    Add runtime and archive directory paths
+
+commit 655f1495e5cd9adc57aac757c60805752ef65afd
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 01:11:17 2017 -0400
+
+    Quote SRC_DIR too
+
+commit 6a8079c1c5b1d304f6fb3131e80c60ec3e199f54
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 01:05:35 2017 -0400
+
+    Consolidate CMake arguments
+
+commit 111218e39bcb07b079531516340eb5f4575260c5
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 00:58:52 2017 -0400
+
+    Quote LIBRARY_PREFIX for good measure
+
+commit 3a09282f0f3060e61bd196172f23657d1e4c4865
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 00:57:44 2017 -0400
+
+    Drop `:PATH` specifier from install path
+
+commit 6b51b4cbb7007933095dabb0a795354077d1914b
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 00:48:47 2017 -0400
+
+    Simply use NMake to build on Windows
+    
+    Instead of hacking around to get Visual Studio 2012 on Windows, simply
+    try to build with Visual Studio 2015. This should ensure `libcxx` uses
+    the same run time on Windows as is used by `clangdev` and `llvmdev`.
+
+commit e3881765f29c29f2662e503350836fd61f432310
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 00:45:14 2017 -0400
+
+    MNT: Re-rendered with conda-smithy 2.3.2
+    
+    Enable Windows builds via AppVeyor.
+
+commit 1cfc3b6acb6582707a466bf9e944f5dcc4c65219
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 00:41:02 2017 -0400
+
+    Just require `python` during the build
+    
+    As we need `python` on Windows and Unix to compile files and set the VC
+    correctly, simply just add it as a requirement without selectors. Also
+    specifying the `python` version for Windows in the `build` messes up
+    `conda-build-all` in determining the Windows build matrix, which in turn
+    messes up `conda-smithy`. So if we just leave this alone both
+    `conda-build-all` and `conda-smithy` should do their things and set this
+    correctly for the different build cases.
+
+commit d82e174fefbce49aa1db2b5b45f4fc872ee1fff1
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 00:37:19 2017 -0400
+
+    Drop xz dependencies on Windows
+    
+    As the Visual Studio 2008 (Python 2.7) case simply doesn't occur for the
+    Windows build (since the system compiler is too old to build `clang` or
+    `libcxx`), it makes sense to just drop these requirements from `build`.
+
+commit b7ed27e85a0225e9513fa235c62a7edc84c1afe4
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Fri Jul 7 00:33:10 2017 -0400
+
+    Drop Windows skip for VC 14 (Python 3.6) builds
+
+commit 78df52d7ca83f9d1852a9f2a81b2dea690c95686
+Merge: 67cc2a0 2debb6b
+Author: jakirkham <jakirkham@gmail.com>
+Date:   Mon Jul 17 00:02:33 2017 -0400
+
+    Merge pull request #11 from isuruf/libcxxabi
+    
+    Use libcxxabi and add tests for stdlib=libc++
+
+commit 2debb6b7d79bec7ccbeb8fe1d3459ddeae2066d4
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Jul 17 08:27:09 2017 +0530
+
+    Skip docs and tests
+
+commit 36f398bebbf10574d0954f88646ec5ee9401f0f2
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Jul 17 07:40:38 2017 +0530
+
+    Bump build number and add me
+
+commit eb726e72ca62f7d0fb0cea500250914140b1b7e5
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Jul 17 07:39:22 2017 +0530
+
+    Fix errors
+
+commit 4e8c578bc0d985b59aaca4277f3a5983fb196c7c
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Mon Jul 17 07:10:48 2017 +0530
+
+    Test C++11 and add curl to build reqs
+
+commit 34bd454189c126aa714b1bf432dcf57828c1ff3e
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Jul 15 12:21:32 2017 +0530
+
+    libcxx needs to be built first on osx
+
+commit 07231aabcda03171c49a42d3916574327d6ba7f2
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Jul 15 12:11:50 2017 +0530
+
+    No need to build libcxx before
+
+commit 82fc12dcf58caf62a2d9892e0fd528f353bbda21
+Author: Isuru Fernando <isuru.11@cse.mrt.ac.lk>
+Date:   Sat Jul 15 11:45:19 2017 +0530
+
+    Fix extracting tar
+
+commit 14a66a1bb5cfeef2330b1fd3acd4f739dc306da2
+Author: Isuru Fernando <isuruf@gmail.com>
+Date:   Sat Jul 15 09:57:08 2017 +0530
+
+    Use libcxxabi and add tests for stdlib=libc++
+
+commit 67cc2a0322a33ca53444c7195c98fd8566355b1b
+Merge: 763a58b 60c84ac
+Author: Andreas Klöckner <inform@tiker.net>
+Date:   Sun Jul 16 17:59:37 2017 -0500
+
+    Merge pull request #12 from jakirkham/add_jakirkham
+    
+    Add @jakirkham [ci skip]
+
+commit 60c84ac1521a58beea379608e2b584c8b05a434b
+Author: John Kirkham <kirkhamj@janelia.hhmi.org>
+Date:   Sun Jul 16 18:03:09 2017 -0400
+
+    Add @jakirkham
+    
+    [ci skip]
+
+commit 763a58b7215aa7bf00cc3eb6d3c4d19c360d4b3e
+Merge: a6f1dee af65887
+Author: Andreas Klöckner <inform@tiker.net>
+Date:   Sat May 27 10:46:23 2017 -0700
+
+    Merge pull request #7 from inducer/master
+    
+    Rerender after recipe fix, actually update to 4.0.0
+
+commit af65887031f16c17c3d4b55e5a7d0c7be513748f
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Sat May 27 10:33:45 2017 -0700
+
+    Use clang to build libcxx
+
+commit cbec6445399b346bcf91a116c282fab33e07d2de
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Sat May 27 09:49:10 2017 -0700
+
+    Rerender after config fix
+
+commit a6f1dee1ffd47a5bc403eb12531c4cb98f339e2c
+Merge: 50662e7 ddf5437
+Author: Andreas Klöckner <inform@tiker.net>
+Date:   Fri May 26 22:30:04 2017 -0700
+
+    Merge pull request #6 from inducer/master
+    
+    Update to 4.0.0
+
+commit ddf54371fe4647c323303e108a841ca20b89bf9b
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Thu May 25 10:41:16 2017 -0700
+
+    MNT: Re-rendered with conda-smithy 2.3.1
+
+commit c683f173ca008288b8a8068b7d53cd57c8c7dd85
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Thu May 25 10:41:07 2017 -0700
+
+    Recipe tweaks for update
+
+commit a736ac56e6a1ce77ba0cd623891904398faf4296
+Author: Andreas Kloeckner <inform@tiker.net>
+Date:   Thu May 25 10:33:55 2017 -0700
+
+    Upgrade to 4.0.0
+
+commit 50662e76e777542b4fb469614e73888b24b6b392
+Merge: 8004fc8 a95a30e
+Author: Andreas Klöckner <inform@tiker.net>
+Date:   Sun Mar 5 22:26:56 2017 -0500
+
+    Merge pull request #5 from conda-forge-admin/feedstock_rerender_master
+    
+    MNT: Re-render the feedstock [ci skip]
+
+commit a95a30e35f08f75cf2721e1b1f75eb8f4455bee4
+Author: conda-forge-admin <pelson.pub+conda-forge@gmail.com>
+Date:   Mon Mar 6 01:43:50 2017 +0000
+
+    MNT: Updated the feedstock for conda-smithy version 2.1.1.
+
+commit 8004fc8904c5410e7e7dd5a67799caa90c6b66a4
+Merge: e7c85bb ac83e37
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Tue Feb 14 12:39:27 2017 -0300
+
+    Merge pull request #1 from SylvainCorlay/391
+    
+    Release 3.9.1
+
+commit ac83e37588bfbabe1a54558b21241838ad246476
+Author: Sylvain Corlay <sylvain.corlay@gmail.com>
+Date:   Tue Feb 14 08:35:02 2017 +0100
+
+    Release 3.9.1
+
+commit e7c85bb92648d8cb197b1434bf2b0874adb5d643
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Fri Jan 27 16:16:20 2017 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 9cab3e957dbe99c0455f72ab1d3bc90e7008161b
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Fri Jan 27 16:07:22 2017 +0000
+
+    Initial feedstock commit with conda-smithy 2.0.1.

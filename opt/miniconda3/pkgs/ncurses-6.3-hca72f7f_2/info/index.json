@@ -1,0 +1,12 @@
+{
+  "arch": "x86_64",
+  "build": "hca72f7f_2",
+  "build_number": 2,
+  "depends": [],
+  "license": "Free software (MIT-like)",
+  "name": "ncurses",
+  "platform": "osx",
+  "subdir": "osx-64",
+  "timestamp": 1636570029158,
+  "version": "6.3"
+}

@@ -1,0 +1,49 @@
+{
+  "build": "py37hecd8cb5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.7,<3.8.0a0"
+  ],
+  "extracted_package_dir": "/Users/mac/opt/miniconda3/pkgs/pysocks-1.7.1-py37hecd8cb5_0",
+  "features": "",
+  "files": [
+    "lib/python3.7/site-packages/PySocks-1.7.1.dist-info/INSTALLER",
+    "lib/python3.7/site-packages/PySocks-1.7.1.dist-info/LICENSE",
+    "lib/python3.7/site-packages/PySocks-1.7.1.dist-info/METADATA",
+    "lib/python3.7/site-packages/PySocks-1.7.1.dist-info/RECORD",
+    "lib/python3.7/site-packages/PySocks-1.7.1.dist-info/REQUESTED",
+    "lib/python3.7/site-packages/PySocks-1.7.1.dist-info/WHEEL",
+    "lib/python3.7/site-packages/PySocks-1.7.1.dist-info/direct_url.json",
+    "lib/python3.7/site-packages/PySocks-1.7.1.dist-info/top_level.txt",
+    "lib/python3.7/site-packages/__pycache__/socks.cpython-37.pyc",
+    "lib/python3.7/site-packages/__pycache__/sockshandler.cpython-37.pyc",
+    "lib/python3.7/site-packages/socks.py",
+    "lib/python3.7/site-packages/sockshandler.py"
+  ],
+  "fn": "pysocks-1.7.1-py37hecd8cb5_0.conda",
+  "legacy_bz2_md5": "cf526aaa629cea4681f394b64c843732",
+  "legacy_bz2_size": 31041,
+  "license": "BSD 3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/Users/mac/opt/miniconda3/pkgs/pysocks-1.7.1-py37hecd8cb5_0",
+    "type": 1
+  },
+  "md5": "745392371bf21815c6cd5121718856ae",
+  "name": "pysocks",
+  "package_tarball_full_path": "/Users/mac/opt/miniconda3/pkgs/pysocks-1.7.1-py37hecd8cb5_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "pysocks==1.7.1=py37hecd8cb5_0",
+  "sha256": "27205ebd8bd4dd6a82cd081e6cb6b8ac472b004b6043144e48c3d84be732e603",
+  "size": 31571,
+  "subdir": "osx-64",
+  "timestamp": 1605305831539,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/pysocks-1.7.1-py37hecd8cb5_0.conda",
+  "version": "1.7.1"
+}

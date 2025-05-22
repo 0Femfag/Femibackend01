@@ -1,0 +1,39 @@
+==> 2022-04-21 09:05:21 <==
+# cmd: build.py --build_number 1 --product miniconda --python 3.7 --installer-type pkg --output-dir /opt/concourse/worker/volumes/live/08a5c406-d2cf-4cdc-73bf-4725e563feb0/volume/output-installer/220421/ --standalone /opt/concourse/worker/volumes/live/08a5c406-d2cf-4cdc-73bf-4725e563feb0/volume/installer-scripts/artifacts/osx-64/conda.exe
++defaults::python-3.7.13-hdfd78df_0
++defaults::ca-certificates-2022.3.29-hecd8cb5_1
++defaults::libcxx-12.0.0-h2f01273_0
++defaults::ncurses-6.3-hca72f7f_2
++defaults::xz-5.2.5-h1de35cc_0
++defaults::yaml-0.2.5-haf1e3a3_0
++defaults::zlib-1.2.12-h4dc903c_1
++defaults::libffi-3.3-hb1e8313_2
++defaults::openssl-1.1.1n-hca72f7f_0
++defaults::readline-8.1.2-hca72f7f_1
++defaults::tk-8.6.11-h7bc2e8c_0
++defaults::sqlite-3.38.2-h707629a_0
++defaults::certifi-2021.10.8-py37hecd8cb5_2
++defaults::charset-normalizer-2.0.4-pyhd3eb1b0_0
++defaults::colorama-0.4.4-pyhd3eb1b0_0
++defaults::idna-3.3-pyhd3eb1b0_0
++defaults::pycosat-0.6.3-py37h9ed2024_0
++defaults::pycparser-2.21-pyhd3eb1b0_0
++defaults::pysocks-1.7.1-py37hecd8cb5_0
++defaults::python.app-3-py37hca72f7f_0
++defaults::ruamel_yaml-0.15.100-py37h9ed2024_0
++defaults::six-1.16.0-pyhd3eb1b0_1
++defaults::wheel-0.37.1-pyhd3eb1b0_0
++defaults::cffi-1.15.0-py37hc55c11b_1
++defaults::setuptools-61.2.0-py37hecd8cb5_0
++defaults::tqdm-4.63.0-pyhd3eb1b0_0
++defaults::brotlipy-0.7.0-py37h9ed2024_1003
++defaults::conda-package-handling-1.8.1-py37hca72f7f_0
++defaults::cryptography-36.0.0-py37hf6deb26_0
++defaults::pip-21.2.2-py37hecd8cb5_0
++defaults::conda-content-trust-0.1.1-pyhd3eb1b0_0
++defaults::pyopenssl-22.0.0-pyhd3eb1b0_0
++defaults::urllib3-1.26.8-pyhd3eb1b0_0
++defaults::requests-2.27.1-pyhd3eb1b0_0
++defaults::conda-4.12.0-py37hecd8cb5_0
+# update specs: ['conda', 'python=3.7', 'python.app']
+
